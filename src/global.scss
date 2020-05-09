@@ -9,18 +9,83 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+ion-content {
+    --ion-background-color: #f6f6f6;
+}
+
+ion-header {
+    --ion-background-color: #f6f6f6;
+}
+
+section.header {
+    background: rgb(224, 122, 12);
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+    /* background: linear-gradient(90deg, rgba(224, 122, 12, 1) 30%, rgba(209, 68, 35, 1) 100%); */
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 0px 0px 0px 50px;
+    margin: 0 auto;
+    height: 100px;
+    width: 100%;
+    line-height: 25px;
+    font-size: 15px;
+    padding: 0px 17px;
+    outline: 0;
+    /* box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);*/
+    -webkit-appearance: none;
+    .iconBack {
+        color: white;
+        margin-top: 50px;
+        position: absolute;
+        p {
+            position: relative;
+            display: block;
+            float: right;
+            margin-top: -2px;
+            margin-left: 5px;
+        }
+    }
+    .logoHeader {
+        position: relative;
+        margin: 30px 0 auto;
+        height: 64px;
+    }
+}
+
+.successAlert {}
+
+.falseAlert {
+    strong {
+        color: red !important;
+    }
+}
+
+.modal-fullscreen {
+    .modal-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

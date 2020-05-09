@@ -1,0 +1,80 @@
+<ion-header translucent>
+    <ion-toolbar color="primary">
+        <ion-title>Vocabulaire</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="dismissModal()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-img class="logo" src="assets/images/iconAf.png"> </ion-img>
+    <div *ngIf="!data" style="display: flex; justify-content: center; align-items: center;">
+        <ion-spinner name="bubbles"></ion-spinner>
+        <p>Chargement...</p>
+    </div>
+    <ion-card>
+        <ion-card-header>
+            <h2>{{data.title}}</h2>
+        </ion-card-header>
+        <ion-card-content>
+            <div *ngIf="data.content_type == 'repeat'">
+                <p>{{data.options}}</p>
+
+                <p>{{data.answer}}</p>
+
+                <br />
+            </div>
+
+            <div *ngIf="data.content_type == 'multiple'">
+                <h3>{{data.question}}</h3>
+
+                <ion-radio-group>
+                    <ion-item *ngFor="let options of options_data" (click)="optionsClick(options)">
+                        <ion-radio slot="start"></ion-radio>
+
+                        <ion-label>{{options}}</ion-label>
+                    </ion-item>
+                </ion-radio-group>
+            </div>
+
+            <div *ngIf="data.content_type == 'match'">
+                <ion-radio-group>
+                    <ion-item *ngFor="let question of question_data" (click)="optionsClick(options)">
+                        <ion-radio slot="start"></ion-radio>
+
+                        <ion-label>{{question}}</ion-label>
+                    </ion-item>
+                </ion-radio-group>
+
+                <ion-radio-group>
+                    <ion-item *ngFor="let options of options_data" (click)="optionsClick(options)">
+                        <ion-radio slot="start"></ion-radio>
+
+                        <ion-label>{{options}}</ion-label>
+                    </ion-item>
+                </ion-radio-group>
+            </div>
+
+            <ion-button style="float: left;" size="small" (click)="prev()">
+                <ion-icon name="skip-backward"></ion-icon>
+            </ion-button>
+            <ion-button class="middle" size="small" (click)="startAudio(data)">
+                <ion-icon name="play-circle"></ion-icon>
+            </ion-button>
+            <ion-button style="float: right;" size="small" (click)="next()">
+                <ion-icon name="skip-forward"></ion-icon>
+            </ion-button>
+
+            <div *ngIf="data.content_type == 'multiple'">
+                <ion-button style="float: left;" size="small" (click)="check()">
+                    Vérifier
+                </ion-button>
+                <ion-button style="float: right;" size="small" (click)="pass()">
+                    Passer
+                </ion-button>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

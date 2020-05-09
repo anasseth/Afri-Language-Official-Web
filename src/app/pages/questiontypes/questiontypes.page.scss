@@ -1,0 +1,30 @@
+.cercle {
+    color: #ff8c1d;
+    background-color: white;
+    position: relative;
+    border-radius: 100px;
+    height: 130px;
+    width: 130px;
+    bottom: -25%;
+    ion-icon {
+        fill: #ff8c1d;
+        position: absolute;
+        margin-top: 18px;
+        margin-left: 33px;
+        width: 60px;
+        height: 60px;
+    }
+    p {
+        position: absolute;
+        margin-top: 82px;
+    }
+}
+
+.espace {
+    margin: 24px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+}

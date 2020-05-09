@@ -1,0 +1,26 @@
+.info {
+  margin: 20px 0px 5px 0px ;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+.info .info__left{
+  padding: 30px 0px;
+  margin: 0px 3px;
+  background-color: #00b002;
+  height: 200px;
+  width: 100%;
+}
+
+.info .info__rigth{
+  padding: 30px 0px;
+  margin: 0px 3px;
+  background-color: #d10000;
+  height: 200px;
+  width: 100%;
+}

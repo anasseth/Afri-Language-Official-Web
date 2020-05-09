@@ -1,0 +1,49 @@
+<!--
+<ion-header translucent>
+  <ion-toolbar color="primary" >
+    <ion-title>{{topic.name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()"><ion-icon name="close"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+-->
+
+<ion-content fullscreen>
+    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
+        <div class="iconBack">
+            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
+        </div>
+
+        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+    </section>
+
+    <div class="rounded" *ngFor="let lesson of lessons  ">
+        <div (click)="lessonClick(lesson)">
+            <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/online-course.svg"></ion-icon>
+            <ion-label class="label"> {{lesson.name}} </ion-label>
+        </div>
+    </div>
+
+    <div *ngIf="!lessons" style="display: flex; justify-content: center; align-items: center;">
+        <ion-spinner name="bubbles"></ion-spinner>
+        <p>Chargement...</p>
+    </div>
+    <!--
+
+  <ion-card  *ngFor="let lesson of lessons"  >
+    <ion-item lines="none" (click)="lessonClick(lesson)"  >
+      <ion-icon slot="end" color="primary" name="arrow-dropdown-circle"></ion-icon>
+
+      <ion-avatar slot="start">
+        <img src="https://afrilangues.com/public/images/{{lesson.lesson_image}}" />
+      </ion-avatar>
+      <ion-card-content>
+        <ion-label>{{lesson.name}}</ion-label>
+
+      </ion-card-content>
+    </ion-item>
+
+  </ion-card>-->
+</ion-content>

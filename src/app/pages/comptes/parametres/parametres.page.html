@@ -1,0 +1,120 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tabs/comptes/comptes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Parametres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+ -->
+
+<section class="header">
+    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+</section>
+
+<ion-content>
+    <ion-card *ngIf="user">
+        <ion-card-content>
+            <div class="card">
+                <img class="profil" src="https://picsum.photos/100/100" />
+
+                <h1 style="margin: 5px;">{{user.name}}</h1>
+                <h2 style="margin: 5px;">{{user.email}}</h2>
+
+                <div class="btn" (click)="onEdit()">
+                    <p *ngIf="edit == false"><strong> Editer mon profil</strong></p>
+                    <p *ngIf="edit == true"><strong> Fermer </strong></p>
+                </div>
+                <div class="btn" (click)="onGetSubscribes()">
+                    <p>
+                        <strong>Mon abonnement</strong>
+                    </p>
+                </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+    <div *ngIf="datas">
+        <h5 text-center style="margin-top: 10px;">Liste des abonnements</h5>
+
+        <p style="color: #ff5e06;" *ngIf="datas.length == 0" text-center style="margin-top: 10px;">
+            Aucun abonnement
+        </p>
+
+        <div class="roundedB" *ngFor="let data of datas ">
+            <div (click)="showInfo(data)">
+                <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/information.svg"></ion-icon>
+                <ion-label class="label"> {{ showName(data.language_id) }} </ion-label>
+            </div>
+        </div>
+    </div>
+
+    <div class="edit" *ngIf="edit == true">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+            <ion-list style="margin: 15px;">
+                <div class="rounded">
+                    <div class="iconInput">
+                        <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/user.svg">
+                        </ion-icon>
+                        <ion-input type="text" name="nompre" [(ngModel)]="nompre" placeholder="Nom & Prénom">
+                        </ion-input>
+                    </div>
+                </div>
+
+                <div class="rounded">
+                    <div class="iconInput">
+                        <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/envelope.svg">
+                        </ion-icon>
+                        <ion-input type="text" readonly disabled name="last" [(ngModel)]="email" placeholder="Email"></ion-input>
+                        <ion-input type="hidden" name="email" [(ngModel)]="email" placeholder="Email"></ion-input>
+                    </div>
+                </div>
+
+                <div class="rounded">
+                    <div class="iconInput">
+                        <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/address.svg">
+                        </ion-icon>
+                        <ion-input type="text" name="adresse" [(ngModel)]="adresse" placeholder="Adresse"></ion-input>
+                    </div>
+                </div>
+
+                <div class="rounded">
+                    <div class="iconInput">
+                        <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/phone-call.svg">
+                        </ion-icon>
+                        <ion-input type="number" name="telephone" [(ngModel)]="telephone" placeholder="Téléphone">
+                        </ion-input>
+                    </div>
+                </div>
+
+                <!--   <div class="rounded">
+                    <div class="iconInput">
+                        <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/lock.svg">
+                        </ion-icon>
+                        <ion-input type="password" name="password" [(ngModel)]="password" placeholder="Mot de passe">
+                        </ion-input>
+                    </div>
+                </div>
+
+                <div class="rounded">
+                    <div class="iconInput">
+                        <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/confirm.svg">
+                        </ion-icon>
+                        <ion-input type="password" name="passwordConfirm" [(ngModel)]="passwordConfirm" placeholder="Confirmation de mot de passe">
+                        </ion-input>
+                    </div>
+                </div> -->
+            </ion-list>
+
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <button class="btn">
+          <strong style="font-size: 15px;"> Sauvegarder</strong>
+        </button>
+            </div>
+        </form>
+    </div>
+</ion-content>

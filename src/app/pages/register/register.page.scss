@@ -1,0 +1,94 @@
+ .logo {
+     margin-top: 50px;
+     margin-bottom: 10px;
+     height: 110px;
+ }
+ 
+ .btn {
+     margin: 5px;
+     /* height: 30px; */
+     width: 90%;
+     padding: 6px;
+     border-radius: 8px;
+     line-height: 30px;
+     color: white;
+     text-align: center;
+     background-image: linear-gradient(to right, #dfb401, #df011f)
+ }
+ 
+ .rounded {
+     background-color: white;
+     border: 2px solid #ccc;
+     -moz-border-radius: 8px;
+     -webkit-border-radius: 8px;
+     border-radius: 8px;
+     margin: 10px auto;
+     height: 50px;
+     width: 100%;
+     line-height: 25px;
+     font-size: 15px;
+     padding: 12px 17px;
+     outline: 0;
+     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+     -webkit-appearance: none;
+     ion-input {
+         position: relative;
+         margin-left: 30px;
+         margin-top: -40px;
+     }
+ }
+ /* .rounded {
+  border: 2px solid #ccc;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+
+  margin-top: 30px;
+
+
+
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+  padding: 5px 17px;
+  outline: 0;
+  -webkit-appearance: none;
+} */
+ 
+ ion-input,
+ ion-input:-moz-placeholder,
+ ion-input::-webkit-input-placeholder,
+ ion-input:-ms-input-placeholder {
+     font-size: 15px;
+     line-height: 1.5em;
+ }
+ 
+ .buttons {
+     --border-radius: 8px;
+     margin: 20px 0;
+ }
+ 
+ .but {
+     height: 30px;
+     --border-radius: 30px;
+     margin-top: 15px;
+ }
+ 
+ .ouModif {
+     margin: 30px auto;
+     width: 79%;
+     color: #9d9d9d;
+ }
+ 
+ .ouModif p {
+     width: 100%;
+     text-align: center;
+     border-bottom: 1px solid #9d9d9d;
+     line-height: 0.1em;
+     margin: 10px 0 20px;
+ }
+ 
+ .ouModif p span {
+     background: #f6f6f6;
+     padding: 0 8px;
+ }

@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    ion-label {
+        margin: 10px !important;
+    }
+}
+
+ion-icon {
+    fill: #ff8c1d;
+}
+
+.btn {
+    margin: 5px;
+    /* height: 30px; */
+    padding: 6px 30px;
+    border-radius: 8px;
+    line-height: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to right, #dfb401, #df011f)
+}

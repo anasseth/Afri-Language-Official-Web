@@ -1,0 +1,29 @@
+h5 {
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #102563;
+}
+
+.rounded {
+    /* border: 2px solid #ccc; */
+    border-radius: 20px;
+    margin: 10px auto;
+    /* width: 94%; */
+    font-size: 20px;
+    padding: 0px 15px;
+    outline: 0;
+    height: 46px;
+    -webkit-appearance: none;
+}
+
+.couleur {
+    --ion-background-color: linear-gradient(to right, #dfb401, #df011f);
+    color: white;
+}
+
+.normal {
+    ion-icon {
+        color: #ff5e06
+    }
+}

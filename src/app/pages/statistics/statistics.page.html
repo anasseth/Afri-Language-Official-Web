@@ -1,0 +1,52 @@
+<!--
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Cours</ion-title>
+    </ion-toolbar>
+</ion-header>
+-->
+
+<section class="header">
+    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+</section>
+
+<ion-content>
+    <div *ngIf="!datas" style="display: flex; justify-content: center; align-items: center;">
+        <ion-spinner name="bubbles"></ion-spinner>
+        <p>Chargement...</p>
+    </div>
+
+    <div *ngIf="datas">
+        <h5 text-center>Mes Statistiques</h5>
+        <div class="info">
+            <div (click)="onGetStatistics()" class="info__left">
+                <p>{{datas.length}}</p>
+                <p>Mots Appris</p>
+            </div>
+            <div (click)="onGetStatistics2()" class="info__rigth">
+                <p>{{datasw.length}}</p>
+                <p>Mots à revoir</p>
+            </div>
+        </div>
+
+        <ion-card>
+            <ion-card-content>
+                <div (click)="clickStatistic(com)" *ngFor="let com of data">
+                    <ion-item *ngIf="com.question_type != 'Dialogue'  ">
+                        <ion-avatar slot="start">
+                            <img src="https://picsum.photos/50/50" />
+                        </ion-avatar>
+
+                        <ion-label>
+                            <h2 style="color: #ff8c1d;">
+                                <b>{{niceText(com.question) }}</b>
+                            </h2>
+                        </ion-label>
+
+                        <!--  <ion-icon  class="iconElement" icon="assets/icon/dialogue-1.svg" ></ion-icon>-->
+                    </ion-item>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

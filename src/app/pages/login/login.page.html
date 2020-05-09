@@ -1,0 +1,77 @@
+<ion-content text-left>
+    <ion-img class="logo" src="assets/images/afrilangues.png"> </ion-img>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+        <ion-list style="margin-bottom: 20px">
+            <div class="rounded">
+                <div class="iconInput">
+                    <ion-icon style="  height: 20px; color:#ff5e06" slot="start" icon="assets/icon/envelope.svg">
+                    </ion-icon>
+                    <ion-input type="text" name="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+                </div>
+            </div>
+
+            <div class="rounded">
+                <div class="iconInput">
+                    <ion-icon style="height: 20px; color:#ff5e06" slot="start" icon="assets/icon/lock.svg"></ion-icon>
+                    <ion-input type="password" name="password" placeholder="Mot de passe" [(ngModel)]="password">
+                    </ion-input>
+                </div>
+            </div>
+        </ion-list>
+
+        <div style="display: flex; align-items: center;justify-content: center;">
+            <button class="btn" style="width: 90%; margin-left: 5%" type="submit" size="default" expand="block">
+        <strong style="font-size: 17px;"> Connexion</strong>
+      </button>
+        </div>
+
+        <!--  <ion-button class="buttons" style="width: 90%; margin-left: 5%" type="submit" size="default" expand="block">
+          
+        </ion-button> -->
+    </form>
+
+    <div style="margin: 15px;" text-center>
+        <p>
+            <a routerLink="/forgotpwd" style="color: black;text-decoration: none">
+        Mot de passe oublié ?
+      </a>
+            <a routerLink="/introlangues" style="color:  #e07a0c; margin-left: -1px ; text-decoration: none">
+        Créer un compte ?</a
+      >
+    </p>
+  </div>
+
+  <!-- <div class="ouModif">
+    <p><span>Ou</span></p>
+  </div> -->
+
+  <!-- <form>
+    <ion-button
+      style="width: 90%; margin: 5%"
+      class="buttons"
+      type="submit"
+      color="secondary"
+      size="default"
+      expand="block"
+    >
+      <ion-label>
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+        Continuer avec Facebook
+      </ion-label>
+    </ion-button>
+    <ion-button
+      style="width: 90%; margin-top: -8px ;  margin-left: 5%"
+      class="buttons"
+      type="submit"
+      color="danger"
+      size="default"
+      expand="block"
+    >
+      <ion-label>
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+        Continuer avec Google
+      </ion-label>
+    </ion-button>
+  </form> -->
+</ion-content>

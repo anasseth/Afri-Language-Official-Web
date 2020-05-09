@@ -1,0 +1,354 @@
+<!--
+<ion-header translucent>
+    <ion-toolbar color="primary">
+        <ion-title>Vocabulaire</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="dismissModal()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+-->
+<ion-content>
+    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
+        <div class="iconBack">
+            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
+        </div>
+
+        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+    </section>
+    <div *ngIf="!data" style="display: flex; justify-content: center; align-items: center;">
+        <ion-spinner name="bubbles"></ion-spinner>
+        <p>Chargement...</p>
+    </div>
+
+    <section *ngIf="data">
+        <h2 text-center style="margin: 15px auto;" *ngIf="data != null">
+            {{data.title}}
+        </h2>
+        <!-- CardRepeat -->
+
+        <div class="cardRepeat" *ngIf="data.content_type == 'repeat'">
+            <div>
+                <p>
+                    <strong>{{data.options}}</strong>
+                </p>
+
+                <p><em>{{data.answer}}</em></p>
+
+                <div class="middles" (click)="startAudio(data)">
+                    <div class="middle" (click)="startAudio(data)">
+                        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                    <p>Préc</p>
+                </div>
+
+                <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                    <p>Suiv</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CardMultiple -->
+
+        <div class="cardMultiple" *ngIf="data.content_type == 'multiple'">
+            <div>
+                <div class="middles">
+                    <div class="middle" (click)="startAudio(data)">
+                        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+                    </div>
+                </div>
+                <h3 style="margin-top: 5px; margin-left: 24px; margin-bottom: 20px;">
+                    {{data.question}}
+                </h3>
+                <div [ngClass]="indexChoose == index ? 'activateBig' : 'choose'" *ngFor="let options of options_data  ;let index = index  " (click)="optionsClick(options,options_data)">
+                    <div>{{options}}</div>
+                </div>
+
+                <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                    <p>Préc</p>
+                </div>
+
+                <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                    <p>Suiv</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- cardTap -->
+
+        <div class="cardTap" *ngIf="data.content_type == 'tap'">
+            <div>
+                <div class="middles">
+                    <div class="middle" (click)="startAudio(data)">
+                        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="chooseParentTop">
+                    <strong [ngClass]="responses  ? 'resp' : ''" *ngFor="let res of responses  " (click)="removeItem(res)">
+            {{res}}
+          </strong>
+                </div>
+
+                <span class="chooseParent">
+          <span
+            class="choose"
+            *ngFor="let answer of answer_data | shuffle "
+            (click)="addItem(answer)"
+          >
+            {{answer}}
+          </span>
+                </span>
+
+                <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                    <p>Préc</p>
+                </div>
+
+                <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                    <p>Suiv</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CardMatch-->
+
+        <div class="cardMatch" *ngIf="data.content_type == 'match'">
+            <div>
+                <ion-row>
+                    <ion-col>
+                        <div [ngClass]="nomQuestion == question ? 'activate' : 'chooseQuestion'" *ngFor="let question of   question_data | shuffle      " (click)="questionMatch(question,question_data)">
+                            <p>{{question }}</p>
+                        </div>
+                    </ion-col>
+
+                    <ion-col>
+                        <div [ngClass]="nomOption == options ? 'activate' : 'chooseQuestion'" *ngFor=" let options of options_data | shuffle  " (click)="optionsMatch(options,options_data)">
+                            <p>{{options}}</p>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <div *ngIf="question_data.length == 0">
+                    <h1 color="primary" style="color: #ffa825; font-size: 80px;" text-center>
+                        Bravo !
+                    </h1>
+
+                    <p text-center style="margin: 50px auto;">
+                        Toutes les réponses sont correctes
+                    </p>
+                </div>
+
+                <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                    <p>Préc</p>
+                </div>
+
+                <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                    <p>Suiv</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- cardTranslate-->
+        <div class="cardTranslate" *ngIf="data.content_type == 'translate'">
+            <div>
+                <p style="margin-top: 60px;" text-center>
+                    <strong>{{data.question}}</strong>
+                </p>
+
+                <div class="middles">
+                    <div class="middle" (click)="startAudio(data)">
+                        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <ion-input text-center type="text" name="email" placeholder="Votre traduction" [(ngModel)]="translateCheck"></ion-input>
+                </div>
+
+                <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                    <p>Préc</p>
+                </div>
+
+                <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                    <p>Suiv</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- cardTruefalse-->
+        <div class="cardTruefalse" *ngIf="data.content_type == 'truefalse'">
+            <div>
+                <p style="margin-top: 60px;" text-center>
+                    <strong>{{data.question}}</strong>
+                </p>
+
+                <div class="middles">
+                    <div class="middle" (click)="startAudio(data)">
+                        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+                    </div>
+                </div>
+
+                <div *ngFor="let choose of chooses ;let index = index " [ngClass]="indexChoose == index ? 'activateBig' : 'choose'" (click)="chooseClick(choose)">
+                    <div>{{choose.name}}</div>
+                </div>
+
+                <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                    <p>Préc</p>
+                </div>
+
+                <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                    <p>Suiv</p>
+                </div>
+            </div>
+        </div>
+        <!-- cardDragDrop-->
+        <div class="cardDragDrop" *ngIf="data.content_type == 'imagedrag'">
+            <div>
+                <p style="margin-top: 60px;" text-center>
+                    <strong>Completez avec les mots</strong>
+                </p>
+
+                <ion-grid *ngIf="arrayDrag.length != format(data.options).length ">
+                    <ion-row>
+                        <ion-col size="6" *ngFor="let datas of format(data.options) | shuffle   ">
+                            <div class="drag">
+                                <div class="data" draggable="true" (click)="dragTap(datas,data.options)">
+                                    {{ replaceImg(datas) }}
+                                </div>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+                <div class="btn" *ngIf="arrayDrag.length == format(data.options).length " (click)="renit()">
+                    <strong> Renitialiser </strong>
+                </div>
+
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="6" *ngFor="let img of format(data.question) ;let index = index ">
+                            <div class="drag">
+                                <ion-img src="https://afrilangues.com/public/images/{{replaceImg(img)}}"></ion-img>
+
+                                <div class="data result" draggable="true" id="{{index}}" (click)="dragTap(datas,data.options)"></div>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+                <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                    <p>Préc</p>
+                </div>
+
+                <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                    <p>Suiv</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- cardFill-->
+        <div class="cardMultiple" *ngIf="data.content_type == 'fill'">
+            <div>
+                <div class="middles">
+                    <div class="middle" (click)="startAudio(data)">
+                        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+                    </div>
+                </div>
+                <h3 style="margin-top: 5px; margin-left: 24px; margin-bottom: 20px;">
+                    {{data.question}}
+                </h3>
+                <div [ngClass]="indexChoose == index ? 'activateBig' : 'choose'" *ngFor="let options of options_data  ;let index = index  " (click)="fillMatch(options,options_data)">
+                    <div>{{options}}</div>
+                </div>
+
+                <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                    <p>Préc</p>
+                </div>
+
+                <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                    <p>Suiv</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIN-->
+        <!--
+    <div class="cardMultiple" *ngIf="data.content_type == undefined">
+        <div>
+
+            <h3 style="margin-top: 5px; margin-left:24px; margin-bottom:20px">
+               FIN
+            </h3>
+
+        </div>
+    </div>
+-->
+
+        <!-- cardTextArea-->
+        <div class="cardTextArea" *ngIf="data.content_type=='textarea'">
+            <div style="margin-top: 20px; padding: 15px !important;" [innerHTML]="data.answer"></div>
+
+            <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                <p>Préc</p>
+            </div>
+
+            <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                <p>Suiv</p>
+            </div>
+        </div>
+
+        <div class="cardTextArea" *ngIf="data.content_type=='youtube'">
+            <!--<iframe width="100%" height="400" src="https://www.youtube.com/embed/iUREXuolYmU" frameborder="0" allowfullscreen></iframe>-->
+
+            <iframe width="100%" height="300" [src]="domSanitize.bypassSecurityTrustResourceUrl(data.question.replace('watch?v=' , 'embed/'))" allow="autoplay;" allowfullscreen></iframe>
+
+            <!--
+
+        <div>
+            <ion-button class="buttons" style="width: 90%; margin-left: 5%" (click)="playVideo(data.question)"  type="submit" size="default" expand="block">
+                Jouer la vidéo
+            </ion-button>
+
+            <ion-button class="buttons" style="width: 90%; margin-left: 5%" (click)="play(data.question)"  type="submit" size="default" expand="block">
+                Jouer
+            </ion-button>
+        </div>
+-->
+
+            <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
+                <p>Préc</p>
+            </div>
+
+            <div class="next" [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} " (click)="next()">
+                <p>Suiv</p>
+            </div>
+        </div>
+
+        <!-- 
+        <div style="display: flex; align-items: center;justify-content: center;">
+
+
+            <button class="btnver" (click)="check()" *ngIf="data.content_type != 'repeat' && data.content_type != undefined  && data.content_type != 'textarea'  && data.content_type != 'youtube'  ">
+                <strong style="font-size: 17px;"> Vérifier</strong>
+            </button>
+        </div>
+
+ -->
+
+        <div style="margin: 60px auto;" *ngIf="data.content_type != 'repeat' && data.content_type != undefined  && data.content_type != 'textarea'  && data.content_type != 'youtube'  ">
+            <!--  <ion-button class="buttons" style="width: 90%; margin-left: 5%" (click)="check()" type="submit" size="default" expand="block">
+                Vérifier
+            </ion-button> -->
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <button class="btnver" (click)="check()" *ngIf="data.content_type != 'repeat' && data.content_type != undefined  && data.content_type != 'textarea'  && data.content_type != 'youtube'  ">
+          <strong style="font-size: 17px;"> Vérifier</strong>
+        </button>
+            </div>
+        </div>
+    </section>
+</ion-content>

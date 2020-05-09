@@ -1,0 +1,106 @@
+<!--
+<ion-header translucent>
+  <ion-toolbar color="primary" >
+
+    <ion-title>{{lesson.name}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()"><ion-icon name="close"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+-->
+
+
+
+
+<ion-content fullscreen>
+
+<!--
+
+  <ion-card *ngFor="let question of questions"  >
+    <ion-item lines="none" (click)="questionClick(question)"  >
+      <ion-icon slot="start" color="primary" name="{{question.icon}}"></ion-icon>
+
+
+      <ion-card-content>
+        <ion-label>{{question.name}}</ion-label>
+
+      </ion-card-content>
+    </ion-item>
+
+  </ion-card>
+-->
+
+  <section (click)="dismissModal()"  style="margin-top: 0px ; padding-top: 5px;margin-bottom: 30px " class="header">
+
+    <div  class="iconBack" >
+      <ion-icon style=" fill: white;" icon="assets/icon/back.svg"  ></ion-icon>
+    </div>
+
+
+
+    <ion-img  class="logoHeader"  src="assets/images/afriwhite.png">
+
+    </ion-img>
+  </section>
+
+
+
+
+
+
+
+
+  <h5 style="margin-top: 10px" text-center>Mes leçons</h5>
+
+  <ion-row>
+    <ion-col size="6">
+      <div class="cercle" (click)="questionClick(questions[0])" >
+        <ion-icon  class="iconElement" icon="assets/icon/light-bulb.svg" ></ion-icon>
+        <p style="margin-left: 45px;" > <strong> {{questions[0].name}} </strong> </p>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="cercle" (click)="questionClick(questions[1])"  >
+        <ion-icon  class="iconElement" icon="assets/icon/vocabulary.svg" ></ion-icon>
+        <p style="margin-left: 19px;" > <strong> {{questions[1].name}} </strong> </p>
+      </div>
+    </ion-col>
+
+  </ion-row>
+
+
+  <ion-row style="margin-top: 15px">
+    <ion-col size="6">
+      <div class="cercle" (click)="questionClick(questions[2])"  >
+        <ion-icon  class="iconElement" icon="assets/icon/vocabulary-2.svg" ></ion-icon>
+        <p style="margin-left: 32px;" > <strong> {{questions[2].name}} </strong> </p>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="cercle" (click)="questionClick(questions[3])"  >
+        <ion-icon  class="iconElement" icon="assets/icon/dialogue-1.svg" ></ion-icon>
+        <p style="margin-left: 32px;" > <strong> {{questions[3].name}} </strong> </p>
+      </div>
+    </ion-col>
+
+  </ion-row>
+
+
+  <ion-row style="margin-top: 15px; margin-left: 25%;">
+    <ion-col  size="6">
+      <div class="cercle"  (click)="questionClick(questions[4])"  >
+        <ion-icon  class="iconElement" icon="assets/icon/grammar.svg" ></ion-icon>
+        <p style="margin-left: 25px;  " > <strong> {{questions[4].name}} </strong> </p>
+      </div>
+    </ion-col>
+
+
+  </ion-row>
+
+
+
+</ion-content>

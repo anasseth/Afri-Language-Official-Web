@@ -1,0 +1,22 @@
+h5 {
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #102563;
+}
+
+.rounded {
+    border: 2px solid #ccc;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 20px;
+    margin: 10px auto;
+  /*  height: 40px;*/
+    width: 94%;
+  /*  line-height: 25px;*/
+    font-size: 15px;
+    padding: 0px 15px;
+    outline: 0;
+
+    -webkit-appearance: none;
+}

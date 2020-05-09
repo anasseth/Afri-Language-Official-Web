@@ -1,4 +1,5 @@
 {
+
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
@@ -20,7 +21,7 @@
     ]
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
+    "fullTemplateTypeCheck": false,
     "strictInjectionParameters": true
   }
 }
