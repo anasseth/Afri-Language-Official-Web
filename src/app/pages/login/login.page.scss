@@ -88,12 +88,16 @@
          right: 0px;
          display                  : flex !important;
          visibility               : visible !important;
-         width                    : 100% !important;
+         width                    : 70% !important;
+         // height                : 500px !important;
+
          margin-top            : 20px;
+         // margin-left: 20%;
+         // align-items: center; 
          justify-content       : center;
-          box-shadow        : -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
-          -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
-          -moz-box-shadow   : -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+         //  box-shadow        : -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+         //  -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+         //  -moz-box-shadow   : -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
      }
      .rounded{
          box-shadow: none;
@@ -134,7 +138,7 @@
      }
 
      .logoAfdesk {
-         width: 170px !important;
+         height: 170px !important;
      }
 
      .logoAfrica {
