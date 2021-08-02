@@ -12,6 +12,12 @@ export class IntrolanguesPage implements OnInit {
   constructor(private afriService: AfrilangueService,private router:Router) { }
 
   profile:any;
+  flagLink:[
+    'https://img.icons8.com/emoji/96/000000/cameroon-emoji.png',
+    'https://img.icons8.com/emoji/96/000000/senegal-emoji.png',
+    'https://img.icons8.com/emoji/96/000000/senegal-emoji.png',
+    'https://img.icons8.com/emoji/96/000000/congo-brazzaville-emoji.png'
+  ]
 
   ngOnInit() {
     //this.onGetProfile();
