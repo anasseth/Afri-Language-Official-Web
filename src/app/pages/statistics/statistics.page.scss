@@ -1,26 +1,571 @@
 .info {
-  margin: 20px 0px 5px 0px ;
-  text-align: center;
-  display: flex;
+  margin         : 20px 0px 5px 0px;
+  text-align     : center;
+  display        : flex;
   justify-content: space-evenly;
-  margin: 0px 10px;
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
+  margin         : 0px 10px;
+  font-size      : 28px;
+  font-weight    : bold;
+  color          : white;
 }
 
-.info .info__left{
-  padding: 30px 0px;
-  margin: 0px 3px;
+.info .info__left {
+  padding         : 30px 0px;
+  margin          : 0px 3px;
   background-color: #00b002;
-  height: 200px;
-  width: 100%;
+  height          : 200px;
+  width           : 100%;
 }
 
-.info .info__rigth{
-  padding: 30px 0px;
-  margin: 0px 3px;
+.info .info__rigth {
+  padding         : 30px 0px;
+  margin          : 0px 3px;
   background-color: #d10000;
-  height: 200px;
-  width: 100%;
+  height          : 200px;
+  width           : 100%;
+}
+
+.LanguageDesktopDiv {
+  display   : none;
+  visibility: hidden;
+}
+
+
+@media screen and (min-width: 1000px) {
+
+  .desktopheader {
+    border-radius     : 0px !important;
+    height            : 10% !important;
+    color             : white;
+    box-shadow        : -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -moz-box-shadow   : -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+  }
+
+  .LanguageMobileDiv {
+    display   : none;
+    visibility: hidden;
+  }
+
+  h5 {
+    font-size  : 20px !important;
+    text-align : left;
+    font-weight: bold;
+    color      : white;
+  }
+
+  .LanguageDesktopDiv {
+    display   : block;
+    visibility: visible;
+  }
+
+  .LanguageDesktopDiv2 {
+    // display: flex;
+    // visibility: visible;
+    width              : 100%;
+    // margin: auto;
+    // left: 0px;
+    // right: 0px;
+    // padding: 50px;
+    // padding-top: 0px;
+    // background-color: transparent;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+
+  // .Card {
+  //   width: 20%;
+  //   padding: 40px;
+  //   text-align: center;
+  //   font-weight: 700;
+  //   margin: 30px;
+  //   background-color: white;
+  //   box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+  //   -webkit-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+  //   -moz-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+  //   transition-duration: 0.2s;
+
+  //   border: 1px solid #df011f;
+  //   font-size: 22px;
+  //   cursor: pointer;
+
+
+  // }
+  // .Card:hover {
+  //   background-image: linear-gradient(to right, #dfb401, #df011f);
+  //   color: white;
+  //   transition-duration: 0.4s;
+  // }
+  .rounded {
+    width        : 60%;
+    border-radius: 0px;
+    border       : 0px solid transparent;
+    border-left  : 5px solid transparent;
+  }
+
+  .rounded:hover {
+    border-left: 5px solid #102563;
+  }
+
+
+
+  body {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+  }
+
+  .container {
+    padding: 70px 0;
+  }
+
+  .card {
+
+    //  width: 20%;
+
+  margin-right: 10px !important;
+
+    position           : relative;
+    height             : 170px;
+    // background: url("https://image.freepik.com/free-vector/colorful-gradient-liquid-shapes-background_23-2148250143.jpg"),
+    // #ffffff;
+    // background: url("../../../assets/images/afre5.jpg") ;
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    border-radius      : 10px;
+    transition         : 0.25s ease-in;
+    padding-top        : 3%;
+    // background-color: #ffffff;
+    height             : 200px;
+    width              : 100%;
+    // color: black !important;
+    border             : 3px solid rgb(26, 188, 156) !important;
+    box-shadow         : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+    -webkit-box-shadow : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow    : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+
+    margin          : auto;
+    left            : 0px;
+    right           : 0px;
+    display         : flex !important;
+    visibility      : visible !important;
+    // width: 70% !important;
+    // margin-top: 20px;
+    justify-content : center;
+    background-color: rgb(26, 188, 156);
+    color           : white !important;
+  }
+
+  .icon1 {
+
+    font-size    : 80px;
+    color        : #df011f !important;
+    padding-top  : 2%;
+    padding-right: 10%;
+
+  }
+  .icon2 {
+
+    font-size    : 80px;
+    color        : #dfb401 !important;
+    padding-top  : 2%;
+    padding-right: 10%;
+
+  }
+
+  .card2 {
+
+
+    position           : relative;
+    height             : 170px;
+    // background: url("https://image.freepik.com/free-vector/colorful-gradient-liquid-shapes-background_23-2148250143.jpg"),
+    // #ffffff;
+    // background: url("../../../assets/images/afre5.jpg") ;
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    border-radius      : 10px;
+    transition         : 0.25s ease-in;
+    padding-top        : 3%;
+    // background-color: #ffffff;
+    height             : 200px;
+    width              : 100%;
+    // color: black !important;
+    border             : 3px solid #e74c3c !important;
+    box-shadow         : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+    -webkit-box-shadow : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow    : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
+
+    margin          : auto;
+    left            : 0px;
+    right           : 0px;
+    display         : flex !important;
+    visibility      : visible !important;
+    // width: 70% !important;
+    // margin-top: 20px;
+    justify-content : center;
+    background-color: #e74c3c;
+    color           : white !important;
+
+  }
+
+  .card .overlay {
+    position: absolute;
+    top     : 0;
+    bottom  : 0;
+    width   : 100%;
+    height  : 170px;
+    background: linear-gradient(120.55deg,
+        rgba(0, 0, 0, 0.38) 0%,
+        rgba(0, 0, 0, 0.239) 100%);
+    border-radius: 10px;
+  }
+
+
+
+
+  .card .content {
+    position: absolute;
+    bottom  : 10px;
+    left    : 25px;
+  }
+
+  .card .content h4 {
+    font-family  : Ubuntu;
+    font-style   : normal;
+    font-weight  : bold;
+    font-size    : 18px;
+    color        : #f2f2f2;
+    margin-bottom: 10px;
+    margin-top   : 0;
+  }
+
+  .card .content h6 {
+    font-family  : Ubuntu;
+    font-style   : normal;
+    font-weight  : 500;
+    font-size    : 14px;
+    color        : #f2f2f2;
+    margin-bottom: 10px;
+    margin-top   : 0;
+  }
+
+  .card .fav {
+    position: absolute;
+    top     : 25px;
+    right   : 25px;
+    cursor  : pointer;
+  }
+
+  .card .fav i {
+    color: white;
+  }
+
+
+  .card:hover {
+    background-position: top !important;
+    // opacity: 0.6;
+    // background-image: linear-gradient(to right, #47df01, #ffffff);
+    color              : white;
+    transition-duration: 0.2s;
+    border-radius      : 10px;
+  }
+
+  .card2:hover {
+    background-position: top !important;
+    // opacity: 0.6;
+    // background-image: linear-gradient(to right, #ffffff,#ff444e);
+    color              : white;
+    transition-duration: 0.2s;
+    border-radius      : 10px;
+  }
+
+  .card:hover {
+    background-position: top !important;
+    // opacity: 0.6;
+
+  }
+
+  p.hover {
+    background-color: #f2f2f2 !important;
+  }
+
+  h1 {
+    color      : rgb(255, 255, 255);
+    font-size  : 30px !important;
+    font-weight: bold !important;
+  }
+
+  h3 {
+    color    : rgb(0, 0, 0);
+    font-size: 20px !important;
+  }
+
+  // .icn{
+  //   font-size: 80px;
+  //   color: black;
+  // }
+
+  body {
+    background: url("http://rybd.com/wp-content/uploads/2014/12/blue-polygon.png");
+  }
+
+
+  /******************************
+
+Stati - minimal statistical cards
+
+*******************************/
+  .stati {
+    background        : #fff;
+    height            : 6em;
+    padding           : 1em;
+    margin            : 1em 0;
+    -webkit-transition: margin 0.5s ease, box-shadow 0.5s ease;
+    /* Safari */
+    transition        : margin 0.5s ease, box-shadow 0.5s ease;
+    -moz-box-shadow   : 0px 0.2em 0.4em rgb(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 0.2em 0.4em rgb(0, 0, 0, 0.8);
+    box-shadow        : 0px 0.2em 0.4em rgb(0, 0, 0, 0.8);
+  }
+
+  .stati:hover {
+    margin-top        : 0.5em;
+    -moz-box-shadow   : 0px 0.4em 0.5em rgb(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 0.4em 0.5em rgb(0, 0, 0, 0.8);
+    box-shadow        : 0px 0.4em 0.5em rgb(0, 0, 0, 0.8);
+  }
+
+  .stati i {
+    font-size: 3.5em;
+  }
+
+  .stati div {
+    width     : calc(100% - 3.5em);
+    display   : block;
+    float     : right;
+    text-align: right;
+  }
+
+  .stati div b {
+    font-size    : 2.2em;
+    width        : 100%;
+    padding-top  : 0px;
+    margin-top   : -0.2em;
+    margin-bottom: -0.2em;
+    display      : block;
+  }
+
+  .stati div span {
+    font-size: 1em;
+    width    : 100%;
+    color    : rgb(0, 0, 0, 0.8) !important;
+    display  : block;
+  }
+
+  .stati.left div {
+    float     : left;
+    text-align: left;
+  }
+
+  .stati.bg-turquoise {
+    background: rgb(26, 188, 156);
+    color     : white;
+  }
+
+  .stati.bg-emerald {
+    background: rgb(46, 204, 113);
+    color     : white;
+  }
+
+  .stati.bg-peter_river {
+    background: rgb(52, 152, 219);
+    color     : white;
+  }
+
+  .stati.bg-amethyst {
+    background: rgb(155, 89, 182);
+    color     : white;
+  }
+
+  .stati.bg-wet_asphalt {
+    background: rgb(52, 73, 94);
+    color     : white;
+  }
+
+  .stati.bg-green_sea {
+    background: rgb(22, 160, 133);
+    color     : white;
+  }
+
+  .stati.bg-nephritis {
+    background: rgb(39, 174, 96);
+    color     : white;
+  }
+
+  .stati.bg-belize_hole {
+    background: rgb(41, 128, 185);
+    color     : white;
+  }
+
+  .stati.bg-wisteria {
+    background: rgb(142, 68, 173);
+    color     : white;
+  }
+
+  .stati.bg-midnight_blue {
+    background: rgb(44, 62, 80);
+    color     : white;
+  }
+
+  .stati.bg-sun_flower {
+    background: rgb(241, 196, 15);
+    color     : white;
+  }
+
+  .stati.bg-carrot {
+    background: rgb(230, 126, 34);
+    color     : white;
+  }
+
+  .stati.bg-alizarin {
+    background: rgb(231, 76, 60);
+    color     : white;
+  }
+
+  .stati.bg-clouds {
+    background: rgb(236, 240, 241);
+    color     : white;
+  }
+
+  .stati.bg-concrete {
+    background: rgb(149, 165, 166);
+    color     : white;
+  }
+
+  .stati.bg-orange {
+    background: rgb(243, 156, 18);
+    color     : white;
+  }
+
+  .stati.bg-pumpkin {
+    background: rgb(211, 84, 0);
+    color     : white;
+  }
+
+  .stati.bg-pomegranate {
+    background: rgb(192, 57, 43);
+    color     : white;
+  }
+
+  .stati.bg-silver {
+    background: rgb(189, 195, 199);
+    color     : white;
+  }
+
+  .stati.bg-asbestos {
+    background: rgb(127, 140, 141);
+    color     : white;
+  }
+
+
+  .stati.turquoise {
+    color: rgb(26, 188, 156);
+  }
+
+  .stati.emerald {
+    color: rgb(46, 204, 113);
+  }
+
+  .stati.peter_river {
+    color: rgb(52, 152, 219);
+  }
+
+  .stati.amethyst {
+    color: rgb(155, 89, 182);
+  }
+
+  .stati.wet_asphalt {
+    color: rgb(52, 73, 94);
+  }
+
+  .stati.green_sea {
+    color: rgb(22, 160, 133);
+  }
+
+  .stati.nephritis {
+    color: rgb(39, 174, 96);
+  }
+
+  .stati.belize_hole {
+    color: rgb(41, 128, 185);
+  }
+
+  .stati.wisteria {
+    color: rgb(142, 68, 173);
+  }
+
+  .stati.midnight_blue {
+    color: rgb(44, 62, 80);
+  }
+
+  .stati.sun_flower {
+    color: rgb(241, 196, 15);
+  }
+
+  .stati.carrot {
+    color: rgb(230, 126, 34);
+  }
+
+  .stati.alizarin {
+    color: rgb(231, 76, 60);
+  }
+
+  .stati.clouds {
+    color: rgb(236, 240, 241);
+  }
+
+  .stati.concrete {
+    color: rgb(149, 165, 166);
+  }
+
+  .stati.orange {
+    color: rgb(243, 156, 18);
+  }
+
+  .stati.pumpkin {
+    color: rgb(211, 84, 0);
+  }
+
+  .stati.pomegranate {
+    color: rgb(192, 57, 43);
+  }
+
+  .stati.silver {
+    color: rgb(189, 195, 199);
+  }
+
+  .stati.asbestos {
+    color: rgb(127, 140, 141);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

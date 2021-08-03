@@ -18,17 +18,57 @@
 
     <div *ngIf="datas">
         <h5 text-center>Mes Statistiques</h5>
-        <div class="info">
-            <div (click)="onGetStatistics()" class="info__left">
-                <p>{{datas.length}}</p>
-                <p>Mots Appris</p>
-            </div>
-            <div (click)="onGetStatistics2()" class="info__rigth">
-                <p>{{datasw.length}}</p>
-                <p>Mots à revoir</p>
+        <div class="LanguageMobileDiv">
+            <div class="info ">
+                <div (click)="onGetStatistics()" class="info__left">
+                    <p>{{datas.length}}</p>
+                    <p>Mots Appris</p>
+                </div>
+                <div (click)="onGetStatistics2()" class="info__rigth">
+                    <p>{{datasw.length}}</p>
+                    <p>Mots à revoir</p>
+                </div>
             </div>
         </div>
 
+
+        <div class="LanguageDesktopDiv">
+            <div class="LanguageDesktopDiv2">
+                <div class="info ">
+                    <div (click)="onGetStatistics()" class="card ">
+                        <div class="icon1">
+                            <ion-icon name="trophy"></ion-icon>
+                        </div>
+                        <div>
+                            <h1>{{datas.length}}</h1>
+                            <h3>Mots Appris</h3>
+                        </div>
+
+
+                    </div>
+                    <div (click)="onGetStatistics2()" class="card2">
+                        <div class="icon2">
+                            <ion-icon name="eye"></ion-icon>
+                        </div>
+                        <div>
+                            <h1>{{datasw.length}}</h1>
+                            <h3>Mots à revoir</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="col-md-3">
+            <div class="stati bg-turquoise ">
+                <i class="bi bi-trophy-fill" style="color: black !important;font-size: 40px!!important;"></i>
+                <div>
+                    <b>2</b>
+                    <span>bg-turquoise</span>
+                </div>
+            </div>
+        </div> -->
         <ion-card>
             <ion-card-content>
                 <div (click)="clickStatistic(com)" *ngFor="let com of data">
