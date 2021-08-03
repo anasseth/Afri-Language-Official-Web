@@ -137,10 +137,10 @@
     transition         : 0.25s ease-in;
     padding-top        : 3%;
     // background-color: #ffffff;
-    height             : 200px;
+    height             : 170px;
     width              : 100%;
     // color: black !important;
-    border             : 3px solid rgb(26, 188, 156) !important;
+    border             : 1px solid white !important;
     box-shadow         : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
     -webkit-box-shadow : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
     -moz-box-shadow    : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
@@ -153,7 +153,7 @@
     // width: 70% !important;
     // margin-top: 20px;
     justify-content : center;
-    background-color: rgb(26, 188, 156);
+    background-color: #df9905;
     color           : white !important;
     cursor: pointer;
   }
@@ -161,7 +161,9 @@
   .icon1 {
 
     font-size    : 80px;
-    color        : #df011f !important;
+    // color        : #df011f !important;
+    color        : #ffffff !important;
+
     padding-top  : 2%;
     padding-right: 10%;
 
@@ -169,13 +171,36 @@
   .icon2 {
 
     font-size    : 80px;
-    color        : #dfb401 !important;
+    // color        : #dfb401 !important;
+    color        : #ffffff !important;
+
     padding-top  : 2%;
     padding-right: 10%;
 
   }
 
+  .Y {
+    background-image: linear-gradient(90deg, #FFC107, #FFC107, #FFC107, rgb(255, 227, 142));
+    color: black;
+}
+
+.G {
+    /* background-color:#28A745; */
+    background-image: linear-gradient(90deg, #28A745, #28A745, #28A745, rgb(87, 212, 116));
+}
+
+.R {
+    /* background-color:#DC3545; */
+    background-image: linear-gradient(90deg, #DC3545, #DC3545, #DC3545, rgb(231, 126, 138));
+}
+
+.B {
+    /* background-color:#17A2B8; */
+    background-image: linear-gradient(90deg, #17A2B8, #17A2B8, #17A2B8, rgb(118, 212, 226));
+}
+
   .card2 {
+    margin-right: 10px !important;
 
 
     position           : relative;
@@ -190,10 +215,10 @@
     transition         : 0.25s ease-in;
     padding-top        : 3%;
     // background-color: #ffffff;
-    height             : 200px;
+    height             : 170px;
     width              : 100%;
     // color: black !important;
-    border             : 3px solid #e74c3c !important;
+    border             : 1px solid white !important;
     box-shadow         : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
     -webkit-box-shadow : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
     -moz-box-shadow    : 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
@@ -315,7 +340,22 @@
   }
 
   
+.h2h{
+  color    : rgb(0, 0, 0) !important;
+  font-weight: normal !important;
 
+}
+
+.bg{
+background-color: white;
+padding-top: 1%;
+padding-bottom: 1%;
+padding-left: 1%;
+cursor: pointer;
+border-bottom: 1px solid #dadada;
+border-radius: 10px;
+
+}
 
 
 

@@ -22,3 +22,68 @@ ion-icon {
     text-align: center;
     background-image: linear-gradient(to right, #dfb401, #df011f)
 }
+
+
+
+@media screen and (min-width: 1000px) {
+    .bg{
+        background-color: white;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 1%;
+        cursor: pointer;
+        border-bottom: 1px solid #dadada;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;        }
+        .bg1{
+            background-color: white;
+            padding-top: 18px;
+            padding-bottom: 18px;
+            padding-left: 1%;
+            padding-right: 1%;
+            cursor: pointer;
+            border-bottom: 1px solid #dadada;
+            border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+            }
+        .LanguageMobileDiv {
+            display   : none;
+            visibility: hidden;
+          }
+        
+          h5 {
+            font-size  : 20px !important;
+            text-align : left;
+            font-weight: bold;
+            color      : white;
+          }
+        
+          .LanguageDesktopDiv {
+            display   : block;
+            visibility: visible;
+          }
+        
+          .LanguageDesktopDiv2 {
+            // display: flex;
+            // visibility: visible;
+            width              : 100%;
+            // margin: auto;
+            // left: 0px;
+            // right: 0px;
+            // padding: 50px;
+            // padding-top: 0px;
+            // background-color: transparent;
+            // flex-wrap: wrap;
+            // justify-content: center;
+          }
+
+          .header1 {
+            //   float: right;
+              display: flex;
+            //   justify-content: space-between;
+            //   flex-direction: column;
+              margin-left: 80%;
+            //   padding: 5%;
+        
+}
+}
