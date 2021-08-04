@@ -31,3 +31,34 @@
     text-align: center;
     background-image: linear-gradient(to right, #dfb401, #df011f);
 }
+
+@media screen and (min-width: 1000px) {
+
+    .MainTitle {
+        margin-top: 10px;
+        width: auto;
+        height: auto;
+        color: white;
+        border-radius: 10px;
+        background-color: orangered;
+        padding: 10px;
+      }
+      .DesktopDiv {
+        display: block;
+        visibility: visible;
+        width: 70%;
+        margin: auto;
+        left: 0px;
+        right: 0px;
+      }
+      .rounded{
+          border-radius: 0px;
+      }
+      .btn{
+          width: 30%;
+          margin: auto;
+          left: 0px;
+          right: 0px;
+      }
+}
+

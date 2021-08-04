@@ -1,212 +1,216 @@
 * {
-    padding: 0;
+  padding: 0;
 }
 
 .rounded {
-    background-color: white;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 20px;
-    margin: 10px auto;
-    height: 50px;
-    width: 94%;
-    line-height: 25px;
-    font-size: 15px;
-    padding: 0px 15px;
-    outline: 0;
-    /* box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);*/
-    -webkit-appearance: none;
-    div {
-        position: relative;
-        padding: 15px;
-    }
-    .label {
-        position: absolute;
-        margin: -3px 14px;
-    }
+  background-color: white;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 20px;
+  margin: 10px auto;
+  height: 50px;
+  width: 94%;
+  line-height: 25px;
+  font-size: 15px;
+  padding: 0px 15px;
+  outline: 0;
+  /* box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);*/
+  -webkit-appearance: none;
+  div {
+    position: relative;
+    padding: 15px;
+  }
+  .label {
+    position: absolute;
+    margin: -3px 14px;
+  }
 }
 
 .item-native {
-    background-color: red
+  background-color: red;
 }
 
 h5 {
-    font-size: 17px;
+  font-size: 17px;
 }
 
-.LanguageDesktopDiv {
+.LogoRound {
+  width: 150px;
+  height: 65px;
+  padding: 2px;
+  float: left;
+  transition-duration: 0.3s;
+}
+.LogoRound:hover {
+  background-color: white;
+  transition-duration: 0.3s;
+}
+.HeaderBar {
+  width: 100%;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  height: 80px;
+  padding: 5px;
+  padding-left: 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.LoginDesktopDiv {
+  display: none;
+  visibility: hidden;
+}
+.hide {
+  display: none;
+  visibility: hidden;
+}
+@media screen and (min-width: 1000px) {
+  .hide {
+    display: block;
+    visibility: visible;
+  }
+  .loginmobiledisnone {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .desktopheader {
+    border-radius: 0px !important;
+    height: 10% !important;
+    color: white;
+    box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -moz-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+  }
+  .LanguageMobileDiv {
     display: none;
     visibility: hidden;
   }
-  
-  @media screen and (min-width: 1000px) {
-  
-    .desktopheader{
-      border-radius :0px !important; 
-      height: 10% !important;
-      color: white;
-      box-shadow: -4px 71px 49px -58px rgba(252, 22, 52,0.3) ;
-      -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52,0.3) ;
-      -moz-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52,0.3) ;
-    }
-    .LanguageMobileDiv {
-      display: none;
-      visibility: hidden;
-    }
-    h5 {
-      font-size: 20px !important;
-      text-align: left;
-      font-weight: bold;
-      color: white;
-    }
-    .LanguageDesktopDiv{
-      display: block;
-      visibility: visible;
-    }
-    .LanguageDesktopDiv2 {
-      display: flex;
-      visibility: visible;
-      width: 100%;
-      margin: auto;
-      left: 0px;
-      right: 0px;
-      padding: 50px;
-      padding-top: 0px;
-      background-color: transparent;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    // .Card {
-    //   width: 20%;
-    //   padding: 40px;
-    //   text-align: center;
-    //   font-weight: 700;
-    //   margin: 30px;
-    //   background-color: white;
-    //   box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
-    //   -webkit-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
-    //   -moz-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
-    //   transition-duration: 0.2s;
-   
-    //   border: 1px solid #df011f;
-    //   font-size: 22px;
-    //   cursor: pointer;
-
-   
-    // }
-    // .Card:hover {
-    //   background-image: linear-gradient(to right, #dfb401, #df011f);
-    //   color: white;
-    //   transition-duration: 0.4s;
-    // }
-    .rounded {
-      width: 60%;
-      border-radius: 0px;
-      border: 0px solid transparent;
-      border-left: 5px solid transparent;
-    }
-    .rounded:hover {
-      border-left: 5px solid #102563;
-    }
-
-
-
-    body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.container {
-	padding: 70px 0;
-}
-.card {
-    
-     width: 20%;
-  
-
- 
-	position: relative;
-	height: 170px;
-	// background: url("https://image.freepik.com/free-vector/colorful-gradient-liquid-shapes-background_23-2148250143.jpg"),
-		// #ffffff;
-    background: url("../../../../assets/images/afri3.png") ;
-    // background-color: #f2f2f2 !important;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-radius: 10px;
-	margin: 10px;
-	transition: 0.25s ease-in;
-    color: #000000 !important;
-}
-
-.card .overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	height: 170px;
-	background: linear-gradient(
-		120.55deg,
-		rgba(39, 39, 39, 0.38) 0%,
-		rgba(39, 39, 39, 0.2394) 100%
-	);
-	border-radius: 10px;
-}
-
-
-
-
-.card .content {
-	position: absolute;
-	bottom: 10px;
-	left: 25px;
-}
-
-.card .content h4 {
-	font-family: Ubuntu;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-	color: #f2f2f2;
-	margin-bottom: 10px;
-	margin-top: 0;
-}
-
-.card .content h6 {
-	font-family: Ubuntu;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	color: #f2f2f2;
-	margin-bottom: 10px;
-	margin-top: 0;
-}
-
-.card .fav {
-	position: absolute;
-	top: 25px;
-	right: 25px;
-	cursor: pointer;
-}
-
-.card .fav i {
-	color: white;
-}
-
-.card:hover {
-	transform: scale(1.10);
-}
-
-.card:hover {
-	background-position: top !important;
-}
-
-
-
-//////
-
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: orangered;
+  }
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: orangered;
+    padding: 10px;
+  }
+  .LanguageDesktopDiv {
+    display: block;
+    visibility: visible;
+  }
+  .LanguageDesktopDiv2 {
+    display: flex;
+    visibility: visible;
+    width: 100%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    padding: 50px;
+    padding-top: 0px;
+    background-color: transparent;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  
+  @import url(https://fonts.googleapis.com/css?family=Lato:300);
+  body {
+    background-color: #f1f1f1;
+    font-family: Lato;
+    font-weight: 300;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .badge {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: white;
+    color: white;
+
+    border-radius: 3rem; // As longe as this is bigger than the fontsize
+    text-align: center;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0.05rem 0.8rem 0.1rem;
+    line-height: inherit;
+  }
+  .badge--smaller {
+    font-size: 0.7rem;
+    padding: 0.09rem 0.4rem 0.15rem;
+  }
+  .badge--danger {
+    background-color: #df011f;
+  }
+
+  .card {
+    width: 350px;
+    height: 220px;
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+
+    margin: 15px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 0px 0px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.4s ease, top 0.4s ease, width 0.4s ease,
+      height 0.4s ease;
+
+    &:hover,
+    &.active {
+      box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.5);
+      top: -5px;
+    }
+    &.active {
+      width: 500px;
+      height: 600px;
+    }
+
+    .top-half {
+      width: 100%;
+      height: 150px;
+      background-color: transparent;
+      background-image: url("../../../../assets/images/afri3.png");
+      background-size: auto 130%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-left: 2px solid #df011f;
+      border-right: 2px solid #df011f;
+    }
+    .bottom-half {
+      margin-left: 5%;
+      margin-top: 12px;
+      width: 90%;
+      text-align: left !important;
+      .title {
+        font-size: 18px;
+        color: #555555;
+        margin-bottom: 2px;
+      }
+      .subtitle {
+        margin-top: 3px;
+        font-size: 12px;
+        color: #999999;
+        font-weight: 700;
+      }
+    }
+  }
+}

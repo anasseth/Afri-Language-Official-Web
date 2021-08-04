@@ -81,6 +81,17 @@ ion-input:-ms-input-placeholder {
 }
 
 @media screen and (min-width: 1000px) {
+
+  .UserLogo{
+    width: 110px;
+    height: 110px;
+    border-radius:50%;
+    background-color: orangered;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+  }
   .AfriLogoDiv {
     margin: auto;
     left: 0px;
@@ -104,7 +115,7 @@ ion-input:-ms-input-placeholder {
     display: flex !important;
     visibility: visible !important;
     width: 70% !important;
-    margin-top: 20px;
+    margin-top: 30px;
     justify-content: center;
     box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
     -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
@@ -130,11 +141,9 @@ ion-input:-ms-input-placeholder {
   .contentdesktop {
     width: 55%;
     margin-top: 5%;
-    //  padding-bottom               : 5%;
-    padding-top: 8.5% !important;
     padding-left: 7%;
     padding-right: 7%;
-    border: 1px solid rgb(252, 22, 52);
+    border: 2px solid rgb(252, 22, 52);
     padding-top: 5%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;

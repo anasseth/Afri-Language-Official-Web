@@ -12,18 +12,7 @@
 </ion-content>
  -->
 
-<section class="header HeaderBar hide">
-  <div class="LogoRound">
-    <ion-img
-      class="logoHeader"
-      src="assets/images/afriwhite-map.png"
-      style="margin-top: 0px"
-    >
-    </ion-img>
-  </div>
-</section>
-
-<section class="header loginmobiledisnone">
+<section class="header">
     <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
   </section>
 
@@ -213,7 +202,7 @@
         </ion-img> -->
       </div>
     </div>
-    <div class="contentdesktop">
+    <div class="contentdesktop scale-up-hor-left" *ngIf=" ( datas && edit == false ) || ( !datas && edit == true )">
       <div *ngIf="datas">
         <h5 text-center style="margin-top: 10px">Liste des abonnements</h5>
 

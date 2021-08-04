@@ -99,11 +99,34 @@ ion-input:-ms-input-placeholder {
 }
 
 @media screen and (min-width: 1000px) {
+
+  .UserLogo{
+    width: 55px;
+    height: 55px;
+    border-radius:50%;
+    background-color: rgb(85, 85, 85);
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+  }
+
+  .MainTitle{
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: orangered;
+    padding: 10px;
+    font-size: 22px;
+  }
+
   .AfriLogoDiv {
     margin: auto;
     left: 0px;
     right: 0px;
-    margin-top: 55%;
+    margin-top: 65%;
     padding-top: 35px;
     padding-left: 15px;
     text-align: center;

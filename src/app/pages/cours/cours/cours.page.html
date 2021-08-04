@@ -1,19 +1,14 @@
-<!--
-<ion-header>
-    <ion-toolbar color="primary">
-        <ion-title>Cours</ion-title>
-    </ion-toolbar>
-</ion-header>
--->
 
-<section class="header">
-    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-</section>
+  <section class="header">
+      <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+    </section>
+
 
 <ion-content>
+
     <div *ngIf="user">
-        <h5 text-center style="margin-top: 10px;">
-            Mes cours - <span style="color: #ff5e06;">{{ showName() }}</span>
+        <h5 text-center style="margin-top: 20px;">
+            <b class="MainTitle">Mes cours</b><span style="color: #ff5e06;"> {{ showName() }}</span>
         </h5>
 
         <div class="LanguageMobileDiv">
@@ -30,6 +25,8 @@
         </div>
 
     </div>
+
+
     <div *ngIf="!user" style="display: flex; justify-content: center; align-items: center;">
         <ion-spinner name="bubbles"></ion-spinner>
         <p>Chargement...</p>
@@ -39,42 +36,17 @@
     <div class="LanguageDesktopDiv">
         <div class="LanguageDesktopDiv2">
             <div *ngFor="let topic of topics |orderBy:'display_order' ; let index = index" class="card"
-                (click)="topicClick(topic,user,index,user.email)">
-                <div class="overlay"></div>
-                <div class="content">
-                    <h4> {{topic.name}}
-                    </h4>
-                    <h6 style="font-size: 12px;font-weight: 900;">Start Course</h6>
+            (click)="topicClick(topic,user,index,user.email)">
+                <div class="top-half">
                 </div>
-                <!-- {{topic.name}} -->
-            </div>
+                <div class="bottom-half">
+                  <div class="title"><b>{{topic.name}}</b></div>
+                  <div class="subtitle">
+                     <span class="badge badge--danger badge--smaller">Start Course</span>
+                  </div>
+                </div>
+              </div>
         </div>
-        <!-- <h5 text-center>Choisissez une langue</h5> -->
-        <!-- <div class="rounded" *ngFor="let langue of langues">
-              <ion-item lines="none" (click)="itemClick(langue)">
-                <ion-icon
-                  style="height: 13px; color: #ff5e06"
-                  slot="start"
-                  icon="assets/icon/arrow-point-to-right.svg"
-                ></ion-icon>
-                <ion-label> {{langue.name}} </ion-label>
-              </ion-item>
-            </div> -->
     </div>
-
-    <!-- <div class="container"> -->
-    <!-- <div class="row justify-content-center"> -->
-    <!-- <div class="col-lg-4 col-md-6 col-sm-12"> -->
-    <!-- <div class="card">
-        <div class="overlay"></div>
-        <div class="content">
-            <h4>UI DESIGN COURSE</h4>
-            <h6>3 Hrs | 13 Sections</h6>
-        </div>
-
-    </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
 
 </ion-content>
