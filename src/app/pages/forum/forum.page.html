@@ -26,7 +26,7 @@
             </ion-card-header>
 
             <ion-card-content>
-                <ion-item (click)="commentPost(data)" lines="none" *ngFor="let data of datas">
+                <ion-item (click)="commentPost(data)" *ngFor="let data of datas">
                     <ion-avatar slot="start">
                         <img src="https://picsum.photos/50/50" />
                     </ion-avatar>
@@ -48,8 +48,8 @@
                 <ion-card-header>
                     <div class="header1">
                         <!-- <ion-label>Tous les Themes</ion-label> -->
-                        
-                        <ion-button  color="primary" (click)="addPost()" size="medium">
+
+                        <ion-button color="primary" (click)="addPost()" size="medium">
                             Poser une question</ion-button>
                     </div>
                 </ion-card-header>
@@ -70,7 +70,7 @@
                         </div> -->
                         <div class="bg1">
                             <ion-icon name="chatbubbles" style="font-size: 25px;"></ion-icon>
-                        </div> 
+                        </div>
                     </ion-item>
                 </ion-card-content>
 

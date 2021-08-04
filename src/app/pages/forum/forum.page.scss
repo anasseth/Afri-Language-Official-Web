@@ -22,9 +22,13 @@ ion-icon {
     text-align: center;
     background-image: linear-gradient(to right, #dfb401, #df011f)
 }
+.LanguageDesktopDiv {
+    display   : none ;
+    visibility: hidden ;
+  }
 
 
-
+  
 @media screen and (min-width: 1000px) {
     .bg{
         background-color: white;
@@ -37,8 +41,8 @@ ion-icon {
         border-bottom-left-radius: 10px;        }
         .bg1{
             background-color: white;
-            padding-top: 18px;
-            padding-bottom: 18px;
+            padding-top: 19px;
+            padding-bottom: 19px;
             padding-left: 1%;
             padding-right: 1%;
             cursor: pointer;
@@ -46,10 +50,7 @@ ion-icon {
             border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
             }
-        .LanguageMobileDiv {
-            display   : none;
-            visibility: hidden;
-          }
+   
         
           h5 {
             font-size  : 20px !important;
@@ -85,5 +86,11 @@ ion-icon {
               margin-left: 83%;
             //   padding: 5%;
         
+            
 }
+.LanguageMobileDiv {
+    display   : none ;
+    visibility: hidden ;
+  }
 }
+
