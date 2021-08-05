@@ -11,26 +11,61 @@
 -->
 
 <ion-content fullscreen>
-    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
-        <div class="iconBack">
-            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
-        </div>
+  <section
+    (click)="dismissModal()"
+    style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px"
+    class="header"
+  >
+    <div class="iconBack">
+      <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
+    </div>
 
-        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-    </section>
+    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+  </section>
 
+  <h5 text-center style="margin-top: 20px" class="LanguageDesktopDiv">
+    <b class="MainTitle">leçons</b>
+  </h5>
+
+  <div class="LanguageMobileDiv">
     <div class="rounded" *ngFor="let lesson of lessons  ">
-        <div (click)="lessonClick(lesson)">
-            <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/online-course.svg"></ion-icon>
-            <ion-label class="label"> {{lesson.name}} </ion-label>
-        </div>
+      <div (click)="lessonClick(lesson)">
+        <ion-icon
+          style="height: 20px; color: #ff5e06"
+          slot="start"
+          icon="assets/icon/online-course.svg"
+        ></ion-icon>
+        <ion-label class="label"> {{lesson.name}} </ion-label>
+      </div>
     </div>
+  </div>
 
-    <div *ngIf="!lessons" style="display: flex; justify-content: center; align-items: center;">
-        <ion-spinner name="bubbles"></ion-spinner>
-        <p>Chargement...</p>
+  <div class="LanguageDesktopDiv">
+    <div class="LanguageDesktopDiv2">
+      <div
+        *ngFor="let lesson of lessons  "
+        class="card"
+        (click)="lessonClick(lesson)"
+      >
+        <div class="top-half"></div>
+        <div class="bottom-half">
+          <div class="title"><b>{{lesson.name}}</b></div>
+          <div class="subtitle">
+            <span class="badge badge--danger badge--smaller">Start Lesson</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--
+  </div>
+
+  <div
+    *ngIf="!lessons"
+    style="display: flex; justify-content: center; align-items: center"
+  >
+    <ion-spinner name="bubbles"></ion-spinner>
+    <p>Chargement...</p>
+  </div>
+  <!--
 
   <ion-card  *ngFor="let lesson of lessons"  >
     <ion-item lines="none" (click)="lessonClick(lesson)"  >

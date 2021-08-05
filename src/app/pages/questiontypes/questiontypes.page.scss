@@ -1,30 +1,75 @@
 .cercle {
-    color: #ff8c1d;
-    background-color: white;
-    position: relative;
-    border-radius: 100px;
-    height: 130px;
-    width: 130px;
-    bottom: -25%;
-    ion-icon {
-        fill: #ff8c1d;
-        position: absolute;
-        margin-top: 18px;
-        margin-left: 33px;
-        width: 60px;
-        height: 60px;
-    }
-    p {
-        position: absolute;
-        margin-top: 82px;
-    }
+  color: #ff8c1d;
+  background-color: white;
+  position: relative;
+  border-radius: 100px;
+  height: 130px;
+  width: 130px;
+  bottom: -25%;
+  ion-icon {
+    fill: #ff8c1d;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 33px;
+    width: 60px;
+    height: 60px;
+  }
+  p {
+    position: absolute;
+    margin-top: 82px;
+  }
 }
 
 .espace {
-    margin: 24px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
+  margin: 24px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+  .cercle {
+    width: 170px;
+    height: 170px;
+    box-shadow: 0px 10px 49px -20px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 49px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 49px -20px rgba(0, 0, 0, 0.75);
+    transition-duration: 0.3s;
+    ion-icon {
+      width: 90px;
+      height: 90px;
+      margin-top: 25px;
+      margin-left: 38px;
+    }
+    p {
+      position: absolute;
+      margin-top: 130px;
+    }
+  }
+  .cercle:hover {
+    box-shadow: 0px 10px 49px -20px rgba(253, 102, 2, 0.75);
+    -webkit-box-shadow: 0px 10px 49px -20px rgba(253, 102, 2, 0.75);
+    -moz-box-shadow: 0px 10px 49px -20px rgba(253, 102, 2, 0.75);
+    transition-duration: 0.3s;
+  }
+
+  .moveUp {
+    margin-top: -300px;
+  }
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
 }
