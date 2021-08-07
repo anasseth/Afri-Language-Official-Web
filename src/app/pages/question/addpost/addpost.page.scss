@@ -4,6 +4,21 @@
 }
 
 @media screen and (min-width: 1000px) {
+
+    .hide {
+        display: none;
+        visibility: hidden;
+      }
+     
+      .MainTitle {
+        margin-top: 10px;
+        width: auto;
+        height: auto;
+        color: white;
+        border-radius: 10px;
+        background-color: #df3d15;
+        padding: 10px;
+      }
     .bg {
         background-color            : white;
         padding-top                 : 10px !important;

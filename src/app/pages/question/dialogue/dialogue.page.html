@@ -8,7 +8,10 @@
     </section>
 
     <div class="content" *ngIf="data != undefined">
-        <h5 style="margin: 30px;" text-center>Ecoutez et completez ce dialogue</h5>
+        <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
+            <b class="MainTitle">Ecoutez et completez ce dialogue</b>
+          </h5>
+        <h5 style="margin: 30px;" class="hide" text-center>Ecoutez et completez ce dialogue</h5>
 
         <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
             <div class="dialogue">

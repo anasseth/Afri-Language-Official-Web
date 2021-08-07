@@ -12,7 +12,11 @@
 
 <ion-content>
     <div *ngIf="thematics">
-        <h5 style="margin-top: 10px;" text-center>Lexique thématique</h5>
+        <h5 style="margin-top: 10px;" class="hide" text-center>Lexique thématique</h5>
+
+        <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
+            <b class="MainTitle">Lexique thématique</b>
+          </h5>
 
         <ion-row class="cercles" style="margin-top: 15px;">
             <ion-col size="6" *ngFor="let thematic of thematics ">

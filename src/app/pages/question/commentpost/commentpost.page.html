@@ -1,65 +1,77 @@
 <ion-content fullscreen>
-    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
-        <div class="iconBack">
-            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
-        </div>
-
-        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-    </section>
-
-    <h5 style="margin-top: 10px;" text-center>Forum</h5>
-
-    <div *ngIf="user">
-        <ion-card>
-            <ion-card-header>
-                <ion-item>
-                    <ion-avatar slot="start">
-                        <img src="https://picsum.photos/50/50" />
-                    </ion-avatar>
-
-                    <ion-label>
-                        <h2 style="color: #ff8c1d;">
-                            {{user.user_name}}
-                        </h2>
-                    </ion-label>
-                </ion-item>
-            </ion-card-header>
-
-            <ion-card-content>
-                <ion-label>
-                    <h2 style="color: #ff8c1d;"><b>{{user.post_title}}</b></h2>
-                    <p>{{user.post_content}}</p>
-                </ion-label>
-            </ion-card-content>
-        </ion-card>
+  <section
+    (click)="dismissModal()"
+    style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px"
+    class="header"
+  >
+    <div class="iconBack">
+      <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
     </div>
 
-    <div *ngIf="datas">
-        <ion-card *ngFor="let data of datas">
-            <ion-card-header>
-                <ion-item>
-                    <ion-avatar slot="start">
-                        <img src="https://picsum.photos/50/50" />
-                    </ion-avatar>
+    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+  </section>
 
-                    <ion-label>
-                        <h2 style="color: #ff8c1d;"><b>{{ data.user_name }}</b></h2>
-                    </ion-label>
-                </ion-item>
-            </ion-card-header>
+  <h5 style="margin-top: 10px" class="hide" text-center>Forum</h5>
 
-            <ion-card-content>
-                <p>{{data.comments}}</p>
-            </ion-card-content>
-        </ion-card>
+  <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
+    <b class="MainTitle">Forum</b>
+  </h5>
+
+  <div *ngIf="user">
+    <ion-card class="commentPost">
+      <ion-card-header>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://picsum.photos/50/50" />
+          </ion-avatar>
+
+          <ion-label>
+            <h2 style="color: #ff8c1d">{{user.user_name}}</h2>
+          </ion-label>
+        </ion-item>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-label>
+          <h2 style="color: #ff8c1d"><b>{{user.post_title}}</b></h2>
+          <p>{{user.post_content}}</p>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="datas">
+    <ion-card *ngFor="let data of datas" class="commentsCard">
+      <ion-card-header>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="https://picsum.photos/50/50" />
+          </ion-avatar>
+
+          <ion-label>
+            <h2 style="color: #ff8c1d"><b>{{ data.user_name }}</b></h2>
+          </ion-label>
+        </ion-item>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>{{data.comments}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div style="margin: 100px auto"></div>
+  <div class="comment">
+    <textarea
+      name="comments"
+      [(ngModel)]="comments"
+      id=""
+      cols="30"
+      rows="7"
+    ></textarea>
+
+    <div class="send">
+      <ion-button (click)="comment()">Commenter</ion-button>
     </div>
-    <div style="margin: 100px auto;"></div>
-    <div class="comment">
-        <textarea name="comments" [(ngModel)]="comments" id="" cols="30" rows="7"></textarea>
-
-        <div class="send">
-            <ion-button (click)="comment()">Commenter</ion-button>
-        </div>
-    </div>
-    <div style="margin: 70px auto;"></div>
+  </div>
+  <div style="margin: 70px auto"></div>
 </ion-content>
