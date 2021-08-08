@@ -13,47 +13,71 @@
  -->
 
 <section class="header">
-    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+  <ion-img class="logoHeader" src="assets/images/afrilangues.png"> </ion-img>
 </section>
 
 <ion-content>
-    <!-- 
+  <!-- 
     <h5 text-center style="margin-top: 10px">About</h5> -->
 
-    <div class="rounded">
-        <div>
-            <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/001-smartphone.svg"></ion-icon>
-            <ion-label class="label">
-                Version <strong style="color: red;">1.0</strong>
-            </ion-label>
-        </div>
+  <div class="rounded">
+    <div>
+      <ion-icon
+        style="height: 20px; color: #000000"
+        slot="start"
+        icon="assets/icon/001-smartphone.svg"
+      ></ion-icon>
+      <ion-label class="label">
+        Version <strong style="color: red">1.0</strong>
+      </ion-label>
     </div>
+  </div>
 
-    <div class="rounded" *ngFor="let option of options ">
-        <div (click)="showInfo(option.url)">
-            <ion-icon style="height: 20px; color: #000000;" slot="start" [icon]="option.icon"></ion-icon>
-            <ion-label class="label"> {{option.name}} </ion-label>
-        </div>
+  <div class="rounded" *ngFor="let option of options ">
+    <div (click)="showInfo(option.url)">
+      <ion-icon
+        style="height: 20px; color: #000000"
+        slot="start"
+        [icon]="option.icon"
+      ></ion-icon>
+      <ion-label class="label"> {{option.name}} </ion-label>
     </div>
+  </div>
 
-    <div class="rounded">
-        <div (click)="share()">
-            <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/003-share.svg"></ion-icon>
-            <ion-label class="label"> Partager </ion-label>
-        </div>
+  <div class="rounded">
+    <div (click)="share()">
+      <ion-icon
+        style="height: 20px; color: #000000"
+        slot="start"
+        icon="assets/icon/003-share.svg"
+      ></ion-icon>
+      <ion-label class="label"> Partager </ion-label>
     </div>
-    <div class="rounded">
-        <div (click)="blankInfo('https://afrilangues.com/blog/')">
-            <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/005-writing.svg"></ion-icon>
-            <ion-label class="label"> Blog </ion-label>
-        </div>
+  </div>
+  <div class="rounded">
+    <div (click)="blankInfo('https://afrilangues.com/blog/')">
+      <ion-icon
+        style="height: 20px; color: #000000"
+        slot="start"
+        icon="assets/icon/005-writing.svg"
+      ></ion-icon>
+      <ion-label class="label"> Blog </ion-label>
     </div>
-    <div class="rounded">
-        <div (click)="blankInfo('https://afrilangues.com/boutique/')">
-            <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/004-shop.svg"></ion-icon>
-            <ion-label class="label"> Boutique </ion-label>
-        </div>
+  </div>
+  <div class="rounded">
+    <div (click)="blankInfo('https://afrilangues.com/boutique/')">
+      <ion-icon
+        style="height: 20px; color: #000000"
+        slot="start"
+        icon="assets/icon/004-shop.svg"
+      ></ion-icon>
+      <ion-label class="label"> Boutique </ion-label>
     </div>
+  </div>
 
-    <div *ngIf="data" style="margin-top: 20px; padding: 15px !important;" [innerHTML]="data.contents"></div>
+  <div
+    *ngIf="data"
+    style="margin-top: 20px; padding: 15px !important"
+    [innerHTML]="data.contents"
+  ></div>
 </ion-content>

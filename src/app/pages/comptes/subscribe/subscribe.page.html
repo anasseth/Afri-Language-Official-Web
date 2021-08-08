@@ -13,16 +13,20 @@
  -->
 
 <section class="header">
-    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+  <ion-img class="logoHeader" src="assets/images/afrilangues.png"> </ion-img>
 </section>
 
 <ion-content *ngIf="datas">
-    <h5 text-center style="margin-top: 10px;">Liste des abonnements</h5>
+  <h5 text-center style="margin-top: 10px">Liste des abonnements</h5>
 
-    <div class="rounded" *ngFor="let data of datas ">
-        <div (click)="showInfo(data)">
-            <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/information.svg"></ion-icon>
-            <ion-label class="label"> {{ showName(data.language_id) }} </ion-label>
-        </div>
+  <div class="rounded" *ngFor="let data of datas ">
+    <div (click)="showInfo(data)">
+      <ion-icon
+        style="height: 20px; color: #000000"
+        slot="start"
+        icon="assets/icon/information.svg"
+      ></ion-icon>
+      <ion-label class="label"> {{ showName(data.language_id) }} </ion-label>
     </div>
+  </div>
 </ion-content>

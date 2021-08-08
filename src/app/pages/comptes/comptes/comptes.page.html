@@ -7,31 +7,31 @@
 -->
 
 <section class="header">
-  <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+  <ion-img class="logoHeader" src="assets/images/afrilangues.png"> </ion-img>
 </section>
 
 <ion-content>
   <h5 text-center style="margin-top: 20px">
     <b class="MainTitle">Compte</b>
   </h5>
-<div class="DesktopDiv">
-  <div class="rounded" *ngFor="let option of options ">
-    <div routerLink="/tabs/tabs/{{option.url}}">
-      <ion-icon
-        style="height: 20px; color: #000000"
-        slot="start"
-        [icon]="option.icon"
-      ></ion-icon>
-      <ion-label class="label"> {{option.name}} </ion-label>
+  <div class="DesktopDiv">
+    <div class="rounded" *ngFor="let option of options ">
+      <div routerLink="/tabs/tabs/{{option.url}}">
+        <ion-icon
+          style="height: 20px; color: #000000"
+          slot="start"
+          [icon]="option.icon"
+        ></ion-icon>
+        <ion-label class="label"> {{option.name}} </ion-label>
+      </div>
+    </div>
+
+    <div class="btn" (click)="logout()">
+      <strong style="color: white; font-weight: 500; font-size: 17px">
+        Déconnexion
+      </strong>
     </div>
   </div>
-
-  <div class="btn" (click)="logout()">
-    <strong style="color: white; font-weight: 500; font-size: 17px">
-      Déconnexion
-    </strong>
-  </div>
-</div>
   <!--  <div class="btn" (click)="notification()">
         <strong style="color: white; font-weight: 500; font-size: 17px;">
       notification

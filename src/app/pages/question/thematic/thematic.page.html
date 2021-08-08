@@ -1,50 +1,60 @@
 <ion-content fullscreen>
-    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
-        <div class="iconBack">
-            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
-        </div>
-
-        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-    </section>
-
-    <h5 style="margin: 30px;" class="hide" text-center>Mots lexique thématique</h5>
-
-    <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
-        <b class="MainTitle">Mots lexique thématique</b>
-      </h5>
-
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="dismissModal()" style="height: 45; width: 45;">
-            <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
-        </ion-fab-button>
-    </ion-fab>
-
-    <div *ngFor="let data of datas">
-        <div class="card" *ngIf="data.section1">
-            <div class="leftCard">
-                {{data.section1}}
-            </div>
-
-            <div class="rightCard">
-                {{data.section2}}
-            </div>
-        </div>
-        <div class="middles" *ngIf="data.section1">
-            <div class="middle" (click)="startAudio(data.audio)">
-                <ion-icon class="iconElement" icon="assets/icon/play-button.svg"></ion-icon>
-            </div>
-        </div>
-
-        <div class="rounded" *ngIf="!data.section1">
-            <div (click)="subThematicClick(data)">
-                <ion-icon style="height: 20px; color: #ff5e06;" slot="start" icon="assets/icon/online-course.svg"></ion-icon>
-
-                <ion-label class="label"> {{data.topic_name}} </ion-label>
-            </div>
-        </div>
+  <section
+    (click)="dismissModal()"
+    style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px"
+    class="header"
+  >
+    <div class="iconBack">
+      <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
     </div>
 
-    <!-- <div class="rounded" *ngFor="let topic of topics | reverse ">
+    <ion-img class="logoHeader" src="assets/images/afrilangues.png"> </ion-img>
+  </section>
+
+  <h5 style="margin: 30px" class="hide" text-center>Mots lexique thématique</h5>
+
+  <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
+    <b class="MainTitle">Mots lexique thématique</b>
+  </h5>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="dismissModal()" style="height: 45; width: 45">
+      <ion-icon
+        md="caret-forward"
+        ios="chevron-forward-circle-outline"
+      ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div *ngFor="let data of datas">
+    <div class="card" *ngIf="data.section1">
+      <div class="leftCard">{{data.section1}}</div>
+
+      <div class="rightCard">{{data.section2}}</div>
+    </div>
+    <div class="middles" *ngIf="data.section1">
+      <div class="middle" (click)="startAudio(data.audio)">
+        <ion-icon
+          class="iconElement"
+          icon="assets/icon/play-button.svg"
+        ></ion-icon>
+      </div>
+    </div>
+
+    <div class="rounded" *ngIf="!data.section1">
+      <div (click)="subThematicClick(data)">
+        <ion-icon
+          style="height: 20px; color: #ff5e06"
+          slot="start"
+          icon="assets/icon/online-course.svg"
+        ></ion-icon>
+
+        <ion-label class="label"> {{data.topic_name}} </ion-label>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="rounded" *ngFor="let topic of topics | reverse ">
     <div   (click)="topicClick(topic)" >
       <ion-icon style="height: 20px; color:#ff5e06" slot="start" icon="assets/icon/online-course.svg" ></ion-icon>
       <ion-label class="label" > {{topic.name}}

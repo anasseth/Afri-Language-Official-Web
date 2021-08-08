@@ -1,122 +1,171 @@
 <ion-content fullscreen>
-    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
-        <div class="iconBack">
-            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
+  <section
+    (click)="dismissModal()"
+    style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px"
+    class="header"
+  >
+    <div class="iconBack">
+      <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
+    </div>
+
+    <ion-img class="logoHeader" src="assets/images/afrilangues.png"> </ion-img>
+  </section>
+
+  <div class="content" *ngIf="data != undefined">
+    <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
+      <b class="MainTitle">Ecoutez et completez ce dialogue</b>
+    </h5>
+    <h5 style="margin: 30px" class="hide" text-center>
+      Ecoutez et completez ce dialogue
+    </h5>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <div class="dialogue">
+        <div class="middles">
+          <div class="middle" (click)="startAudio(data)">
+            <ion-icon
+              class="iconElement"
+              icon="assets/icon/volume.svg"
+            ></ion-icon>
+          </div>
+        </div>
+        <div class="topDialogue">
+          <div
+            cdkDropList
+            #secondList="cdkDropList"
+            [cdkDropListData]="saisieData"
+            [cdkDropListConnectedTo]="[firstList]"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <div
+              class="rounded"
+              *ngFor=" let data of question_data ; let name of resultats ; let index = index; "
+            >
+              <div *ngIf="index % 2 == 0">
+                <div class="name">
+                  <span *ngIf="data.person1 != undefined" style="float: left">
+                    <ion-icon name="person"></ion-icon>
+                  </span>
+                  <span *ngIf="data.person1 == undefined" style="float: right">
+                    <ion-icon name="person"></ion-icon>
+                  </span>
+                </div>
+
+                <div class="sentenses">
+                  <!-- <span class="tag"> {{data.person2.split('[tag]').pop().split('[/tag]')[0]  }}</span>-->
+
+                  <p
+                    *ngIf="data.person1 != undefined"
+                    [innerHTML]="onResultats(data.person1,index,'tag') | safeHtml"
+                  ></p>
+
+                  <p
+                    *ngIf="data.person1 == undefined"
+                    [innerHTML]="onResultats(data.person2,index,'tag') | safeHtml"
+                  ></p>
+                </div>
+              </div>
+
+              <div *ngIf="index % 2 != 0">
+                <div class="name">
+                  <span *ngIf="data.person2 != undefined" style="float: right">
+                    <ion-icon name="person"></ion-icon>
+                  </span>
+                  <span *ngIf="data.person2 == undefined" style="float: left">
+                    <ion-icon name="person"></ion-icon>
+                  </span>
+                </div>
+
+                <div class="sentenses">
+                  <!-- <span class="tag"> {{data.person2.split('[tag]').pop().split('[/tag]')[0]  }}</span>-->
+
+                  <p
+                    *ngIf="data.person2 != undefined"
+                    [innerHTML]="onResultats(data.person2,index,'tag') | safeHtml"
+                  ></p>
+
+                  <p
+                    *ngIf="data.person2 == undefined"
+                    [innerHTML]="onResultats(data.person1,index,'tag') | safeHtml"
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-    </section>
+        <div
+          class="chooseParent"
+          cdkDropList
+          #firstList="cdkDropList"
+          [cdkDropListData]="onDatas"
+          [cdkDropListConnectedTo]="[secondList]"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <p style="margin: 0px; font-size: 16px" text-center>
+            Compléter avec ces mots :
+          </p>
 
-    <div class="content" *ngIf="data != undefined">
-        <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
-            <b class="MainTitle">Ecoutez et completez ce dialogue</b>
-          </h5>
-        <h5 style="margin: 30px;" class="hide" text-center>Ecoutez et completez ce dialogue</h5>
-
-        <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-            <div class="dialogue">
-                <div class="middles">
-                    <div class="middle" (click)="startAudio(data)">
-                        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
-                    </div>
-                </div>
-                <div class="topDialogue">
-                    <div cdkDropList #secondList="cdkDropList" [cdkDropListData]="saisieData" [cdkDropListConnectedTo]="[firstList]" (cdkDropListDropped)="drop($event)">
-                        <div class="rounded" *ngFor=" let data of question_data ; let name of resultats ; let index = index; ">
-                            <div *ngIf="index % 2 == 0">
-                                <div class="name">
-                                    <span *ngIf="data.person1 != undefined" style="float: left;">
-                    <ion-icon name="person"></ion-icon>
-                  </span>
-                                    <span *ngIf="data.person1 == undefined" style="float: right;">
-                    <ion-icon name="person"></ion-icon>
-                  </span>
-                                </div>
-
-                                <div class="sentenses">
-                                    <!-- <span class="tag"> {{data.person2.split('[tag]').pop().split('[/tag]')[0]  }}</span>-->
-
-                                    <p *ngIf="data.person1 != undefined" [innerHTML]="onResultats(data.person1,index,'tag') | safeHtml"></p>
-
-                                    <p *ngIf="data.person1 == undefined" [innerHTML]="onResultats(data.person2,index,'tag') | safeHtml"></p>
-                                </div>
-                            </div>
-
-                            <div *ngIf="index % 2 != 0">
-                                <div class="name">
-                                    <span *ngIf="data.person2 != undefined" style="float: right;">
-                    <ion-icon name="person"></ion-icon>
-                  </span>
-                                    <span *ngIf="data.person2 == undefined" style="float: left;">
-                    <ion-icon name="person"></ion-icon>
-                  </span>
-                                </div>
-
-                                <div class="sentenses">
-                                    <!-- <span class="tag"> {{data.person2.split('[tag]').pop().split('[/tag]')[0]  }}</span>-->
-
-                                    <p *ngIf="data.person2 != undefined" [innerHTML]="onResultats(data.person2,index,'tag') | safeHtml"></p>
-
-                                    <p *ngIf="data.person2 == undefined" [innerHTML]="onResultats(data.person1,index,'tag') | safeHtml"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="chooseParent" cdkDropList #firstList="cdkDropList" [cdkDropListData]="onDatas" [cdkDropListConnectedTo]="[secondList]" (cdkDropListDropped)="drop($event)">
-                    <p style="margin: 0px; font-size: 16px;" text-center>
-                        Compléter avec ces mots :
-                    </p>
-
-                    <span *ngIf="cible < 100">
+          <span *ngIf="cible < 100">
             <span
               class="choose"
               *ngFor="let result of  onDatas | shuffle let index = index; "
             >
               <span (click)="onTap(result,index)"> {{result}}</span>
-                    </span>
-                    </span>
+            </span>
+          </span>
 
-                    <div *ngIf="cible == 100" class="btn" (click)="reset()">
-                        <strong style="color: white; font-weight: 500; font-size: 17px;">
+          <div *ngIf="cible == 100" class="btn" (click)="reset()">
+            <strong style="color: white; font-weight: 500; font-size: 17px">
               Renitialiser
             </strong>
-                    </div>
+          </div>
 
-                    <!--    <span >
+          <!--    <span >
                      <ion-button class="buttons" color="light" style="width: 90%; margin-left: 5%"  type="submit" size="default"
                                  expand="block">
             Rénitialiser
         </ion-button>
                 </span> -->
-                </div>
-            </div>
-        </form>
-        <div class="section" *ngIf="datas.length != 0">
-            <div class="prev" [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} " (click)="prev()">
-                <p>Préc</p>
-            </div>
-
-            <div class="next" [ngStyle]="{'opacity' : index  != tailles ? '1' : '0'} " (click)="next()">
-                <p>Suiv</p>
-            </div>
         </div>
+      </div>
+    </form>
+    <div class="section" *ngIf="datas.length != 0">
+      <div
+        class="prev"
+        [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
+        (click)="prev()"
+      >
+        <p>Préc</p>
+      </div>
 
-        <div style="display: flex; align-items: center; justify-content: center;">
-            <button class="btnver" (click)="check()" *ngIf="data.content_type != 'repeat' && data.content_type != undefined  && data.content_type != 'textarea'  && data.content_type != 'youtube'  ">
-        <strong style="font-size: 17px; color: white;"> Vérifier</strong>
+      <div
+        class="next"
+        [ngStyle]="{'opacity' : index  != tailles ? '1' : '0'} "
+        (click)="next()"
+      >
+        <p>Suiv</p>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: center">
+      <button
+        class="btnver"
+        (click)="check()"
+        *ngIf="data.content_type != 'repeat' && data.content_type != undefined  && data.content_type != 'textarea'  && data.content_type != 'youtube'  "
+      >
+        <strong style="font-size: 17px; color: white"> Vérifier</strong>
       </button>
-        </div>
+    </div>
 
-        <!--   <div style="margin: 20px auto;">
+    <!--   <div style="margin: 20px auto;">
             <ion-button class="buttons" style="width: 90%; margin-left: 5%" (click)="check()" type="submit" size="default" expand="block">
                 Vérifier
             </ion-button>
         </div>
  -->
-    </div>
-    <div class="content" *ngIf="data == undefined">
-        <h2 style="margin: 30px;" text-center>Fin ...</h2>
-    </div>
+  </div>
+  <div class="content" *ngIf="data == undefined">
+    <h2 style="margin: 30px" text-center>Fin ...</h2>
+  </div>
 </ion-content>

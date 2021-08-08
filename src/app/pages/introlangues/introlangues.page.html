@@ -11,12 +11,12 @@
     </ion-toolbar>
 </ion-header>
 -->
-<section class="header  desktopheader LanguageDesktopDiv">
-    <h5  text-center style="margin-top: 10px" >Choisissez une langue</h5>
+<section class="header desktopheader LanguageDesktopDiv">
+  <h5 text-center style="margin-top: 10px">Choisissez une langue</h5>
 </section>
 
 <section class="header LanguageMobileDiv">
-  <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+  <ion-img class="logoHeader" src="assets/images/afrilangues.png"> </ion-img>
 </section>
 <ion-content>
   <div class="LanguageMobileDiv">
@@ -35,7 +35,13 @@
 
   <div class="LanguageDesktopDiv">
     <div class="LanguageDesktopDiv2">
-      <div *ngFor="let langue of langues" class="Card" (click)="itemClick(langue)" >{{langue.name}}</div>
+      <div
+        *ngFor="let langue of langues"
+        class="Card"
+        (click)="itemClick(langue)"
+      >
+        {{langue.name}}
+      </div>
     </div>
     <!-- <h5 text-center>Choisissez une langue</h5> -->
     <!-- <div class="rounded" *ngFor="let langue of langues">
