@@ -88,7 +88,7 @@
       </div>
 
       <div class="card-container">
-        <div class="front">
+        <div class="front" (mouseenter)="startAudio(data)">
           <br />
           <br />
           <h1
@@ -106,11 +106,11 @@
           </h4>
           <br />
           <h5 style="color: gray; font-size: 14px">
-            Hover Over The Card To Flip It
+            Tournez la carte écouter l'audio
           </h5>
         </div>
         <div class="back">
-          <div class="playAudio" (click)="startAudio(data)">
+          <div class="playAudio">
             <div class="play" (click)="startAudio(data)">
               <ion-icon class="ico" icon="assets/icon/volume.svg"></ion-icon>
             </div>
@@ -1013,7 +1013,7 @@
  -->
 
     <div
-    class="hide"
+      class="hide"
       style="margin: 60px auto"
       *ngIf="data.content_type != 'repeat' && data.content_type != undefined  && data.content_type != 'textarea'  && data.content_type != 'youtube'  "
     >

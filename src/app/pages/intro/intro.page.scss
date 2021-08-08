@@ -1,147 +1,146 @@
 * {
-    margin : 0 auto;
-    padding: 0 10px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .logoAf {
-    margin-top: 43px;
-    height    : 90px;
+  margin-top: 43px;
+  height: 90px;
 }
 
 .logo {
-    margin-bottom: 10px;
-    height       : 300px;
+  margin-bottom: 10px;
+  height: 300px;
 }
 
 .rounded {
-    border               : 2px solid #ccc;
-    -moz-border-radius   : 25px;
-    -webkit-border-radius: 25px;
-    border-radius        : 25px;
-    margin-top           : 30px;
-    height               : 40px;
-    width                : 90%;
-    font-size            : 15px;
-    padding              : 5px 17px;
-    outline              : 0;
-    -webkit-appearance   : none;
+  border: 2px solid #ccc;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  margin-top: 30px;
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+  padding: 5px 17px;
+  outline: 0;
+  -webkit-appearance: none;
 }
 
 ion-input,
 ion-input:-moz-placeholder,
 ion-input::-webkit-input-placeholder,
 ion-input:-ms-input-placeholder {
-    font-size  : 15px;
-    line-height: 1.5em;
+  font-size: 15px;
+  line-height: 1.5em;
 }
 
 .buttons {
-    --border-radius: 8px;
-    margin         : 30px 0;
+  --border-radius: 8px;
+  margin: 30px 0;
 }
 
 .but {
-    height         : 30px;
-    --border-radius: 30px;
-    margin-top     : 15px;
+  height: 30px;
+  --border-radius: 30px;
+  margin-top: 15px;
 }
 
 .btn {
-    margin          : 20px auto;
-    /* height       : 30px; */
-    width           : 90%;
-    padding         : 6px;
-    border-radius   : 8px;
-    line-height     : 30px;
-    color           : white;
-    text-align      : center;
-    background-image: linear-gradient(to right, #dfb401, #df011f)
+  margin: 20px auto;
+  /* height       : 30px; */
+  width: 90%;
+  padding: 6px;
+  border-radius: 8px;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to right, #dfb401, #df011f);
 }
 
 .LoginDesktopDiv {
-    display   : none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
 @media screen and (min-width: 1000px) {
-    .LoginDesktopDiv {
-        display              : flex !important;
-        // border    : 2px solid black;
-        visibility           : visible !important;
-        width                : 70% !important;
-        margin-top           : 20px;
-        box-shadow: -4px 71px 49px -58px rgba(252, 22, 52,0.3);
-        -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52,0.3);
-        -moz-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52,0.3);
-    }
+  .MainLogo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding-left: 25px;
+    background-color: white;
+  }
+  .LoginDesktopDiv {
+    display: flex !important;
+    // border    : 2px solid black;
+    visibility: visible !important;
+    width: 70% !important;
+    margin-top: 20px;
+    box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -moz-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+  }
 
-    .contentdesktop {
-        margin-top : 5%;
-        border     : 2px solid rgb(252, 22, 52);
-        padding-top: 15%;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+  .contentdesktop {
+    margin-top: 5%;
+    border: 2px solid rgb(252, 22, 52);
+    padding-top: 15%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 
+  .imgdesktop {
+    margin-top: 5%;
+    background-image: linear-gradient(to right, #f7cf30, #fc1634);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 
+  .logoAfdesk {
+    height: 140px;
+  }
 
-    }
+  .intromobiledisnone {
+    display: none !important;
+  }
 
-    .imgdesktop {
-        margin-top      : 5%;
-        background-image: linear-gradient(to right, #f7cf30, #fc1634);
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+  h5 {
+    font-weight: bold;
+    font-size: 30px;
+  }
 
-    }
-
-    .logoAfdesk {
-        height: 140px;
-    }
-
-    .intromobiledisnone {
-        display: none !important;
-    }
-
-    h5 {
-        font-weight: bold;
-        font-size  : 30px;
-    }
-
-    .logindesktop{
-        border: 1px solid #dfb401;
-        padding: 1%;
-        margin-left: 20% !important;
-        border-radius: 5px;
-        cursor: pointer;
-        padding-left: 2%;
-        padding-right: 2%;
-        // font-size: 12px;
-
-
-    }
-    .logindesktop:hover{
-        border: 1px solid #dfb401;
-        background-image: linear-gradient(to right, #dfb401, #df011f);
-        color: white !important;
-        // transition-duration: 1s !important;
-        cursor: pointer;
-    }
-    .desktopUIBTN {
-        margin          : 20px auto;
-        /* height       : 30px; */
-        width           : 90%;
-        padding         : 6px;
-        border-radius   : 8px;
-        line-height     : 30px;
-        color           : white;
-        text-align      : center;
-        background-image: linear-gradient(to right, #dfb401, #df011f);
-        // display: flex !important;
-        //  align-items: center !important;
-        justify-content : center !important;
-        margin-left     : 15% !important;
-        margin-right    : 15% !important;
-
-    }
-
+  .logindesktop {
+    border: 1px solid #dfb401;
+    padding: 1%;
+    margin-left: 20% !important;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 2%;
+    padding-right: 2%;
+    // font-size: 12px;
+  }
+  .logindesktop:hover {
+    border: 1px solid #dfb401;
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+    color: white !important;
+    // transition-duration: 1s !important;
+    cursor: pointer;
+  }
+  .desktopUIBTN {
+    margin: 20px auto;
+    /* height       : 30px; */
+    width: 90%;
+    padding: 6px;
+    border-radius: 8px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+    // display: flex !important;
+    //  align-items: center !important;
+    justify-content: center !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+  }
 }
