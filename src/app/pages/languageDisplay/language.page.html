@@ -1,0 +1,57 @@
+<ion-content text-left>
+  <div class="LoginDesktopDiv">
+    <div class="h-100 container" *ngFor="let i of this.usersData2">
+      <div class="card mobile-card">
+        <section class="onboarding">
+          <main class="onboarding-slides">
+            <div class="onboarding-slide">
+              <img
+                class="onboarding-illustration"
+                src="https://thumbs.dreamstime.com/b/caucasian-couple-two-men-talking-sitting-sofa-argue-fight-angry-conversation-flat-style-stock-vector-illustration-163057073.jpg"
+                alt=""
+              />
+              <h2 class="onboarding-title">{{i.name}}</h2>
+              <p class="onboarding-subtitle">{{i.total_users}} User</p>
+            </div>
+          </main>
+        </section>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<!--  <ion-button class="buttons" style="width: 90%; margin-left: 5%" type="submit" size="default" expand="block">
+          
+        </ion-button> -->
+
+<!-- <div class="ouModif">
+    <p><span>Ou</span></p>
+  </div> -->
+
+<!-- <form>
+    <ion-button
+      style="width: 90%; margin: 5%"
+      class="buttons"
+      type="submit"
+      color="secondary"
+      size="default"
+      expand="block"
+    >
+      <ion-label>
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+        Continuer avec Facebook
+      </ion-label>
+    </ion-button>
+    <ion-button
+      style="width: 90%; margin-top: -8px ;  margin-left: 5%"
+      class="buttons"
+      type="submit"
+      color="danger"
+      size="default"
+      expand="block"
+    >
+      <ion-label>
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+        Continuer avec Google
+      </ion-label>
+    </ion-button>
+  </form> -->

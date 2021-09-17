@@ -894,15 +894,15 @@
     overflow: hidden;
     transition: transform 0.8s ease;
   }
-  .back {
-    transform: rotateY(180deg);
-  }
-  .card-container:hover .front {
-    transform: rotateY(-180deg);
-  }
-  .card-container:hover .back {
-    transform: rotateY(0deg);
-  }
+  // .back {
+  //   transform: rotateY(180deg);
+  // }
+  // .card-container:hover .front {
+  //   transform: rotateY(-180deg);
+  // }
+  // .card-container:hover .back {
+  //   transform: rotateY(0deg);
+  // }
 
   .card-container,
   .card-container-quiz {

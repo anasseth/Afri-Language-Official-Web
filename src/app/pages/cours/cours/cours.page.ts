@@ -51,7 +51,7 @@ export class CoursPage implements OnInit {
     //this.afriService.showHelp();
     //this.onGetProfile();
     this.onGetTopics();
-
+    this.onGetLangues();
     this.afriService.showNotification();
   }
 
@@ -178,5 +178,56 @@ export class CoursPage implements OnInit {
                        });
                        return await modal.present();
                    }*/
+  }
+
+
+  langues;
+  user2;
+
+  onGetProfile2() {
+    this.afriService.getProfile().subscribe(
+      data => {
+        this.user2 = data['success'];
+
+        console.log('user ', this.user2);
+
+      }
+    );
+  }
+
+  currentLangue
+  onLanguage() {
+
+    for (let i = 0; i < this.langues.length; i++) {
+      if (this.langues[i].id == this.afriService.language_id) {
+        this.currentLangue = this.langues[i]
+      }
+    }
+
+  }
+
+  onGetLangues() {
+
+    this.afriService.getLangues()
+
+      .subscribe(
+        data => {
+
+          this.langues = data;
+          this.onLanguage();
+        }, error => console.log(error)
+      );
+
+  }
+
+  servLanguage
+
+  itemClick(langue: any) {
+
+    this.afriService.language_id = langue.id
+    this.servLanguage = this.afriService.language_id
+    this.ngOnInit()
+
+
   }
 }

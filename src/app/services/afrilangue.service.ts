@@ -54,14 +54,12 @@ export class AfrilangueService {
 
   showHelp() {
     this.helpShow = true;
-
     localStorage.setItem("help", this.helpShow);
   }
 
   loadHelp() {
     this.helpShow = localStorage.getItem("help");
     let etats;
-
     if (this.helpShow == null) {
       etats = "/tabs/tabs/help";
       console.log(etats);
@@ -101,6 +99,23 @@ export class AfrilangueService {
       email: email,
       password: password,
     });
+  }
+
+  public forgotPassword(email) {
+    return this.http.post("https://www.afrilangues.com/api/resetpassword", {
+      email: email
+    });
+  }
+
+  public changePassword(passObject) {
+    return this.http.post("https://www.afrilangues.com/api/change_password",
+      passObject
+    );
+  }
+  public getLanguageData() {
+    return this.http.post("https://www.afrilangues.com/api/languages",
+      null
+    );
   }
 
   public getProfile() {

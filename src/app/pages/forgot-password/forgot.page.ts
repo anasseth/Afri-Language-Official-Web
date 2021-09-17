@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AfrilangueService } from "../../services/afrilangue.service";
 import { Router } from "@angular/router";
-
 import { finalize } from "rxjs/operators";
 import { from } from "rxjs";
 import { LoadingController } from "@ionic/angular";
@@ -9,10 +8,10 @@ import { AlertController } from "@ionic/angular";
 
 @Component({
   selector: "app-login",
-  templateUrl: "./login.page.html",
-  styleUrls: ["./login.page.scss"],
+  templateUrl: "./forgot.page.html",
+  styleUrls: ["./forgot.page.scss"],
 })
-export class LoginPage implements OnInit {
+export class ForgotPasswordPage implements OnInit {
   email: string;
   password: string;
 
@@ -41,25 +40,19 @@ export class LoginPage implements OnInit {
 
     await alert.present();
   }
-
   onSubmit(user) {
-    if (user.email == undefined || user.password == undefined) {
+    if (user.email == undefined) {
       this.wrongAlert("Tous les champs doivent être remplis");
-    } else if (user.password.toString().length < 5) {
-      this.wrongAlert("Ce champ requiert 5 caractères minimum");
-    } else {
+    }
+    else {
       this.afriService
-        .login(user.email, user.password)
-
+        .forgotPassword(user.email)
         .subscribe(
           (data) => {
-            this.afriService.myToken = data["success"].token;
-            this.afriService.saveToken();
-            localStorage.setItem("userDetails", JSON.stringify(user))
-            this.afriService.loadHelp();
-
-            this.router.navigateByUrl(this.afriService.loadHelp());
-            // this.router.navigateByUrl('/tabs/tabs/cours');
+            // this.afriService.myToken = data["success"].token;
+            // this.router.navigateByUrl(this.afriService.loadHelp());
+            alert("Un e-mail vous a été envoyé, veuillez réinitialiser le mot de passe en utilisant le lien fourni dans l'e-mail.")
+            this.router.navigate(["/login"])
           },
           (error) => {
             console.log(error);

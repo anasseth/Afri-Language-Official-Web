@@ -20,7 +20,8 @@
       <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
     </div>
 
-    <ion-img class="logoHeader" src="assets/images/afrilangues.png"> </ion-img>
+    <ion-img class="logoHeader" src="assets/images/afriwhite-map.png">
+    </ion-img>
   </section>
   <div
     *ngIf="!data"
@@ -88,9 +89,16 @@
       </div>
 
       <div class="card-container">
-        <div class="front" (mouseenter)="startAudio(data)">
+        <div class="front">
           <br />
-          <br />
+          <div class="playAudioQuiz">
+            <div class="playQuiz" (click)="startAudio(data)">
+              <ion-icon
+                class="icoQuiz"
+                icon="assets/icon/volume.svg"
+              ></ion-icon>
+            </div>
+          </div>
           <h1
             text-center
             style="margin-top: 20px; margin-bottom: 20px; text-transform: none"
@@ -109,13 +117,13 @@
             Tournez la carte écouter l'audio
           </h5>
         </div>
-        <div class="back">
+        <!-- <div class="back">
           <div class="playAudio">
             <div class="play" (click)="startAudio(data)">
               <ion-icon class="ico" icon="assets/icon/volume.svg"></ion-icon>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div
@@ -430,14 +438,14 @@
 
       <div class="card-container-quiz">
         <div class="QuizFront">
-          <div class="playAudioQuiz">
+          <!-- <div class="playAudioQuiz">
             <div class="playQuiz" (click)="startAudio(data)">
               <ion-icon
                 class="icoQuiz"
                 icon="assets/icon/volume.svg"
               ></ion-icon>
             </div>
-          </div>
+          </div> -->
 
           <div class="MatchTheColumn">
             <div class="ColumnOne">

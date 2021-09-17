@@ -4,7 +4,18 @@ import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 const routes: Routes = [
   { path: "", redirectTo: "intro", pathMatch: "full" },
 
-  { path: "login", loadChildren: "./pages/login/login.module#LoginPageModule" },
+  {
+    path: "login",
+    loadChildren: "./pages/login/login.module#LoginPageModule"
+  },
+  {
+    path: "forgotpassword",
+    loadChildren: "./pages/forgot-password/forgot.module#ForgotPasswordPageModule"
+  },
+  {
+    path: "languagedisplay",
+    loadChildren: "./pages/languageDisplay/language.module#LanguageDisplayModule"
+  },
   {
     path: "register",
     loadChildren: "./pages/register/register.module#RegisterPageModule",
@@ -49,8 +60,7 @@ const routes: Routes = [
   },
   {
     path: "introlangues",
-    loadChildren:
-      "./pages/introlangues/introlangues.module#IntrolanguesPageModule",
+    loadChildren: "./pages/introlangues/introlangues.module#IntrolanguesPageModule",
   },
 
   {
@@ -118,4 +128,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

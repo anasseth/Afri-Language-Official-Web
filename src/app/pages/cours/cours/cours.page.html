@@ -1,12 +1,29 @@
 <section class="header">
-  <ion-img class="logoHeader" src="assets/images/afrilangues.png"> </ion-img>
+  <ion-img class="logoHeader" src="assets/images/afriwhite-map.png"> </ion-img>
 </section>
 
 <ion-content>
   <div *ngIf="user">
     <h5 text-center style="margin-top: 20px">
-      <b class="MainTitle">Mes cours</b
-      ><span style="color: #ff5e06"> {{ showName() }}</span>
+      <!-- <b class="MainTitle">Mes cours</b> -->
+
+      <div class="popover__wrapper">
+        <button>
+          <h5><b class="MainTitle">{{ showName() }}</b></h5>
+        </button>
+        <div class="popover__content">
+          <div *ngFor="let langue of langues" routerLink="/tabs/tabs/cours">
+            <div>
+              <b class="MainTitle MenuButton" (click)="itemClick(langue)"
+                >{{langue.name}}</b
+              >
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <span style="color: #ff5e06"> Mes cours</span>
     </h5>
 
     <div class="LanguageMobileDiv">

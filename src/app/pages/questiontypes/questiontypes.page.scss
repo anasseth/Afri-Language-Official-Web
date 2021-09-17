@@ -30,6 +30,9 @@
 }
 
 @media screen and (min-width: 1000px) {
+  .espace {
+    justify-content: space-evenly;
+  }
   .hide {
     display: none;
     visibility: hidden;
@@ -71,5 +74,8 @@
     background-color: #df3d15;
     padding: 10px;
     margin-bottom: 30px;
+  }
+  .moveInCenter {
+    margin-top: 10%;
   }
 }
