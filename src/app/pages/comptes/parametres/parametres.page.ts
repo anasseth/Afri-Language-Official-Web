@@ -16,6 +16,7 @@ export class ParametresPage implements OnInit {
   passwordConfirm: any;
   adresse: any;
   telephone: any;
+  description: any;
 
   language: number;
   constructor(
@@ -130,6 +131,7 @@ export class ParametresPage implements OnInit {
 
   onEdit() {
     this.datas = undefined;
+    console.log(this.user)
 
     if (this.edit == false) {
       this.edit = true;
@@ -138,6 +140,7 @@ export class ParametresPage implements OnInit {
       this.email = this.user.email;
       this.telephone = this.user.phone_number;
       this.adresse = this.user.location;
+      this.description = this.user.description
     } else {
       this.edit = false;
     }
@@ -164,5 +167,27 @@ export class ParametresPage implements OnInit {
         console.log(data);
       });
     }
+
+    if (
+      user.password == undefined
+    ) {
+      this.wrongAlert("Tous les champs doivent être remplis");
+    } else if (
+      user.password.toString().length < 5
+    ) {
+      this.wrongAlert("Ce champ requiert 5 caractères minimum");
+    } else {
+      console.log("succes");
+      let object = {
+        old_password: JSON.parse(localStorage.getItem("userDetails")).password,
+        new_password: user.password,
+        confirm_password: user.password
+      }
+      console.log(object)
+      // this.afriService.changePassword(object).subscribe((data) => {
+      //   console.log(data);
+      // });
+    }
   }
 }
+

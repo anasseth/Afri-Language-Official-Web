@@ -13,14 +13,17 @@
  -->
 
 <section class="header">
-    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
+  <ion-img class="logoHeader" src="assets/images/afriwhite-map.png"> </ion-img>
 </section>
 
 <ion-content>
-    <!-- 
+  <!-- 
   <h5 text-center style="margin-top: 10px">About</h5> -->
-<div class="HelpDiv">
-  <div *ngIf="data" style="margin-top: 20px; padding: 15px !important;" [innerHTML]="data.contents"></div>
-</div>
-    
+  <div class="HelpDiv">
+    <div
+      *ngIf="data"
+      style="margin-top: 20px; padding: 15px !important"
+      [innerHTML]="data.contents"
+    ></div>
+  </div>
 </ion-content>

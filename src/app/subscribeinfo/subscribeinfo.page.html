@@ -11,53 +11,71 @@
 </ion-header>
 -->
 <ion-content>
-    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
-        <div class="iconBack">
-            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
-        </div>
+  <section
+    (click)="dismissModal()"
+    style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px"
+    class="header"
+  >
+    <div class="iconBack">
+      <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
+    </div>
 
-        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-    </section>
+    <ion-img class="logoHeader" src="assets/images/afriwhite-map.png">
+    </ion-img>
+  </section>
 
-    <div *ngIf="info">
-        <h5 text-center style="margin-top: 10px;">
-            Mon abonnement
-        </h5>
+  <div *ngIf="info">
+    <h5 text-center style="margin-top: 10px">Mon abonnement</h5>
 
-        <div class="rounded">
-            <div>
-                <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/information.svg"></ion-icon>
-                <ion-label class="label">Language
-                    <strong style="color: #e07a0c;"> {{ showName() }} </strong>
-                    <!--  <strong style="color: red;" *ngIf="info.status == 'succeeded'">
+    <div class="rounded">
+      <div>
+        <ion-icon
+          style="height: 20px; color: #000000"
+          slot="start"
+          icon="assets/icon/information.svg"
+        ></ion-icon>
+        <ion-label class="label"
+          >Language
+          <strong style="color: #e07a0c"> {{ showName() }} </strong>
+          <!--  <strong style="color: red;" *ngIf="info.status == 'succeeded'">
             Activé
           </strong>
                     <strong style="color: red;" *ngIf="info.status != 'succeeded'">
             Désactivé</strong >-->
-                </ion-label>
-            </div>
-        </div>
-        <div class="rounded">
-            <div>
-                <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/information.svg"></ion-icon>
-
-                <ion-label class="label">Montant :
-                    <strong style="color: #e07a0c;">{{ info.amount }} € </strong>
-                </ion-label>
-            </div>
-        </div>
-        <div class="rounded">
-            <div>
-                <ion-icon style="height: 20px; color: #000000;" slot="start" icon="assets/icon/information.svg"></ion-icon>
-
-                <ion-label class="label">Durée :
-                    <strong style="color: #e07a0c;">{{ info.months }} mois </strong>
-                </ion-label>
-            </div>
-        </div>
+        </ion-label>
+      </div>
     </div>
+    <div class="rounded">
+      <div>
+        <ion-icon
+          style="height: 20px; color: #000000"
+          slot="start"
+          icon="assets/icon/information.svg"
+        ></ion-icon>
 
-    <!--  <div *ngIf="info.status =='succeeded'" style="display: flex; align-items: center; justify-content: center;">
+        <ion-label class="label"
+          >Montant :
+          <strong style="color: #e07a0c">{{ info.amount }} € </strong>
+        </ion-label>
+      </div>
+    </div>
+    <div class="rounded">
+      <div>
+        <ion-icon
+          style="height: 20px; color: #000000"
+          slot="start"
+          icon="assets/icon/information.svg"
+        ></ion-icon>
+
+        <ion-label class="label"
+          >Durée :
+          <strong style="color: #e07a0c">{{ info.months }} mois </strong>
+        </ion-label>
+      </div>
+    </div>
+  </div>
+
+  <!--  <div *ngIf="info.status =='succeeded'" style="display: flex; align-items: center; justify-content: center;">
         <div class="btn" (click)="showAlert(info)">
             Annuler mon abonnement
         </div>

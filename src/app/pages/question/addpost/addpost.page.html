@@ -1,44 +1,128 @@
 <ion-content fullscreen>
-    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
-        <div class="iconBack">
-            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
+  <section
+    (click)="dismissModal()"
+    style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px"
+    class="header"
+  >
+    <div class="iconBack">
+      <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
+    </div>
+
+    <ion-img class="logoHeader" src="assets/images/afriwhite-map.png">
+    </ion-img>
+  </section>
+
+  <h5
+    style="margin-top: 10px; color: black"
+    class="LanguageMobileDiv"
+    text-center
+  >
+    Forum
+  </h5>
+
+  <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
+    <b class="MainTitle">Forum</b>
+  </h5>
+
+  <ion-card>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="LanguageMobileDiv">
+        <ion-card-content>
+          <ion-item>
+            <ion-label>Votre titre :</ion-label>
+            <ion-input name="post_title" ngModel></ion-input>
+          </ion-item>
+          <br />
+
+          <ion-item>
+            <ion-label position="stacked">Votre article</ion-label>
+            <ion-textarea rows="7" name="post_content" ngModel> </ion-textarea>
+          </ion-item>
+
+          <br />
+
+          <ion-item lines="none">
+            <ion-label>Type de leçon : </ion-label>
+            <ion-select
+              name="post_topic"
+              ngModel
+              okText="Ok"
+              cancelText="Retour"
+            >
+              <ion-select-option value="Review">Intro</ion-select-option>
+              <ion-select-option value="Vocabulary"
+                >Vocabulaire</ion-select-option
+              >
+              <ion-select-option value="Sentences">Phrases</ion-select-option>
+              <ion-select-option value="Dialogue">Dialogue</ion-select-option>
+              <ion-select-option value="Grammar">grammaire</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-button
+            type="submit"
+            style="margin-top: 30px"
+            color="primary"
+            expand="full"
+          >
+            Ajouter un article</ion-button
+          >
+        </ion-card-content>
+      </div>
+
+      <div class="LanguageDesktopDiv">
+        <div class="LanguageDesktopDiv2">
+          <ion-card-content>
+            <ion-item lines="none">
+              <ion-label
+                position="stacked"
+                style="padding-bottom: 20px !important"
+                >Votre titre :
+              </ion-label>
+              <ion-input class="bg" name="post_title" ngModel></ion-input>
+            </ion-item>
+            <br />
+
+            <ion-item lines="none">
+              <ion-label position="stacked">Votre article</ion-label>
+              <ion-textarea class="bg" rows="5" name="post_content" ngModel>
+              </ion-textarea>
+            </ion-item>
+
+            <br />
+
+            <ion-item lines="none">
+              <ion-label
+                position="stacked"
+                class="bg3"
+                style="padding-bottom: 20px !important"
+                >Type de leçon :
+              </ion-label>
+              <ion-select
+                class="bg4"
+                name="post_topic"
+                ngModel
+                okText="Ok"
+                cancelText="Retour"
+              >
+                <ion-select-option value="Review">Intro</ion-select-option>
+                <ion-select-option value="Vocabulary"
+                  >Vocabulaire</ion-select-option
+                >
+                <ion-select-option value="Sentences">Phrases</ion-select-option>
+                <ion-select-option value="Dialogue">Dialogue</ion-select-option>
+                <ion-select-option value="Grammar">grammaire</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <div class="header1">
+              <ion-button type="submit" color="primary" expand="full">
+                Ajouter un article</ion-button
+              >
+            </div>
+          </ion-card-content>
         </div>
-
-        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-    </section>
-
-    <h5 style="margin-top: 10px;" text-center>Forum</h5>
-
-    <ion-card>
-        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-            <ion-card-content>
-                <ion-item>
-                    <ion-label>Votre titre :</ion-label>
-                    <ion-input name="post_title" ngModel></ion-input>
-                </ion-item>
-                <br />
-
-                <ion-item>
-                    <ion-label position="stacked">Votre article</ion-label>
-                    <ion-textarea rows="7" name="post_content" ngModel> </ion-textarea>
-                </ion-item>
-
-                <br />
-
-                <ion-item lines="none">
-                    <ion-label>Type de leçon : </ion-label>
-                    <ion-select name="post_topic" ngModel okText="Ok" cancelText="Retour">
-                        <ion-select-option value="Review">Intro</ion-select-option>
-                        <ion-select-option value="Vocabulary">Vocabulaire</ion-select-option>
-                        <ion-select-option value="Sentences">Phrases</ion-select-option>
-                        <ion-select-option value="Dialogue">Dialogue</ion-select-option>
-                        <ion-select-option value="Grammar">grammaire</ion-select-option>
-                    </ion-select>
-                </ion-item>
-
-                <ion-button type="submit" style="margin-top: 30px;" color="primary" expand="full">
-                    Ajouter un article</ion-button>
-            </ion-card-content>
-        </form>
-    </ion-card>
+      </div>
+    </form>
+  </ion-card>
 </ion-content>

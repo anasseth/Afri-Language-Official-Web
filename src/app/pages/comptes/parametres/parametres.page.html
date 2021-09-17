@@ -13,8 +13,8 @@
  -->
 
 <section class="header">
-    <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-  </section>
+  <ion-img class="logoHeader" src="assets/images/afriwhite-map.png"> </ion-img>
+</section>
 
 <ion-content>
   <div class="loginmobiledisnone">
@@ -116,6 +116,23 @@
               <ion-icon
                 style="height: 20px; color: #ff5e06"
                 slot="start"
+                icon="assets/icon/lock.svg"
+              >
+              </ion-icon>
+              <ion-input
+                type="password"
+                name="password"
+                placeholder="Mot de passe"
+                [(ngModel)]="password"
+              ></ion-input>
+            </div>
+          </div>
+
+          <div class="rounded">
+            <div class="iconInput">
+              <ion-icon
+                style="height: 20px; color: #ff5e06"
+                slot="start"
                 icon="assets/icon/address.svg"
               >
               </ion-icon>
@@ -198,11 +215,14 @@
             </div>
           </ion-card-content>
         </ion-card>
-        <!-- <ion-img class="logo logoAfrica" src="assets/images/afrilangues.png">
+        <!-- <ion-img class="logo logoAfrica" src="assets/images/afriwhite-map.png">
         </ion-img> -->
       </div>
     </div>
-    <div class="contentdesktop scale-up-hor-left" *ngIf=" ( datas && edit == false ) || ( !datas && edit == true )">
+    <div
+      class="contentdesktop scale-up-hor-left"
+      *ngIf=" ( datas && edit == false ) || ( !datas && edit == true )"
+    >
       <div *ngIf="datas">
         <h5 text-center style="margin-top: 10px">Liste des abonnements</h5>
 
@@ -279,6 +299,23 @@
                 <ion-icon
                   style="height: 20px; color: #ff5e06"
                   slot="start"
+                  icon="assets/icon/lock.svg"
+                >
+                </ion-icon>
+                <ion-input
+                  type="password"
+                  name="password"
+                  placeholder="Mot de passe"
+                  [(ngModel)]="password"
+                ></ion-input>
+              </div>
+            </div>
+
+            <div class="rounded">
+              <div class="iconInput">
+                <ion-icon
+                  style="height: 20px; color: #ff5e06"
+                  slot="start"
                   icon="assets/icon/address.svg"
                 >
                 </ion-icon>
@@ -304,6 +341,24 @@
                   name="telephone"
                   [(ngModel)]="telephone"
                   placeholder="Téléphone"
+                >
+                </ion-input>
+              </div>
+            </div>
+
+            <div class="rounded">
+              <div class="iconInput">
+                <ion-icon
+                  style="height: 20px; color: #ff5e06"
+                  slot="start"
+                  icon="assets/icon/envelope.svg"
+                >
+                </ion-icon>
+                <ion-input
+                  type="text"
+                  name="Description"
+                  [(ngModel)]="description"
+                  placeholder="La description"
                 >
                 </ion-input>
               </div>

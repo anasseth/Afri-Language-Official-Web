@@ -14,7 +14,7 @@
 -->
 
 <ion-content fullscreen>
-    <!--
+  <!--
 
   <ion-card *ngFor="let question of questions"  >
     <ion-item lines="none" (click)="questionClick(question)"  >
@@ -30,49 +30,113 @@
   </ion-card>
 -->
 
-    <section (click)="dismissModal()" style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px;" class="header">
-        <div class="iconBack">
-            <ion-icon style="fill: white;" icon="assets/icon/back.svg"></ion-icon>
-        </div>
-
-        <ion-img class="logoHeader" src="assets/images/afriwhite.png"> </ion-img>
-    </section>
-
-    <h5 style="margin-top: 10px;" text-center>Mes leçons</h5>
-
-    <div class="espace">
-        <div class="cercle" (click)="questionClick(questions[0])">
-            <ion-icon class="iconElement" icon="assets/icon/light-bulb.svg"></ion-icon>
-            <p style="margin-left: 45px;"><strong> {{questions[0].name}} </strong></p>
-        </div>
-
-        <div class="cercle" (click)="questionClick(questions[1])">
-            <ion-icon class="iconElement" icon="assets/icon/vocabulary.svg"></ion-icon>
-            <p style="margin-left: 19px;"><strong> {{questions[1].name}} </strong></p>
-        </div>
+  <section
+    (click)="dismissModal()"
+    style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px"
+    class="header"
+  >
+    <div class="iconBack">
+      <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
     </div>
 
-    <div class="espace">
-        <div class="cercle" (click)="questionClick(questions[2])">
-            <ion-icon class="iconElement" icon="assets/icon/vocabulary-2.svg"></ion-icon>
-            <p style="margin-left: 32px;">
-                <strong> {{questions[2].name}} </strong>
-            </p>
-        </div>
-        <div class="cercle" (click)="questionClick(questions[3])">
-            <ion-icon class="iconElement" icon="assets/icon/dialogue-1.svg"></ion-icon>
-            <p style="margin-left: 32px;">
-                <strong> {{questions[3].name}} </strong>
-            </p>
-        </div>
+    <ion-img class="logoHeader" src="assets/images/afriwhite-map.png">
+    </ion-img>
+  </section>
+
+  <h5 style="margin-top: 10px" class="hide" text-center>Mes leçons</h5>
+
+  <h5 text-center style="margin-top: 20px" class="LanguageDesktopDiv">
+    <b class="MainTitle">Mes leçons</b>
+  </h5>
+
+  <!-- <div class="espace">
+    <div class="cercle" (click)="questionClick(questions[0])">
+      <ion-icon
+        class="iconElement"
+        icon="assets/icon/light-bulb.svg"
+      ></ion-icon>
+      <p style="margin-left: 57px"><strong>1) {{questions[0].name}}</strong></p>
     </div>
 
-    <div class="espace">
-        <div class="cercle" (click)="questionClick(questions[4])">
-            <ion-icon class="iconElement" icon="assets/icon/grammar.svg"></ion-icon>
-            <p style="margin-left: 25px;">
-                <strong> {{questions[4].name}} </strong>
-            </p>
-        </div>
+    <div class="cercle" (click)="questionClick(questions[1])">
+      <ion-icon
+        class="iconElement"
+        icon="assets/icon/vocabulary.svg"
+      ></ion-icon>
+      <p style="margin-left: 28px"><strong>2) {{questions[1].name}}</strong></p>
     </div>
+  </div>
+
+  <div class="espace">
+    <div class="cercle" (click)="questionClick(questions[3])">
+      <ion-icon
+        class="iconElement"
+        icon="assets/icon/vocabulary-2.svg"
+      ></ion-icon>
+      <p style="margin-left: 40px">
+        <strong>4) {{questions[3].name}} </strong>
+      </p>
+    </div>
+    <div class="cercle" (click)="questionClick(questions[4])">
+      <ion-icon
+        class="iconElement"
+        icon="assets/icon/dialogue-1.svg"
+      ></ion-icon>
+      <p style="margin-left: 34px">
+        <strong>5) {{questions[4].name}} </strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="espace moveUp">
+    <div class="cercle" (click)="questionClick(questions[2])">
+      <ion-icon class="iconElement" icon="assets/icon/grammar.svg"></ion-icon>
+      <p style="margin-left: 40px">
+        <strong>3) {{questions[2].name}} </strong>
+      </p>
+    </div>
+  </div> -->
+
+  <div class="espace moveInCenter">
+    <div class="cercle" (click)="questionClick(questions[0])">
+      <ion-icon
+        class="iconElement"
+        icon="assets/icon/light-bulb.svg"
+      ></ion-icon>
+      <p style="margin-left: 57px"><strong>1) {{questions[0].name}}</strong></p>
+    </div>
+
+    <div class="cercle" (click)="questionClick(questions[1])">
+      <ion-icon
+        class="iconElement"
+        icon="assets/icon/vocabulary.svg"
+      ></ion-icon>
+      <p style="margin-left: 28px"><strong>2) {{questions[1].name}}</strong></p>
+    </div>
+
+    <div class="cercle" (click)="questionClick(questions[2])">
+      <ion-icon class="iconElement" icon="assets/icon/grammar.svg"></ion-icon>
+      <p style="margin-left: 40px">
+        <strong>3) {{questions[2].name}} </strong>
+      </p>
+    </div>
+    <div class="cercle" (click)="questionClick(questions[3])">
+      <ion-icon
+        class="iconElement"
+        icon="assets/icon/vocabulary-2.svg"
+      ></ion-icon>
+      <p style="margin-left: 40px">
+        <strong>4) {{questions[3].name}} </strong>
+      </p>
+    </div>
+    <div class="cercle" (click)="questionClick(questions[4])">
+      <ion-icon
+        class="iconElement"
+        icon="assets/icon/dialogue-1.svg"
+      ></ion-icon>
+      <p style="margin-left: 34px">
+        <strong>5) {{questions[4].name}} </strong>
+      </p>
+    </div>
+  </div>
 </ion-content>

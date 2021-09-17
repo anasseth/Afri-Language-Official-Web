@@ -11,204 +11,183 @@
 </ion-header>
 -->
 <ion-content>
-
-    <section (click)="dismissModal()" style="margin-top: 0px ; padding-top: 5px;margin-bottom: 30px " class="header">
-
-        <div class="iconBack">
-            <ion-icon style=" fill: white;" icon="assets/icon/back.svg"></ion-icon>
-        </div>
-
-
-        <ion-img class="logoHeader" src="assets/images/afriwhite.png">
-
-        </ion-img>
-    </section>
-
-
-    <h2 text-center style="margin: 15px auto;">{{data.title}}</h2>
-    <!-- CardRepeat -->
-    <div class="cardRepeat" *ngIf="data.content_type == 'repeat'">
-        <div>
-
-
-            <p>
-                <Strong>{{data.options}}</Strong>
-            </p>
-
-            <p><em>{{data.answer}}</em></p>
-
-
-            <div class="middle" (click)="startAudio(data)">
-                <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
-            </div>
-
-
-            <div class="prev" (click)="prev()">
-                <p>Préc</p>
-            </div>
-
-
-            <div class="next" (click)="next()">
-                <p>Suiv</p>
-            </div>
-
-        </div>
-
-
+  <section
+    (click)="dismissModal()"
+    style="margin-top: 0px; padding-top: 5px; margin-bottom: 30px"
+    class="header"
+  >
+    <div class="iconBack">
+      <ion-icon style="fill: white" icon="assets/icon/back.svg"></ion-icon>
     </div>
 
+    <ion-img class="logoHeader" src="assets/images/afriwhite-map.png">
+    </ion-img>
+  </section>
 
-    <!-- CardMultiple -->
+  <h2 text-center style="margin: 15px auto">{{data.title}}</h2>
+  <!-- CardRepeat -->
+  <div class="cardRepeat" *ngIf="data.content_type == 'repeat'">
+    <div>
+      <p>
+        <strong>{{data.options}}</strong>
+      </p>
 
-    <div class="cardMultiple" *ngIf="data.content_type == 'multiple'">
-        <div>
+      <p><em>{{data.answer}}</em></p>
 
+      <div class="middle" (click)="startAudio(data)">
+        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+      </div>
 
-            <div class="middle" (click)="startAudio(data)">
-                <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
-            </div>
-            <h3 style="margin-top: 5px; margin-left:24px; margin-bottom:20px">
-                {{data.question}}
-            </h3>
-            <div [ngClass]="indexChoose == index ? 'activate' : 'choose'" *ngFor="let options of options_data  ;let index = index  " (click)="optionsClick(options,options_data)">
-                <div>{{options}}</div>
-            </div>
+      <div class="prev" (click)="prev()">
+        <p>Préc</p>
+      </div>
 
-            <div class="prev" (click)="prev()">
-                <p>Préc</p>
-            </div>
-
-
-            <div class="next" (click)="next()">
-                <p>Suiv</p>
-            </div>
-
-        </div>
+      <div class="next" (click)="next()">
+        <p>Suiv</p>
+      </div>
     </div>
+  </div>
 
+  <!-- CardMultiple -->
 
-    <!-- cardTap -->
+  <div class="cardMultiple" *ngIf="data.content_type == 'multiple'">
+    <div>
+      <div class="middle" (click)="startAudio(data)">
+        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+      </div>
+      <h3 style="margin-top: 5px; margin-left: 24px; margin-bottom: 20px">
+        {{data.question}}
+      </h3>
+      <div
+        [ngClass]="indexChoose == index ? 'activate' : 'choose'"
+        *ngFor="let options of options_data  ;let index = index  "
+        (click)="optionsClick(options,options_data)"
+      >
+        <div>{{options}}</div>
+      </div>
 
-    <div class="cardTap"  *ngIf="data.content_type == 'tap'">
-        <div>
+      <div class="prev" (click)="prev()">
+        <p>Préc</p>
+      </div>
 
-
-            <div class="middle" (click)="startAudio(data)">
-                <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
-            </div>
-
-
-
-            <div class="chooseParent">
-
-                <strong [ngClass]="responses  ? 'resp' : ''" *ngFor="let res of responses "  (click)="removeItem(res)" >
-            {{res}}
-           </strong>
-           </div>
-
-
-
-            <span class="chooseParent" >
-                  
-                    <span class="choose"  *ngFor="let answer of answer_data | shuffle "  (click)="addItem(answer)">
-                        {{answer}}
-                       </span>
-                   
-            </span> 
-
-       
-
-           
-
-
-            <div class="prev" (click)="prev()">
-                <p>Préc</p>
-            </div>
-
-
-            <div class="next" (click)="next()">
-                <p>Suiv</p>
-            </div>
-
-        </div>
+      <div class="next" (click)="next()">
+        <p>Suiv</p>
+      </div>
     </div>
+  </div>
 
+  <!-- cardTap -->
 
-    <!-- CardMatch-->
+  <div class="cardTap" *ngIf="data.content_type == 'tap'">
+    <div>
+      <div class="middle" (click)="startAudio(data)">
+        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+      </div>
 
-    <div class="cardMatch" *ngIf="data.content_type == 'match'">
-        <div>
+      <div class="chooseParent">
+        <strong
+          [ngClass]="responses  ? 'resp' : ''"
+          *ngFor="let res of responses "
+          (click)="removeItem(res)"
+        >
+          {{res}}
+        </strong>
+      </div>
 
+      <span class="chooseParent">
+        <span
+          class="choose"
+          *ngFor="let answer of answer_data | shuffle "
+          (click)="addItem(answer)"
+        >
+          {{answer}}
+        </span>
+      </span>
 
-            <div class="chooseQuestion" *ngFor="let question of question_data | shuffle "
-                 (click)="questionMatch(question,question_data)">
+      <div class="prev" (click)="prev()">
+        <p>Préc</p>
+      </div>
 
-                <p>{{question}}</p>
-
-            </div>
-
-            <div class="ouModif">
-                <p><span></span></p>
-            </div>
-
-            <div class="chooseOption" *ngFor="let options of options_data | shuffle "
-                 (click)="optionsMatch(options,options_data)">
-
-                <p>{{options}}</p>
-            </div>
-
-            <div class="prev" (click)="prev()">
-                <p>Préc</p>
-            </div>
-
-
-            <div class="next" (click)="next()">
-                <p>Suiv</p>
-            </div>
-
-        </div>
+      <div class="next" (click)="next()">
+        <p>Suiv</p>
+      </div>
     </div>
+  </div>
 
-    <div class="cardTranslate" *ngIf="data.content_type == 'translate'">
-        <div>
+  <!-- CardMatch-->
 
+  <div class="cardMatch" *ngIf="data.content_type == 'match'">
+    <div>
+      <div
+        class="chooseQuestion"
+        *ngFor="let question of question_data | shuffle "
+        (click)="questionMatch(question,question_data)"
+      >
+        <p>{{question}}</p>
+      </div>
 
-            <p style="margin-top: 60px" text-center>
-                <Strong>{{data.question}}</Strong>
-            </p>
+      <div class="ouModif">
+        <p><span></span></p>
+      </div>
 
+      <div
+        class="chooseOption"
+        *ngFor="let options of options_data | shuffle "
+        (click)="optionsMatch(options,options_data)"
+      >
+        <p>{{options}}</p>
+      </div>
 
-            <div class="middle" (click)="startAudio(data)">
-                <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
-            </div>
+      <div class="prev" (click)="prev()">
+        <p>Préc</p>
+      </div>
 
-
-            <div class="input">
-                <ion-input text-center type="text" name="email" placeholder="Votre traduction" [(ngModel)]="translateCheck"></ion-input>
-            </div>
-
-
-            <div class="prev" (click)="prev()">
-                <p>Préc</p>
-            </div>
-
-
-            <div class="next" (click)="next()">
-                <p>Suiv</p>
-            </div>
-
-        </div>
-
-
+      <div class="next" (click)="next()">
+        <p>Suiv</p>
+      </div>
     </div>
+  </div>
 
+  <div class="cardTranslate" *ngIf="data.content_type == 'translate'">
+    <div>
+      <p style="margin-top: 60px" text-center>
+        <strong>{{data.question}}</strong>
+      </p>
 
-    <div style="margin: 30px auto;" *ngIf="data.content_type != 'repeat'">
-        <ion-button class="buttons" style="width: 90%; margin-left: 5%" (click)="check()" type="submit" size="default"
-                    expand="block">
-            Vérifier
-        </ion-button>
+      <div class="middle" (click)="startAudio(data)">
+        <ion-icon class="iconElement" icon="assets/icon/volume.svg"></ion-icon>
+      </div>
+
+      <div class="input">
+        <ion-input
+          text-center
+          type="text"
+          name="email"
+          placeholder="Votre traduction"
+          [(ngModel)]="translateCheck"
+        ></ion-input>
+      </div>
+
+      <div class="prev" (click)="prev()">
+        <p>Préc</p>
+      </div>
+
+      <div class="next" (click)="next()">
+        <p>Suiv</p>
+      </div>
     </div>
+  </div>
 
-
+  <div style="margin: 30px auto" *ngIf="data.content_type != 'repeat'">
+    <ion-button
+      class="buttons"
+      style="width: 90%; margin-left: 5%"
+      (click)="check()"
+      type="submit"
+      size="default"
+      expand="block"
+    >
+      Vérifier
+    </ion-button>
+  </div>
 </ion-content>

@@ -343,6 +343,10 @@ export class VocabularyPage implements OnInit {
       .indexOf(op);
 
     this.checkOptions = op;
+
+    console.log(this.checkAnswer)
+    console.log(this.checkOptions)
+    console.log(this.data)
   }
 
   fillMatch(op, ops) {
@@ -508,11 +512,17 @@ export class VocabularyPage implements OnInit {
     if (this.data.content_type == "translate") {
       const result = this.answerCheck;
 
+      console.log(this.answerCheck[0]);
+      console.log(this.translateCheck)
+
       const index = result
         .map(function (e) {
-          return e.toLowerCase();
+          console.log(e.toLowerCase().replace(/\s+/g, ''))
+          return e.toLowerCase().replace(/\s+/g, '');
         })
-        .indexOf(this.translateCheck.toLowerCase());
+        .indexOf(this.translateCheck.toLowerCase().replace(/\s+/g, ''));
+
+      console.log(index)
 
       if (index != -1) {
         this.successAlert();
@@ -635,11 +645,13 @@ export class VocabularyPage implements OnInit {
     this.nomQuestion = null;
   }
   translateRender() {
+
     this.answerCheck = this.data.answer
       .replace(/^\["+|\"]+$/g, "")
       .split('","');
 
     this.translateCheck = "";
+
   }
   truefalseRender() {
     this.answerCheck = this.data.answer
