@@ -71,7 +71,18 @@ export class QuestiontypesPage implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    this.afriService.getContentCoveredPercentage().subscribe(
+      data => {
+        console.log(data)
+      },
+      (err) => {
+        console.log(err)
+      }
+    )
+  }
+
 
   async questionClick(question) {
     let modalPage;

@@ -1,20 +1,32 @@
 <ion-content text-left>
+  <img
+    src="../../../assets/images/afrilangues.png"
+    alt=""
+    style="margin-left: 70px; width: 100px; margin-top: 20px"
+  />
   <div class="LoginDesktopDiv">
-    <div class="h-100 container" *ngFor="let i of this.usersData2">
-      <div class="card mobile-card">
-        <section class="onboarding">
-          <main class="onboarding-slides">
-            <div class="onboarding-slide">
-              <img
+    <b class="MainTitle">je veux apprendre</b>
+    <div class="Container23">
+      <div class="h-100 container" *ngFor="let i of this.usersData2">
+        <div class="card mobile-card">
+          <section class="onboarding">
+            <main class="onboarding-slides">
+              <div class="onboarding-slide">
+                <!-- <img
                 class="onboarding-illustration"
-                src="https://thumbs.dreamstime.com/b/caucasian-couple-two-men-talking-sitting-sofa-argue-fight-angry-conversation-flat-style-stock-vector-illustration-163057073.jpg"
+                [src]="i.logo"
                 alt=""
-              />
-              <h2 class="onboarding-title">{{i.name}}</h2>
-              <p class="onboarding-subtitle">{{i.total_users}} User</p>
-            </div>
-          </main>
-        </section>
+              /> -->
+                <img
+                  src="https://img.icons8.com/color/96/000000/france.png"
+                  style="margin-top: 20px"
+                />
+                <h2 class="onboarding-title">{{i.name}}</h2>
+                <p class="onboarding-subtitle">{{i.total_users}} User</p>
+              </div>
+            </main>
+          </section>
+        </div>
       </div>
     </div>
   </div>

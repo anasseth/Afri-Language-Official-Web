@@ -37,13 +37,13 @@ ion-header {
 
 section.header {
   background: rgb(224, 122, 12);
-  background-image: linear-gradient(to right, #dfb401, #df011f);
+  background-image: linear-gradient(to right, #dfb401, #dfb401, #df011f);
   /* background: linear-gradient(90deg, rgba(224, 122, 12, 1) 30%, rgba(209, 68, 35, 1) 100%); */
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 0px 0px 0px 50px;
   margin: 0 auto;
-  height: 100px;
+  height: 150px;
   width: 100%;
   line-height: 25px;
   font-size: 15px;
@@ -94,7 +94,7 @@ section.header {
   section.header {
     height: 65px;
     border-radius: 0px 0px 50px 50px;
-    .iconBack{
+    .iconBack {
       margin-top: 15px;
     }
     .logoHeader {

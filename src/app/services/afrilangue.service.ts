@@ -94,6 +94,23 @@ export class AfrilangueService {
     this.router.navigateByUrl("login");
   }
 
+  public getContentCoveredPercentage() {
+    var email = JSON.parse(localStorage.getItem("userDetails")).email
+    let httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: "Bearer " + this.myToken,
+      }),
+    };
+    console.log("header => ", httpOptions.headers);
+
+    return this.http.post("https://afrilangues.com/api/topics",
+      {
+        email: email,
+      },
+      httpOptions
+    );
+  }
+
   public login(email, password) {
     return this.http.post("https://afrilangues.com/api/login", {
       email: email,
@@ -108,8 +125,16 @@ export class AfrilangueService {
   }
 
   public changePassword(passObject) {
+    let httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: "Bearer " + this.myToken,
+      }),
+    };
+    console.log("header => ", httpOptions.headers);
+
     return this.http.post("https://www.afrilangues.com/api/change_password",
-      passObject
+      passObject,
+      httpOptions
     );
   }
   public getLanguageData() {

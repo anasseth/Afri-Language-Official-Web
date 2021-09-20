@@ -184,9 +184,9 @@ export class ParametresPage implements OnInit {
         confirm_password: user.password
       }
       console.log(object)
-      // this.afriService.changePassword(object).subscribe((data) => {
-      //   console.log(data);
-      // });
+      this.afriService.changePassword(object).subscribe((data) => {
+        console.log(data);
+      });
     }
   }
 }

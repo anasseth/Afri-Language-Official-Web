@@ -108,15 +108,39 @@ ion-input:-ms-input-placeholder {
     -moz-box-shadow: 0px 9px 13px -3px rgba(255, 255, 255, 0.43);
   }
   .LoginDesktopDiv {
+    // background: url("../../../assets/images/background.gif");
     margin: auto;
     left: 0px;
     right: 0px;
     flex-wrap: wrap;
     display: flex !important;
     visibility: visible !important;
-    width: 90% !important;
-    margin-top: 30px;
+    // border: 2px solid black;
+    width: 100% !important;
+    // margin-top: 30px;
     justify-content: center;
+  }
+  .Container23 {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    flex-wrap: wrap;
+    display: flex !important;
+    visibility: visible !important;
+    // border: 2px solid black;
+    width: 90% !important;
+    // margin-top: 150px;
+    justify-content: center;
+  }
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+    font-size: 30px;
   }
   .logo {
     margin: auto;
@@ -215,6 +239,7 @@ ion-input:-ms-input-placeholder {
   .h-100 {
     height: 100%;
     margin: 20px;
+    margin-top: 40px;
   }
 
   *,
@@ -228,24 +253,31 @@ ion-input:-ms-input-placeholder {
   }
 
   .container {
-    background: #fafafa;
+    // background: #fafafa;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .card {
-    box-shadow: 2px 4px 30px 0px rgba(0, 0, 0, 0.3);
+    // border-radius: 40px;
     display: flex;
     flex-direction: column;
-    border-top: 8px solid orangered;
+    border: 5px solid white;
+    transition-duration: 0.5s;
+  }
+  .card:hover {
+    // border: 5px solid orangered;
+    background-color: white;
+    box-shadow: 1px 9px 17px 0px rgb(245 184 148 / 71%);
+    transition-duration: 0.5s;
   }
 
   .mobile-card {
     width: 250px;
     height: auto;
-    background-color: white;
-    border-radius: 5px;
+    // background-color: white;
+    border-radius: 35px;
     font-family: "Roboto", sans-serif;
   }
 
@@ -287,14 +319,15 @@ ion-input:-ms-input-placeholder {
   .onboarding-title {
     font-weight: 700;
     margin: 10px 0 25px;
-    font-size: 30px;
+    font-size: 20px;
     color: orangered;
   }
 
   .onboarding-subtitle {
     padding: 0 5px;
-    font-size: 14px;
-    color: #aaa;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(136, 136, 136);
     line-height: 22px;
   }
 
