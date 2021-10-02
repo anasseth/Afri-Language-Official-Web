@@ -6,24 +6,61 @@
   <div *ngIf="user">
     <h5 text-center style="margin-top: 20px">
       <!-- <b class="MainTitle">Mes cours</b> -->
-
+      <span style="color: #ff5e06"> Mes cours </span>
       <div class="popover__wrapper">
         <button>
           <h5><b class="MainTitle">{{ showName() }}</b></h5>
         </button>
         <div class="popover__content">
-          <div *ngFor="let langue of langues" routerLink="/tabs/tabs/cours">
+          <!-- <div *ngFor="let langue of langues" routerLink="/tabs/tabs/cours">
             <div>
               <b class="MainTitle MenuButton" (click)="itemClick(langue)"
                 >{{langue.name}}</b
               >
             </div>
             <br />
+          </div> -->
+          <div
+            style="
+              display: flex !important;
+              flex-wrap: wrap !important;
+              width: 100%;
+              justify-content: center;
+            "
+          >
+            <div
+              class="card33 mobile-card"
+              *ngFor="let i of this.usersData"
+              style="margin: 10px"
+              (click)="itemClick(i)"
+            >
+              <section class="onboarding">
+                <main class="onboarding-slides">
+                  <div class="onboarding-slide">
+                    <img
+                      class="onboarding-illustration"
+                      [src]="i.logo"
+                      style="width: 50%; border-radius: 50%; margin-top: 20px"
+                      alt=""
+                    />
+                    <!-- <img
+                      src="https://img.icons8.com/color/96/000000/france.png"
+                      style="margin-top: 20px"
+                    /> -->
+                    <!-- <h2 class="onboarding-title">{{i.name}}</h2> -->
+                    <p
+                      class="onboarding-subtitle"
+                      style="color: orangered !important"
+                    >
+                      {{i.total_users}} Membres
+                    </p>
+                  </div>
+                </main>
+              </section>
+            </div>
           </div>
         </div>
       </div>
-
-      <span style="color: #ff5e06"> Mes cours</span>
     </h5>
 
     <div class="LanguageMobileDiv">

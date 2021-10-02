@@ -1,10 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { AfrilangueService } from "../../services/afrilangue.service";
-import { Router } from "@angular/router";
+// import { Router } from "@angular/router";
 import { finalize } from "rxjs/operators";
 import { from } from "rxjs";
 import { LoadingController } from "@ionic/angular";
 import { AlertController } from "@ionic/angular";
+import {NavigationExtras, Router} from '@angular/router';
 
 @Component({
   selector: "app-login",
@@ -18,14 +19,17 @@ export class LanguageDisplay implements OnInit {
   usersData2: any;
   randomNumber: number;
   imageData = [
-    "https://thumbs.dreamstime.com/b/caucasian-couple-two-men-talking-sitting-sofa-argue-fight-angry-conversation-flat-style-stock-vector-illustration-163057073.jpg",
-    "https://media.istockphoto.com/vectors/cartoon-character-man-talking-to-a-friend-vector-vector-id1130767377?k=20&m=1130767377&s=612x612&w=0&h=jYZ0wFg5CYqyeroZzQrWKB9u2ynWSofW2Pcs7AvIMeU=",
-    "https://thumbs.dreamstime.com/b/two-young-men-talking-speech-bubbles-friends-colleagues-gossiping-sharing-impressions-cartoon-style-vector-illustration-207464831.jpg",
-    "https://static.vecteezy.com/system/resources/previews/002/918/748/original/business-people-doing-office-activity-taking-tea-and-discussing-with-each-other-illustration-in-cartoon-style-vector.jpg",
-    "https://image.freepik.com/free-vector/friends-drinking-coffee-chatting_97843-160.jpg",
-    "https://thumbs.dreamstime.com/b/cartoon-trendy-male-talking-hipster-girl-vector-flat-illustration-two-people-communicating-speech-bubble-cartoon-trendy-170562574.jpg",
-    "https://thumbs.dreamstime.com/b/two-young-men-talking-speech-bubbles-friends-colleagues-gossiping-sharing-impressions-cartoon-style-vector-illustration-207464831.jpg",
-    "https://thumbs.dreamstime.com/b/two-female-friends-gossiping-speech-bubbles-vector-flat-illustration-cartoon-woman-talking-each-other-gesticulating-174282923.jpg"
+    "../../../assets/images/1.png",
+    "../../../assets/images/2.png",
+    "../../../assets/images/3.png",
+    "../../../assets/images/4.png",
+    "../../../assets/images/5.png",
+    "../../../assets/images/6.png",
+    "../../../assets/images/7.png",
+    "../../../assets/images/8.png",
+    "../../../assets/images/9.png",
+    "../../../assets/images/10.png",
+    "../../../assets/images/11.png"
   ]
 
   constructor(
@@ -40,9 +44,7 @@ export class LanguageDisplay implements OnInit {
       (data) => {
         this.usersData = JSON.parse(JSON.stringify(data))
         for (var i = 0; i < this.usersData.length; i++) {
-          this.randomNumber = Math.floor(Math.random() * 9)
-          console.log(this.randomNumber)
-          this.usersData[i].logo = this.imageData[this.randomNumber]
+          this.usersData[i].logo = this.imageData[i]
         }
         console.log(data)
       }, (err) => {
@@ -53,6 +55,21 @@ export class LanguageDisplay implements OnInit {
       }
     )
   }
+  itemClick(langue){
+    console.log('langue choisie : ' , langue);
+
+    this.afriService.language_id = langue.id
+
+      let navigationExtra : NavigationExtras = {
+          queryParams :{
+              language : langue
+          }
+      }
+
+      this.router.navigate(["/register"], navigationExtra)
+
+  }
+
 
   generateRandomNumber() {
 
