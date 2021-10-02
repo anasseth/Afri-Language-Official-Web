@@ -71,11 +71,31 @@ section.header {
 }
 
 .successAlert {
+  strong {
+    color: rgb(26, 153, 0) !important;
+  }
 }
 
 .falseAlert {
   strong {
     color: red !important;
+  }
+}
+
+ion-alert {
+  .alert-wrapper.sc-ion-alert-md {
+    border: 3px solid orangered;
+    border-radius: 19px;
+    width: 100%;
+    height: 200px;
+  }
+  .alert-button.sc-ion-alert-md {
+    background-color: orangered;
+    color: white;
+    border-radius: 10px;
+  }
+  .alert-message.sc-ion-alert-md {
+    min-height: 80px;
   }
 }
 
@@ -92,7 +112,7 @@ section.header {
 
 @media screen and (min-width: 1000px) {
   section.header {
-    height: 65px;
+    height: 70px;
     border-radius: 0px 0px 50px 50px;
     .iconBack {
       margin-top: 15px;
@@ -100,5 +120,10 @@ section.header {
     .logoHeader {
       margin: 0px 0px auto;
     }
+  }
+  ion-alert {
+    // --background: red !important;
+    --border-radius: 8px;
+    --border: 3px solid orangered;
   }
 }

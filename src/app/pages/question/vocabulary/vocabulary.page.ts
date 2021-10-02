@@ -36,6 +36,8 @@ export class VocabularyPage implements OnInit {
     this.lesson = this.navParams.get("lesson");
   }
 
+  triedTimes = 0;
+
   lesson;
   question_type;
   index = 0;
@@ -197,12 +199,12 @@ export class VocabularyPage implements OnInit {
 
     await alert.present();
   }
-
+  // this.data.answer
   async falseAlert(wrong) {
     const alert = await this.alertController.create({
       cssClass: "falseAlert",
       header: "Réponse incorrecte",
-      message: "<strong>" + wrong + "</strong>",
+      message: (this.triedTimes >= 3) && (this.data.content_type == "truefalse") ? "<strong> La bonne réponse est : <br /><br />" + this.data.answer + "</strong><br /><br />" : (this.triedTimes >= 3) && (this.data.content_type == "multiple") ? "<strong> La bonne réponse est : <br /><br />" + this.checkAnswer + "</strong><br /><br />" : (this.triedTimes >= 3) && (this.data.content_type == "translate") ? "<strong> La bonne réponse est : <br /><br />" + this.answerCheck[0] + "</strong><br /><br />" : (this.triedTimes >= 3) && (this.data.content_type == "tap") ? "<strong> La bonne réponse est : <br /><br />" + this.data.question + "</strong><br /><br />" : (this.triedTimes >= 3) && (this.data.content_type == "fill") ? "<strong> La bonne réponse est : <br /><br />" + this.data.answer + "</strong><br /><br />" : "<strong>Mauvaise réponse</strong><br />",
       buttons: ["Continuer"],
     });
 
@@ -427,6 +429,7 @@ export class VocabularyPage implements OnInit {
   // Fin Tap
 
   check() {
+    this.triedTimes = this.triedTimes + 1;
     if (this.data.content_type == "multiple") {
       const answercheck = '["' + this.checkOptions + '"]';
       this.afriService
@@ -513,11 +516,15 @@ export class VocabularyPage implements OnInit {
       const result = this.answerCheck;
 
       console.log(this.answerCheck[0]);
+      // console.log(this.answerCheck[0].toLowerCase().replace(/[^a-zA-Z ]/g, ""))
+      // console.log(this.answerCheck[0].toLowerCase().replace(/\s+/g, ''))
+      console.log(this.answerCheck[0].toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, ""))
       console.log(this.translateCheck)
 
       const index = result
         .map(function (e) {
           console.log(e.toLowerCase().replace(/\s+/g, ''))
+          console.log(e.toLowerCase().replace(/[^a-zA-Z ]/g, " ").trim().split(" "))
           return e.toLowerCase().replace(/\s+/g, '');
         })
         .indexOf(this.translateCheck.toLowerCase().replace(/\s+/g, ''));
@@ -686,6 +693,7 @@ export class VocabularyPage implements OnInit {
   }
 
   next() {
+    this.triedTimes = 0;
     const taille: number = this.datas[0].length - 1;
 
     if (this.index < taille) {
@@ -699,6 +707,7 @@ export class VocabularyPage implements OnInit {
   }
 
   prev() {
+    this.triedTimes = 0;
     const taille: number = this.datas[0].length;
 
     if (this.index > 0) {

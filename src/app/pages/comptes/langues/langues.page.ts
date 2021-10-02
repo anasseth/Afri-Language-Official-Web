@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {AfrilangueService} from '../../../services/afrilangue.service';
+import { Component, OnInit } from '@angular/core';
+import { AfrilangueService } from '../../../services/afrilangue.service';
 
 
 @Component({
@@ -9,13 +9,43 @@ import {AfrilangueService} from '../../../services/afrilangue.service';
 })
 export class LanguesPage implements OnInit {
 
+    usersData: any;
+    usersData2: any;
+    imageData = [
+        "../../../assets/images/1.png",
+        "../../../assets/images/2.png",
+        "../../../assets/images/3.png",
+        "../../../assets/images/4.png",
+        "../../../assets/images/5.png",
+        "../../../assets/images/6.png",
+        "../../../assets/images/7.png",
+        "../../../assets/images/8.png",
+        "../../../assets/images/9.png",
+        "../../../assets/images/10.png",
+        "../../../assets/images/11.png"
+    ]
+
     constructor(private afriService: AfrilangueService) {
-        this.servLanguage =  this.afriService.language_id
+        this.servLanguage = this.afriService.language_id
     }
 
     ngOnInit() {
         this.onGetProfile();
         this.onGetLangues();
+        this.afriService.getLanguageData().subscribe(
+            (data) => {
+                this.usersData = JSON.parse(JSON.stringify(data))
+                for (var i = 0; i < this.usersData.length; i++) {
+                    this.usersData[i].logo = this.imageData[i]
+                }
+                console.log(data)
+            }, (err) => {
+                console.log(err)
+            }, () => {
+                console.log(this.usersData)
+                this.usersData2 = this.usersData
+            }
+        )
     }
 
     langues;
@@ -35,10 +65,10 @@ export class LanguesPage implements OnInit {
     currentLangue
     onLanguage() {
 
-        for (let i = 0 ; i < this.langues.length ; i++) {
-           if (this.langues[i].id == this.afriService.language_id){
-               this.currentLangue = this.langues[i]
-           }
+        for (let i = 0; i < this.langues.length; i++) {
+            if (this.langues[i].id == this.afriService.language_id) {
+                this.currentLangue = this.langues[i]
+            }
         }
 
     }
@@ -62,8 +92,8 @@ export class LanguesPage implements OnInit {
     itemClick(langue: any) {
 
         this.afriService.language_id = langue.id
-        this.servLanguage =  this.afriService.language_id
-     this.ngOnInit()
+        this.servLanguage = this.afriService.language_id
+        this.ngOnInit()
 
 
     }

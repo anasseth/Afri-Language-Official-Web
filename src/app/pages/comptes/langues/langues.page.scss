@@ -1,29 +1,312 @@
 h5 {
-    padding: 0 15px;
-    font-size: 17px;
-    font-weight: bold;
-    color: #102563;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #102563;
 }
 
 .rounded {
-    /* border: 2px solid #ccc; */
-    border-radius: 20px;
-    margin: 10px auto;
-    /* width: 94%; */
-    font-size: 20px;
-    padding: 0px 15px;
-    outline: 0;
-    height: 46px;
-    -webkit-appearance: none;
+  /* border: 2px solid #ccc; */
+  border-radius: 20px;
+  margin: 10px auto;
+  /* width: 94%; */
+  font-size: 20px;
+  padding: 0px 15px;
+  outline: 0;
+  height: 46px;
+  -webkit-appearance: none;
 }
 
 .couleur {
-    --ion-background-color: linear-gradient(to right, #dfb401, #df011f);
-    color: white;
+  --ion-background-color: linear-gradient(to right, #dfb401, #df011f);
+  color: white;
 }
 
 .normal {
-    ion-icon {
-        color: #ff5e06
-    }
+  ion-icon {
+    color: #ff5e06;
+  }
+}
+.LoginDesktopDiv {
+  display: none;
+  visibility: visible;
+}
+@media screen and (min-width: 1000px) {
+  .MobileDiv {
+    display: none;
+    visibility: visible;
+  }
+  .LoginDesktopDiv {
+    // background: url("../../../assets/images/background.gif");
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    flex-wrap: wrap;
+    display: flex !important;
+    visibility: visible !important;
+    // border: 2px solid black;
+    width: 100% !important;
+    // margin-top: 30px;
+    justify-content: center;
+  }
+  .Container23 {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    flex-wrap: wrap;
+    display: flex !important;
+    visibility: visible !important;
+    // border: 2px solid black;
+    width: 90% !important;
+    // margin-top: 150px;
+    justify-content: center;
+  }
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .logo {
+    margin: auto;
+    height: auto;
+    vertical-align: middle;
+  }
+  .rounded {
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+  }
+
+  h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .contentdesktop {
+    width: 100%;
+    margin-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    border: 2px solid rgb(252, 22, 52);
+    padding-top: 5%;
+    padding-bottom: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .imgdesktop {
+    width: 45%;
+    height: 100%;
+    max-width: 400px;
+    min-height: 450px;
+    margin-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    background-image: linear-gradient(to right, #f7cf30, #fc1634);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .logoAfdesk {
+    height: 170px !important;
+  }
+
+  .logoAfrica {
+    // margin-bottom: 10px;
+    height: 130px !important;
+  }
+
+  .loginmobiledisnone {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  h5 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .logindesktop {
+    border: 1px solid #dfb401;
+    padding: 1%;
+    margin-left: 20% !important;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 2%;
+    padding-right: 2%;
+    // font-size: 12px;
+  }
+
+  .logindesktop:hover {
+    border: 1px solid #dfb401;
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+    color: white !important;
+    // transition-duration: 1s !important;
+    cursor: pointer;
+  }
+
+  .desktoploginIBTN {
+    //  margin-top      : 30%;
+    width: 90%;
+    padding: 6px;
+    border-radius: 8px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+  }
+  input:hover {
+    border: 2px solid #00a2ff !important;
+  }
+
+  .h-100 {
+    height: 100%;
+    margin: 20px;
+    margin-top: 40px;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .container {
+    // background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    // border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    transition-duration: 0.5s;
+  }
+  .card:hover {
+    // border: 5px solid orangered;
+    background-color: white;
+    box-shadow: 1px 9px 17px 0px rgb(245 184 148 / 71%);
+    transition-duration: 0.5s;
+  }
+
+  .mobile-card {
+    width: 250px;
+    height: auto;
+    // background-color: white;
+    border-radius: 35px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .mobile-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8px 0;
+    font-size: 12px;
+  }
+
+  .mobile-status-icons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mobile-status-icon {
+    font-size: 13px;
+    padding: 0 2px;
+  }
+
+  .onboarding {
+    flex: 1;
+    text-align: center;
+    // padding: 50px 20px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .onboarding-slides {
+    flex: 1;
+  }
+
+  .onboarding-illustration {
+    width: 100%;
+    height: auto;
+  }
+
+  .onboarding-title {
+    font-weight: 700;
+    margin: 10px 0 25px;
+    font-size: 20px;
+    color: orangered;
+  }
+
+  .onboarding-subtitle {
+    padding: 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(136, 136, 136);
+    line-height: 22px;
+  }
+
+  .onboarding-action-bar {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .onboarding-button {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+  }
+
+  .onboarding-button {
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in;
+  }
+
+  .onboarding-button[disabled] {
+    color: #aaa;
+  }
+
+  .onboarding-button-next {
+    color: #6c63ff;
+  }
+
+  .onboarding-button-next:hover,
+  .onboarding-button-next:focus {
+    color: #fff;
+    background-color: #6c63ff;
+  }
+
+  .onboarding-slides-indicators {
+    display: flex;
+    align-items: center;
+  }
+
+  .onboarding-slides-indicator {
+    border-radius: 20px;
+    font-size: 0;
+    padding: 6px;
+    background-color: #6c63ff33;
+    margin: 0 2px;
+  }
+
+  .onboarding-slides-indicator--active {
+    background-color: #6c63ff7d;
+  }
 }
