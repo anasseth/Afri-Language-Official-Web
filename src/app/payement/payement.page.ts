@@ -122,7 +122,7 @@ export class PayementPage implements OnInit {
 
     this.http
       .post(
-        "https://api.waripay.io/api/v1/authorization/token",
+        "https://d3ii1lw2ab85qe.cloudfront.net/api/v1/authorization/token",
         bodyData,
         httpOptions
       )
@@ -140,13 +140,13 @@ export class PayementPage implements OnInit {
 
             this.http
               .post(
-                "https://api.waripay.io/api/v1/transaction/create",
+                "https://d3ii1lw2ab85qe.cloudfront.net/api/v1/transaction/create",
                 bodyDataTrans,
                 httpOptionTrans
               )
               .subscribe((data) => {
                 const browser = this.iab.create(
-                  "https://www.waripay.io/#/Checkout/" + data["wpayId"],
+                  "https://www.wariflow.com/#/Checkout/" + data["wpayId"],
                   "_blank"
                 );
 
