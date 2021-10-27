@@ -377,3 +377,317 @@ h5 {
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .popover__title {
+    // font-size: 24px;
+    // line-height: 36px;
+    // text-decoration: none;
+    color: rgb(228, 68, 68);
+    text-align: center;
+    // padding: 15px 0;
+  }
+
+  .popover__wrapper {
+    display: none;
+    visibility: hidden;
+  }
+  .popover__content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -700px;
+    transform: translate(0, 10px);
+    transform: translateX(135px);
+    background-color: #f6f6f6;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: 1100px;
+    height: 800px;
+    padding-top: 20px;
+  }
+  .popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(50% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #bfbfbf transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+  .popover__wrapper:hover .popover__content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -20px);
+    transform: translateX(140px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  }
+  .popover__message {
+    text-align: center;
+  }
+  .MenuButton {
+    margin-bottom: 20px !important;
+    font-size: 16px;
+    margin: 15px;
+  }
+  .hide {
+    display: block;
+    visibility: visible;
+  }
+  .loginmobiledisnone {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .desktopheader {
+    border-radius: 0px !important;
+    height: 10% !important;
+    color: white;
+    box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -moz-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+  }
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+  .h-100 {
+    height: 100%;
+    margin: 20px;
+    margin-top: 40px;
+  }
+
+  .card33 {
+    // border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    transition-duration: 0.5s;
+  }
+  .card33:hover {
+    // border: 5px solid orangered;
+    background-color: white;
+    box-shadow: 1px 9px 17px 0px rgb(245 184 148 / 71%);
+    transition-duration: 0.5s;
+  }
+
+  .mobile-card {
+    width: 250px;
+    height: auto;
+    // background-color: white;
+    border-radius: 35px;
+    font-family: "Roboto", sans-serif;
+  }
+  .onboarding {
+    flex: 1;
+    text-align: center;
+    // padding: 50px 20px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .onboarding-slides {
+    flex: 1;
+  }
+
+  .onboarding-illustration {
+    width: 100%;
+    height: auto;
+  }
+
+  .onboarding-title {
+    font-weight: 700;
+    margin: 10px 0 25px;
+    font-size: 20px;
+    color: orangered;
+  }
+
+  .onboarding-subtitle {
+    padding: 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(136, 136, 136);
+    line-height: 22px;
+  }
+
+  .onboarding-action-bar {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .onboarding-button {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+  }
+
+  .onboarding-button {
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in;
+  }
+
+  .onboarding-button[disabled] {
+    color: #aaa;
+  }
+
+  .onboarding-button-next {
+    color: #6c63ff;
+  }
+
+  .onboarding-button-next:hover,
+  .onboarding-button-next:focus {
+    color: #fff;
+    background-color: #6c63ff;
+  }
+
+  .onboarding-slides-indicators {
+    display: flex;
+    align-items: center;
+  }
+
+  .onboarding-slides-indicator {
+    border-radius: 20px;
+    font-size: 0;
+    padding: 6px;
+    background-color: #6c63ff33;
+    margin: 0 2px;
+  }
+
+  .onboarding-slides-indicator--active {
+    background-color: #6c63ff7d;
+  }
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: #df3d15;
+  }
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .LanguageDesktopDiv {
+    display: block;
+    visibility: visible;
+  }
+  .LanguageDesktopDiv2 {
+    display: flex;
+    visibility: visible;
+    width: 100%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    padding: 50px;
+    padding-top: 0px;
+    background-color: transparent;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Lato:300);
+  body {
+    background-color: #f1f1f1;
+    font-family: Lato;
+    font-weight: 300;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .badge {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: white;
+    color: white;
+
+    border-radius: 3rem; // As longe as this is bigger than the fontsize
+    text-align: center;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0.05rem 0.8rem 0.1rem;
+    line-height: inherit;
+  }
+  .badge--smaller {
+    font-size: 0.7rem;
+    padding: 0.09rem 0.4rem 0.15rem;
+  }
+  .badge--danger {
+    background-color: #df011f;
+  }
+
+  .card {
+    width: 350px;
+    height: 220px;
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+
+    margin: 15px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 0px 0px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.4s ease, top 0.4s ease, width 0.4s ease,
+      height 0.4s ease;
+
+    &:hover,
+    &.active {
+      box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.5);
+      top: -5px;
+    }
+    &.active {
+      width: 500px;
+      height: 600px;
+    }
+
+    .top-half {
+      width: 100%;
+      height: 150px;
+      background-color: transparent;
+      background-image: url("../../../../assets/images/afri3.png");
+      background-size: auto 130%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-left: 2px solid #df011f;
+      border-right: 2px solid #df011f;
+    }
+    .bottom-half {
+      margin-left: 5%;
+      margin-top: 12px;
+      width: 90%;
+      text-align: center !important;
+      .title {
+        font-size: 18px;
+        color: #555555;
+        margin-bottom: 2px;
+      }
+      .subtitle {
+        margin-top: 3px;
+        font-size: 12px;
+        color: #999999;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -24,20 +24,20 @@
 }
 
 @media screen and (min-width: 1000px) {
-    .hide {
-        display: none;
-        visibility: hidden;
-      }
-     
-      .MainTitle {
-        margin-top: 10px;
-        width: auto;
-        height: auto;
-        color: white;
-        border-radius: 10px;
-        background-color: #df3d15;
-        padding: 10px;
-      }
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
   .commentsCard {
     background-color: white;
     margin: auto;
@@ -45,23 +45,66 @@
     width: 70%;
     margin-top: 20px;
   }
-  .commentPost{
+  .commentPost {
     background-color: white;
     margin: auto;
     border-radius: 10px;
     width: 90%;
     margin-top: 20px;
     margin-bottom: 40px;
-    border: 2px solid orangered; 
+    border: 2px solid orangered;
   }
-  .comment{
+  .comment {
     background-color: white;
     margin: auto;
     border-radius: 20px;
     width: 70%;
     margin-top: 20px;
   }
-  textarea.comment{
-      border: 1px solid orange;
+  textarea.comment {
+    border: 1px solid orange;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .commentsCard {
+    background-color: white;
+    margin: auto;
+    border-radius: 20px;
+    width: 70%;
+    margin-top: 20px;
+  }
+  .commentPost {
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 2px solid orangered;
+  }
+  .comment {
+    background-color: white;
+    margin: auto;
+    border-radius: 20px;
+    width: 70%;
+    margin-top: 20px;
+  }
+  textarea.comment {
+    border: 1px solid orange;
   }
 }

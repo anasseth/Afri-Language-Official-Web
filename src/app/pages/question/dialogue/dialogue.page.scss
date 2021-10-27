@@ -178,21 +178,21 @@ strong {
   }
 }
 
-@media screen and (min-width: 1000px) {
-    .hide {
-        display: none;
-        visibility: hidden;
-      }
-     
-      .MainTitle {
-        margin-top: 10px;
-        width: auto;
-        height: auto;
-        color: white;
-        border-radius: 10px;
-        background-color: #df3d15;
-        padding: 10px;
-      }
+@media screen and (min-width: 0px) {
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
   .dialogue {
     background-color: white;
   }
@@ -213,10 +213,10 @@ strong {
     overflow-x: hidden;
     border-bottom: 3px solid #df011f;
   }
-  .chooseParent{
-      border: 3px solid #ff8c1d;
+  .chooseParent {
+    border: 3px solid #ff8c1d;
   }
-  .choose{
+  .choose {
     margin-top: 5px;
     width: auto;
     height: auto;

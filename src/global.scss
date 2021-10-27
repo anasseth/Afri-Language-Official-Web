@@ -127,3 +127,20 @@ ion-alert {
     --border: 3px solid orangered;
   }
 }
+@media screen and (max-width: 1000px) {
+  section.header {
+    height: 70px;
+    border-radius: 0px 0px 50px 50px;
+    .iconBack {
+      margin-top: 15px;
+    }
+    .logoHeader {
+      margin: 0px 0px auto;
+    }
+  }
+  ion-alert {
+    // --background: red !important;
+    --border-radius: 8px;
+    --border: 3px solid orangered;
+  }
+}

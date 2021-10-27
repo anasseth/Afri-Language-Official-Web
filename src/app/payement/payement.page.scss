@@ -1,8 +1,8 @@
-.LoginDesktopDiv{
+.LoginDesktopDiv {
   display: none;
-    visibility: hidden;
+  visibility: hidden;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 0px) {
   .LoginDesktopDiv {
     display: block;
     visibility: visible;

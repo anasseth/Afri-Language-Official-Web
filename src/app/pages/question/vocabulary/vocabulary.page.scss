@@ -1142,3 +1142,367 @@
     padding: 15px;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+  .Vocab {
+    display: block;
+    visibility: visible;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid orangered;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0px 10px 26px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 26px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 26px 1px rgba(0, 0, 0, 0.75);
+  }
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .InsideCardText {
+    padding: 15px;
+  }
+  .card-container,
+  .front,
+  .back {
+    width: 99%;
+    min-height: 400px;
+    padding-bottom: 30px;
+  }
+  .card-container-quiz {
+    width: 99%;
+    min-height: 400px;
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .card-container,
+  .card-container-quiz {
+    margin: 5rem;
+  }
+  .front,
+  .back,
+  .QuizFront {
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+
+    font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  /* front side bg is green gradient */
+  .front {
+    background-image: linear-gradient(to right bottom, white, white);
+    border-bottom: 5px solid #ef7b30;
+  }
+  /* back side bg is orange gradient */
+  .back {
+    border-bottom: 5px solid #df011f;
+    background-image: linear-gradient(to right bottom, #444444, #616161);
+  }
+  .QuizFront {
+    background-color: white;
+  }
+
+  .card-container {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    margin-top: 10px;
+    position: relative;
+  }
+  .card-container-quiz {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    margin-top: 30px;
+    position: relative;
+  }
+
+  .front,
+  .back,
+  .QuizFront {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: transform 0.8s ease;
+  }
+  // .back {
+  //   transform: rotateY(180deg);
+  // }
+  // .card-container:hover .front {
+  //   transform: rotateY(-180deg);
+  // }
+  // .card-container:hover .back {
+  //   transform: rotateY(0deg);
+  // }
+
+  .card-container,
+  .card-container-quiz {
+    perspective: 75rem;
+  }
+  .SoundVocab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+  }
+  .Quiz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+  }
+  .QuizFront {
+    background: white;
+    text-align: left;
+  }
+  .QuizFront {
+    background: white;
+  }
+  .QuizOption {
+    margin: auto;
+    // border: 1px solid #df011f;
+    background-color: lightyellow;
+    border-left: 5px solid #df011f;
+    border-right: 5px solid transparent;
+    text-align: left;
+    width: 90%;
+    height: 50px;
+    color: #444444;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: none;
+    padding: 13px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+  }
+  .QuizOptionSelected {
+    margin: auto;
+    border: 1px solid #ff8c1d;
+    border-left: 5px solid #ff8c1d;
+    border-right: 5px solid #ff8c1d;
+    text-align: left;
+    width: 90%;
+    height: 50px;
+    color: white !important;
+    background-color: #ff8c1d;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: none;
+    padding: 13px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    box-shadow: 0px 10px 26px -13px rgba(253, 102, 2, 0.75);
+    -webkit-box-shadow: 0px 10px 26px -13px rgba(253, 102, 2, 0.75);
+    -moz-box-shadow: 0px 10px 26px -13px rgba(253, 102, 2, 0.75);
+  }
+  .next {
+    position: absolute !important;
+    left: 100% !important;
+    transform: translateX(-100%);
+  }
+  .buttonBackFor {
+    position: absolute;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 20;
+    background-color: #ff8c1d;
+    display: flex;
+    color: transparent;
+    border: 1px solid #ff8c1d;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px;
+    padding-left: 35px;
+    box-shadow: 0px 10px 49px -20px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 49px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 49px -20px rgba(0, 0, 0, 0.75);
+    transition-duration: 0.3s;
+  }
+  .buttonBackFor:hover {
+    color: transparent;
+    background-color: white;
+    box-shadow: 0px 10px 49px -20px rgba(253, 102, 2, 0.75);
+    -webkit-box-shadow: 0px 10px 49px -20px rgba(253, 102, 2, 0.75);
+    -moz-box-shadow: 0px 10px 49px -20px rgba(253, 102, 2, 0.75);
+    transition-duration: 0.3s;
+  }
+
+  .playAudio {
+    margin-top: 75px !important;
+    width: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .play {
+    width: 200px;
+    height: 200px;
+    background-color: #9d9d9d;
+    border-radius: 50%;
+    padding-top: 35px;
+    margin: auto;
+    transition-duration: 0.3s;
+  }
+  .play:hover {
+    transition-duration: 0.3s;
+    background-color: #ff8c1d;
+  }
+  .ico {
+    font-size: 120px;
+  }
+
+  .playAudioQuiz {
+    margin-top: -20px !important;
+    width: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .playQuiz {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background-color: #9d9d9d;
+    border-radius: 50%;
+    // padding-top: 35px;
+    margin: auto;
+    transition-duration: 0.3s;
+  }
+  .playQuiz:hover {
+    transition-duration: 0.3s;
+    background-color: #ff8c1d;
+  }
+  .icoQuiz {
+    font-size: 20px;
+  }
+  .MatchTheColumn {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .ColumnOne {
+    width: 50%;
+    height: auto;
+    padding: 5px;
+  }
+  .ColumnTwo {
+    width: 50%;
+    height: auto;
+    padding: 5px;
+  }
+  .TranslationInput {
+    width: 99%;
+    height: auto;
+    padding: px;
+    border: 2px solid #df011f;
+    font-size: 18px;
+    text-transform: none;
+    border-radius: 20px;
+    margin: auto;
+    color: orangered;
+    font-weight: 700;
+  }
+  .CardTapTop {
+    margin: auto;
+    margin-top: 10px;
+    left: 0%;
+    right: 0%;
+    width: 90%;
+    text-align: left;
+    min-height: 100px;
+    height: auto;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: #ffae62;
+    border-bottom: #ffae62 7px solid;
+    box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+  }
+  .CardTapBottom {
+    margin: auto;
+    margin-top: 20px;
+    left: 0%;
+    right: 0%;
+    width: 90%;
+    text-align: left;
+    min-height: 100px;
+    height: auto;
+    padding: 026px;
+    border-radius: 40px;
+    background-color: #df3d15;
+    border-bottom: #df3d15 7px solid;
+    box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+  }
+  .MainTitle2 {
+    margin-top: 15px !important;
+    width: auto;
+    height: auto;
+    color: #df3d15;
+    border-radius: 10px;
+    background-color: white;
+    padding: 11px;
+    text-transform: none;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .res {
+    background-color: white;
+    color: #ef7b30;
+  }
+  .InsideCardText2 {
+    padding: 15px;
+  }
+}
