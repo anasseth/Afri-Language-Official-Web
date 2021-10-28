@@ -31,11 +31,6 @@
 }
 
 @media screen and (min-width: 1000px) {
-  .HeaderLogoBack {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
   .desktopheader {
     border-radius: 0px !important;
     height: 10% !important;
@@ -63,7 +58,6 @@
   }
 
   .LanguageDesktopDiv2 {
-    margin-top: 30px;
     // display: flex;
     // visibility: visible;
     width: 100%;
@@ -137,10 +131,10 @@
     transition: 0.25s ease-in;
     padding-top: 3%;
     // background-color: #ffffff;
-    height: 170px;
+    height: 200px;
     width: 100%;
     // color: black !important;
-    border: 1px solid white !important;
+    border: 3px solid rgb(26, 188, 156) !important;
     box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
     -webkit-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
     -moz-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
@@ -153,75 +147,25 @@
     // width: 70% !important;
     // margin-top: 20px;
     justify-content: center;
-    background-color: #df9905;
+    background-color: rgb(26, 188, 156);
     color: white !important;
     cursor: pointer;
   }
 
   .icon1 {
     font-size: 80px;
-    // color        : #df011f !important;
-    color: #ffffff !important;
-
+    color: #df011f !important;
     padding-top: 2%;
     padding-right: 10%;
   }
   .icon2 {
     font-size: 80px;
-    // color        : #dfb401 !important;
-    color: #ffffff !important;
-
+    color: #dfb401 !important;
     padding-top: 2%;
     padding-right: 10%;
   }
 
-  .Y {
-    background-image: linear-gradient(
-      90deg,
-      #ffc107,
-      #ffc107,
-      #ffc107,
-      rgb(255, 227, 142)
-    );
-    color: black;
-  }
-
-  .G {
-    /* background-color:#28A745; */
-    background-image: linear-gradient(
-      90deg,
-      #28a745,
-      #28a745,
-      #28a745,
-      #28a745
-    );
-  }
-
-  .R {
-    /* background-color:#DC3545; */
-    background-image: linear-gradient(
-      90deg,
-      #dc3545,
-      #dc3545,
-      #dc3545,
-      #dc3545
-    );
-  }
-
-  .B {
-    /* background-color:#17A2B8; */
-    background-image: linear-gradient(
-      90deg,
-      #17a2b8,
-      #17a2b8,
-      #17a2b8,
-      rgb(118, 212, 226)
-    );
-  }
-
   .card2 {
-    margin-right: 10px !important;
-
     position: relative;
     height: 170px;
     // background: url("https://image.freepik.com/free-vector/colorful-gradient-liquid-shapes-background_23-2148250143.jpg"),
@@ -234,10 +178,10 @@
     transition: 0.25s ease-in;
     padding-top: 3%;
     // background-color: #ffffff;
-    height: 170px;
+    height: 200px;
     width: 100%;
     // color: black !important;
-    border: 1px solid white !important;
+    border: 3px solid #e74c3c !important;
     box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
     -webkit-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
     -moz-box-shadow: 0px 9px 13px -5px rgba(0, 0, 0, 0.43);
@@ -348,30 +292,5 @@
     color: rgb(0, 0, 0);
     font-size: 20px !important;
     font-weight: 400;
-  }
-
-  .h2h {
-    color: rgb(0, 0, 0) !important;
-    font-weight: normal !important;
-  }
-
-  .bg {
-    background-color: white;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 1%;
-    cursor: pointer;
-    border-bottom: 1px solid #dadada;
-    border-radius: 10px;
-  }
-  .MainTitle {
-    margin-top: 10px;
-    width: auto;
-    height: auto;
-    color: white;
-    border-radius: 10px;
-    background-color: #df3d15;
-    padding: 10px;
-    margin-bottom: 30px;
   }
 }

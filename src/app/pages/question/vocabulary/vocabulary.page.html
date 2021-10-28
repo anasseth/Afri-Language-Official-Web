@@ -110,7 +110,9 @@
             text-center
             style="margin-top: 20px; margin-bottom: 20px; text-transform: none"
           >
-            <b class="MainTitle">{{data.answer}}</b>
+            <div style="font-size: 18px; font-family: 700" class="MainTitle">
+              {{data.answer}}
+            </div>
           </h4>
           <br />
           <h5 style="color: gray; font-size: 14px">
@@ -127,7 +129,7 @@
       </div>
 
       <div
-        class="buttonBackFor"
+        class="buttonBackFor next"
         [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
         (click)="next()"
       >
@@ -235,7 +237,7 @@
       </div>
 
       <div
-        class="buttonBackFor"
+        class="buttonBackFor next"
         [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
         (click)="next()"
       >
@@ -360,7 +362,7 @@
       </div>
 
       <div
-        class="buttonBackFor"
+        class="buttonBackFor next"
         [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
         (click)="next()"
       >
@@ -494,7 +496,7 @@
       </div>
 
       <div
-        class="buttonBackFor"
+        class="buttonBackFor next"
         [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
         (click)="next()"
       >
@@ -675,7 +677,7 @@
       </div>
 
       <div
-        class="buttonBackFor"
+        class="buttonBackFor next"
         [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
         (click)="next()"
       >
@@ -898,7 +900,7 @@
       </div>
 
       <div
-        class="buttonBackFor"
+        class="buttonBackFor next"
         [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
         (click)="next()"
       >

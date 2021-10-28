@@ -142,7 +142,42 @@
     display: none;
     visibility: hidden;
   }
- 
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .card {
+    width: 80% !important;
+    border-left: 5px solid orangered;
+    border-right: 5px solid orangered;
+    box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 26px -21px rgba(0, 0, 0, 0.75);
+
+    .leftCard {
+      width: 45%;
+      height: 60px;
+    }
+    .rightCard {
+      width: 45%;
+      height: 60px;
+      overflow: hidden;
+    }
+  }
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+
   .MainTitle {
     margin-top: 10px;
     width: auto;
