@@ -1303,7 +1303,7 @@
     border-right: 5px solid transparent;
     text-align: left;
     width: 90%;
-    height: 50px;
+    height: fit-content;
     color: #444444;
     font-size: 16px;
     font-weight: 700;
@@ -1430,14 +1430,21 @@
     align-items: center;
   }
   .ColumnOne {
-    width: 50%;
+    width: 100%;
     height: auto;
     padding: 5px;
+    border: 5px solid rgb(255, 208, 0);
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .ColumnTwo {
-    width: 50%;
+    margin-top: 10px;
+    width: 100%;
     height: auto;
     padding: 5px;
+    border: 5px solid orangered;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .TranslationInput {
     width: 99%;
@@ -1459,6 +1466,7 @@
     width: 90%;
     text-align: left;
     min-height: 100px;
+    line-height: 1.6;
     height: auto;
     padding: 20px;
     border-radius: 40px;
@@ -1471,6 +1479,7 @@
   .CardTapBottom {
     margin: auto;
     margin-top: 20px;
+    line-height: 1.6;
     left: 0%;
     right: 0%;
     width: 90%;
