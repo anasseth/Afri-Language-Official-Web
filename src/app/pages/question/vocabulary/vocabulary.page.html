@@ -79,7 +79,12 @@
       </div>
     </div>
 
-    <div class="DesktopDiv SoundVocab" *ngIf="data.content_type == 'repeat'">
+    <div
+      class="DesktopDiv SoundVocab"
+      *ngIf="data.content_type == 'repeat'"
+      (swiperight)="index != 0 ? prev() : '' "
+      (swipeleft)="index != tailles ? next() : ''"
+    >
       <div
         class="buttonBackFor"
         [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
@@ -87,6 +92,12 @@
       >
         <
       </div>
+      <img
+        class="ImageBack"
+        [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
+        (click)="prev()"
+        src="https://img.icons8.com/material-rounded/48/000000/back--v1.png"
+      />
 
       <div class="card-container">
         <div class="front">
@@ -103,7 +114,7 @@
             text-center
             style="margin-top: 20px; margin-bottom: 20px; text-transform: none"
           >
-            <b class="MainTitle InsideCardText">{{data.options}}</b>
+            <div class="MainTitle InsideCardText">{{data.options}}</div>
           </h1>
           <br />
           <h4
@@ -115,9 +126,7 @@
             </div>
           </h4>
           <br />
-          <h5 style="color: gray; font-size: 14px">
-            Tournez la carte écouter l'audio
-          </h5>
+          <h5 style="color: gray; font-size: 14px"></h5>
         </div>
         <!-- <div class="back">
           <div class="playAudio">
@@ -128,6 +137,12 @@
         </div> -->
       </div>
 
+      <img
+        class="ImageBack next pos"
+        [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
+        (click)="next()"
+        src="https://img.icons8.com/material-rounded/48/000000/forward.png"
+      />
       <div
         class="buttonBackFor next"
         [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
@@ -179,7 +194,12 @@
       </div>
     </div>
 
-    <div class="DesktopDiv Quiz" *ngIf="data.content_type == 'multiple'">
+    <div
+      class="DesktopDiv Quiz MCQExcersice"
+      *ngIf="data.content_type == 'multiple'"
+      (swiperight)="index != 0 ? prev() : '' "
+      (swipeleft)="index != tailles ? next() : ''"
+    >
       <div
         class="buttonBackFor"
         [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
@@ -187,6 +207,12 @@
       >
         <
       </div>
+      <img
+        class="ImageBack"
+        [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
+        (click)="prev()"
+        src="https://img.icons8.com/material-rounded/48/000000/back--v1.png"
+      />
 
       <div class="card-container-quiz">
         <div class="QuizFront">
@@ -202,7 +228,7 @@
             text-center
             style="margin-top: 20px; margin-bottom: 5px; text-transform: none"
           >
-            <b class="MainTitle InsideCardText">{{data.question}}</b>
+            <div class="MainTitle InsideCardText">{{data.question}}</div>
           </h1>
           <br />
           <div
@@ -235,6 +261,13 @@
           </div>
         </div>
       </div>
+
+      <img
+        class="ImageBack next pos"
+        [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
+        (click)="next()"
+        src="https://img.icons8.com/material-rounded/48/000000/forward.png"
+      />
 
       <div
         class="buttonBackFor next"
@@ -297,7 +330,12 @@
       </div>
     </div>
 
-    <div class="DesktopDiv Quiz" *ngIf="data.content_type == 'tap'">
+    <div
+      class="DesktopDiv Quiz TapCard"
+      *ngIf="data.content_type == 'tap'"
+      (swiperight)="index != 0 ? prev() : '' "
+      (swipeleft)="index != tailles ? next() : ''"
+    >
       <div
         class="buttonBackFor"
         [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
@@ -305,6 +343,12 @@
       >
         <
       </div>
+      <img
+        class="ImageBack"
+        [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
+        (click)="prev()"
+        src="https://img.icons8.com/material-rounded/48/000000/back--v1.png"
+      />
 
       <div class="card-container-quiz">
         <div class="QuizFront">
@@ -360,6 +404,13 @@
           </div>
         </div>
       </div>
+
+      <img
+        class="ImageBack next pos"
+        [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
+        (click)="next()"
+        src="https://img.icons8.com/material-rounded/48/000000/forward.png"
+      />
 
       <div
         class="buttonBackFor next"
@@ -429,7 +480,12 @@
       </div>
     </div>
 
-    <div class="DesktopDiv Quiz" *ngIf="data.content_type == 'match'">
+    <div
+      class="DesktopDiv Quiz ColumnMatching"
+      *ngIf="data.content_type == 'match'"
+      (swiperight)="index != 0 ? prev() : '' "
+      (swipeleft)="index != tailles ? next() : ''"
+    >
       <div
         class="buttonBackFor"
         [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
@@ -437,6 +493,12 @@
       >
         <
       </div>
+      <img
+        class="ImageBack"
+        [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
+        (click)="prev()"
+        src="https://img.icons8.com/material-rounded/48/000000/back--v1.png"
+      />
 
       <div class="card-container-quiz">
         <div class="QuizFront">
@@ -449,10 +511,10 @@
             </div>
           </div> -->
 
-          <div class="MatchTheColumn">
+          <div class="MatchTheColumn" style="margin-top: 10px">
             <div class="ColumnOne">
               <div
-                [ngClass]="nomQuestion == question ? 'QuizOptionSelected' : 'QuizOption'"
+                [ngClass]="nomQuestion == question ? 'QuizOptionSelected columnOption' : 'QuizOption columnOption'"
                 *ngFor="let question of   question_data | shuffle "
                 (click)="questionMatch(question,question_data)"
               >
@@ -461,7 +523,7 @@
             </div>
             <div class="ColumnTwo">
               <div
-                [ngClass]="nomOption == options ? 'QuizOptionSelected' : 'QuizOption'"
+                [ngClass]="nomOption == options ? 'QuizOptionSelected columnOption' : 'QuizOption columnOption'"
                 *ngFor=" let options of options_data | shuffle  "
                 (click)="optionsMatch(options,options_data)"
               >
@@ -470,7 +532,7 @@
             </div>
           </div>
 
-          <br />
+          <!-- <br /> -->
 
           <div
             style="
@@ -494,6 +556,13 @@
           </div>
         </div>
       </div>
+
+      <img
+        class="ImageBack next pos"
+        [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
+        (click)="next()"
+        src="https://img.icons8.com/material-rounded/48/000000/forward.png"
+      />
 
       <div
         class="buttonBackFor next"
@@ -617,7 +686,12 @@
       </div>
     </div>
 
-    <div class="DesktopDiv Quiz" *ngIf="data.content_type == 'translate'">
+    <div
+      class="DesktopDiv Quiz TranslatingExcersice"
+      *ngIf="data.content_type == 'translate'"
+      (swiperight)="index != 0 ? prev() : '' "
+      (swipeleft)="index != tailles ? next() : ''"
+    >
       <div
         class="buttonBackFor"
         [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
@@ -625,6 +699,12 @@
       >
         <
       </div>
+      <img
+        class="ImageBack"
+        [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
+        (click)="prev()"
+        src="https://img.icons8.com/material-rounded/48/000000/back--v1.png"
+      />
 
       <div class="card-container-quiz">
         <div class="QuizFront">
@@ -640,7 +720,7 @@
             text-center
             style="margin-top: 20px; margin-bottom: 5px; text-transform: none"
           >
-            <b class="MainTitle InsideCardText">{{data.question}}</b>
+            <div class="MainTitle InsideCardText">{{data.question}}</div>
           </h1>
           <br />
           <div class="TranslationInput">
@@ -675,6 +755,13 @@
           </div>
         </div>
       </div>
+
+      <img
+        class="ImageBack next pos"
+        [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
+        (click)="next()"
+        src="https://img.icons8.com/material-rounded/48/000000/forward.png"
+      />
 
       <div
         class="buttonBackFor next"
@@ -842,7 +929,12 @@
       </div>
     </div>
 
-    <div class="DesktopDiv Quiz" *ngIf="data.content_type == 'fill'">
+    <div
+      class="DesktopDiv Quiz MCQExcersice"
+      *ngIf="data.content_type == 'fill'"
+      (swiperight)="index != 0 ? prev() : '' "
+      (swipeleft)="index != tailles ? next() : ''"
+    >
       <div
         class="buttonBackFor"
         [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
@@ -850,6 +942,12 @@
       >
         <
       </div>
+      <img
+        class="ImageBack"
+        [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
+        (click)="prev()"
+        src="https://img.icons8.com/material-rounded/48/000000/back--v1.png"
+      />
 
       <div class="card-container-quiz">
         <div class="QuizFront">
@@ -865,7 +963,7 @@
             text-center
             style="margin-top: 20px; margin-bottom: 5px; text-transform: none"
           >
-            <b class="MainTitle InsideCardText">{{data.question}}</b>
+            <div class="MainTitle InsideCardText">{{data.question}}</div>
           </h1>
           <br />
           <div
@@ -898,6 +996,13 @@
           </div>
         </div>
       </div>
+
+      <img
+        class="ImageBack next pos"
+        [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
+        (click)="next()"
+        src="https://img.icons8.com/material-rounded/48/000000/forward.png"
+      />
 
       <div
         class="buttonBackFor next"

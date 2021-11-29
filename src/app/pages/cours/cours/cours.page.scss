@@ -65,6 +65,10 @@ h5 {
   visibility: hidden;
 }
 @media screen and (min-width: 1000px) {
+  .hide34 {
+    display: none;
+    visibility: hidden;
+  }
   .popover__title {
     // font-size: 24px;
     // line-height: 36px;
@@ -91,6 +95,8 @@ h5 {
     width: 1100px;
     height: 800px;
     padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .popover__content:before {
     position: absolute;
@@ -351,7 +357,8 @@ h5 {
       width: 100%;
       height: 150px;
       background-color: transparent;
-      background-image: url("../../../../assets/images/afri3.png");
+      background-size: cover;
+      // background-image: url("../../../../assets/images/afri3.png");
       background-size: auto 130%;
       background-position: center center;
       background-repeat: no-repeat;
@@ -379,6 +386,15 @@ h5 {
 }
 
 @media screen and (max-width: 1000px) {
+  .hide43 {
+    display: none;
+    visibility: hidden;
+  }
+  .hide34 {
+    width: 800px;
+    border: 3px solid orangered;
+    height: 300px;
+  }
   .popover__title {
     // font-size: 24px;
     // line-height: 36px;
@@ -388,9 +404,48 @@ h5 {
     // padding: 15px 0;
   }
 
+  .popover__wrapper {
+    position: relative;
+    display: block;
+  }
   .popover__content {
+    opacity: 0;
     visibility: hidden;
-    display: none;
+    position: absolute;
+    left: -140px;
+    transform: translate(0, 10px);
+    transform: translateX(135px);
+    background-color: #f6f6f6;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: 100vw;
+    padding-top: 20px;
+    display: -webkit-box;
+    overflow-x: scroll;
+    border: 5px solid orangered;
+  }
+  .popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(50% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #bfbfbf transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+  .popover__wrapper:hover .popover__content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -20px);
+    transform: translateX(140px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  }
+  .popover__message {
+    text-align: center;
   }
 
   .MenuButton {
@@ -421,8 +476,8 @@ h5 {
   }
   .h-100 {
     height: 100%;
-    margin: 20px;
-    margin-top: 40px;
+    margin: 10px;
+    // margin-top: 40px;
   }
 
   .card33 {
@@ -440,7 +495,7 @@ h5 {
   }
 
   .mobile-card {
-    width: 250px;
+    width: 140px;
     height: auto;
     // background-color: white;
     border-radius: 35px;
@@ -472,7 +527,7 @@ h5 {
 
   .onboarding-subtitle {
     padding: 0 5px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     color: rgb(136, 136, 136);
     line-height: 22px;
@@ -629,7 +684,8 @@ h5 {
       width: 100%;
       height: 150px;
       background-color: transparent;
-      background-image: url("../../../../assets/images/afri3.png");
+      background-size: cover;
+      // background-image: url("../../../../assets/images/afri3.png");
       background-size: auto 130%;
       background-position: center center;
       background-repeat: no-repeat;
@@ -653,5 +709,14 @@ h5 {
         font-weight: 700;
       }
     }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .card {
+    width: 100%;
+  }
+  .LanguageDesktopDiv2 {
+    padding: 20px;
   }
 }

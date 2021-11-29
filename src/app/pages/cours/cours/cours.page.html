@@ -12,7 +12,11 @@
           <h5><b class="MainTitle">{{ showName() }}</b></h5>
         </button>
         <div class="popover__content">
-          <!-- <div *ngFor="let langue of langues" routerLink="/tabs/tabs/cours">
+          <!-- <div
+            class="hide34"
+            *ngFor="let langue of langues"
+            routerLink="/tabs/tabs/cours"
+          >
             <div>
               <b class="MainTitle MenuButton" (click)="itemClick(langue)"
                 >{{langue.name}}</b
@@ -20,45 +24,45 @@
             </div>
             <br />
           </div> -->
-          <div
+          <!-- <div
             style="
               display: flex !important;
               flex-wrap: wrap !important;
               width: 100%;
               justify-content: center;
             "
+          > -->
+          <div
+            class="card33 mobile-card"
+            *ngFor="let i of this.usersData"
+            style="margin: 10px"
+            (click)="itemClick(i)"
           >
-            <div
-              class="card33 mobile-card"
-              *ngFor="let i of this.usersData"
-              style="margin: 10px"
-              (click)="itemClick(i)"
-            >
-              <section class="onboarding">
-                <main class="onboarding-slides">
-                  <div class="onboarding-slide">
-                    <img
-                      class="onboarding-illustration"
-                      [src]="i.logo"
-                      style="width: 50%; border-radius: 50%; margin-top: 20px"
-                      alt=""
-                    />
-                    <!-- <img
+            <section class="onboarding">
+              <main class="onboarding-slides">
+                <div class="onboarding-slide">
+                  <img
+                    class="onboarding-illustration"
+                    [src]="i.logo"
+                    style="width: 50%; border-radius: 50%; margin-top: 20px"
+                    alt=""
+                  />
+                  <!-- <img
                       src="https://img.icons8.com/color/96/000000/france.png"
                       style="margin-top: 20px"
                     /> -->
-                    <!-- <h2 class="onboarding-title">{{i.name}}</h2> -->
-                    <p
-                      class="onboarding-subtitle"
-                      style="color: orangered !important"
-                    >
-                      {{i.total_users}} membres
-                    </p>
-                  </div>
-                </main>
-              </section>
-            </div>
+                  <!-- <h2 class="onboarding-title">{{i.name}}</h2> -->
+                  <p
+                    class="onboarding-subtitle"
+                    style="color: orangered !important"
+                  >
+                    {{i.total_users}} membres
+                  </p>
+                </div>
+              </main>
+            </section>
           </div>
+          <!-- </div> -->
         </div>
       </div>
     </h5>
@@ -94,9 +98,19 @@
       <div
         *ngFor="let topic of topics |orderBy:'display_order' ; let index = index"
         class="card"
-        (click)="topicClick(topic,user,index,user.email)"
+        (click)="clickCourseCard(topic,user,index,user.email)"
       >
-        <div class="top-half"></div>
+        <div
+          class="top-half"
+          style="background-size: cover !important"
+          [ngStyle]="{
+        'background-image': 
+        this.contentLockingPercentage[index].logo.slice(this.contentLockingPercentage[index].logo.length-4,this.contentLockingPercentage[index].logo.length-3) == '.' ? 
+        'url(' + this.contentLockingPercentage[index].logo + ')' : 
+        'url(' + '../../../../assets/images/afri3.png' + 
+        ')'
+      }"
+        ></div>
         <div class="bottom-half">
           <div class="title"><b>{{topic.name}}</b></div>
           <div class="subtitle">
@@ -109,3 +123,5 @@
     </div>
   </div>
 </ion-content>
+
+<!-- style="background-image: url('../../../../assets/images/afri3.png')" -->

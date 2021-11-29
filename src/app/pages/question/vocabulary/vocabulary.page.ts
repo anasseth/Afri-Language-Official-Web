@@ -184,6 +184,7 @@ export class VocabularyPage implements OnInit {
   }
 
   async successAlert() {
+    this.triedTimes = 0;
     const alert = await this.alertController.create({
       cssClass: "successAlert",
       header: "Réponse correcte",
@@ -514,7 +515,7 @@ export class VocabularyPage implements OnInit {
 
     if (this.data.content_type == "translate") {
       const result = this.answerCheck;
-
+      this.translateCheck = this.translateCheck.toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, "")
       console.log(this.answerCheck[0]);
       // console.log(this.answerCheck[0].toLowerCase().replace(/[^a-zA-Z ]/g, ""))
       // console.log(this.answerCheck[0].toLowerCase().replace(/\s+/g, ''))

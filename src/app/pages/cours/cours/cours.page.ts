@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AfrilangueService } from "../../../services/afrilangue.service";
 import { ActivatedRoute, Router } from "@angular/router";
-import { ModalController } from "@ionic/angular";
-
+import { AlertController, ModalController, NavParams } from "@ionic/angular";
 import { Platform } from "@ionic/angular";
 import { VocabularyPage } from "../../question/vocabulary/vocabulary.page";
 import { LoadingController } from "@ionic/angular";
@@ -20,6 +19,7 @@ export class CoursPage implements OnInit {
   data: any;
   idVerify;
   usersData: any;
+  contentLockingPercentage: any;
   usersData2: any;
   imageData = [
     "../../../assets/images/1.png",
@@ -40,7 +40,8 @@ export class CoursPage implements OnInit {
     private afriService: AfrilangueService,
     private route: ActivatedRoute,
     private router: Router,
-    public modalController: ModalController
+    private alertController: AlertController,
+    private modalController: ModalController,
   ) {
     this.route.queryParams.subscribe((params) => {
       this.onGetProfile();
@@ -68,6 +69,7 @@ export class CoursPage implements OnInit {
     //this.onGetProfile();
     this.onGetTopics();
     this.onGetLangues();
+    this.loadContentPercentage();
     this.afriService.showNotification();
 
     this.afriService.getLanguageData().subscribe(
@@ -84,6 +86,34 @@ export class CoursPage implements OnInit {
         this.usersData2 = this.usersData
       }
     )
+  }
+
+  loadContentPercentage() {
+    if (this.afriService.language_id == undefined) {
+      this.onGetProfile();
+      setTimeout(() => {
+        this.afriService.getContentCoveredPercentage().subscribe(
+          data => {
+            console.log("User Content % Covered")
+            console.log(data)
+            this.contentLockingPercentage = data
+          }, err => {
+            console.log(err)
+          }
+        )
+      }, 3000);
+    }
+    else {
+      this.afriService.getContentCoveredPercentage().subscribe(
+        data => {
+          console.log("User Content % Covered")
+          console.log(data)
+          this.contentLockingPercentage = data
+        }, err => {
+          console.log(err)
+        }
+      )
+    }
   }
 
   onGetProfile() {
@@ -144,6 +174,51 @@ export class CoursPage implements OnInit {
     }
   }
 
+  async contentPercentageErrorAlert() {
+    const alert = await this.alertController.create({
+      cssClass: "successAlert",
+      header: "Erreur",
+      message: "<strong>Veuillez d'abord terminer la leçon précédente</strong>",
+      buttons: ["Continuer"],
+    });
+    await alert.present();
+  }
+
+  clickCourseCard(topic, user, index, mail) {
+    console.log("Topic : ", topic)
+    console.log("User : ", user)
+    console.log("Index : ", index)
+    console.log("Mail : ", mail)
+
+    if (index != 0 && topic.name == this.contentLockingPercentage[index].name) {
+      if (
+        this.contentLockingPercentage[index - 1].grammar_percentage >= 70
+        &&
+        this.contentLockingPercentage[index - 1].review_percentage >= 70
+        &&
+        this.contentLockingPercentage[index - 1].sentence_percentage >= 70
+      ) {
+        console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
+        console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
+        console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
+        this.topicClick(topic, user, index, mail)
+      }
+      else {
+        this.contentPercentageErrorAlert()
+        console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
+        console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
+        console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
+      }
+    }
+    else if (index == 0) {
+      console.log("grammar_percentage : ", this.contentLockingPercentage[index].grammar_percentage)
+      console.log("review_percentage : ", this.contentLockingPercentage[index].review_percentage)
+      console.log("sentence_percentage : ", this.contentLockingPercentage[index].sentence_percentage)
+      this.topicClick(topic, user, index, mail)
+    }
+
+  }
+
   async topicClick(topic, user, index, mail) {
     console.log(this.verify);
     console.log(this.user);
@@ -193,18 +268,18 @@ export class CoursPage implements OnInit {
                            component: LessonsPage,
                            componentProps: {
                                'topic': topic,
-
+  
                            }
                        });
                        return await modal.present();
                    }
-
+  
                    else if(user.subscribed == true && index > 0){
                        const modal = await this.modalController.create({
                            component: LessonsPage,
                            componentProps: {
                                'topic': topic,
-
+  
                            }
                        });
                        return await modal.present();

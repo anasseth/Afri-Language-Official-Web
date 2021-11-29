@@ -132,3 +132,67 @@
     margin-top: 10%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .cercle {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+
+    ion-icon {
+      width: 75px;
+      height: 75px;
+    }
+    p {
+      margin-top: 110px;
+      font-size: 16px;
+    }
+  }
+  .a {
+    margin-left: 45px !important;
+  }
+  .b {
+    margin-left: 23px !important;
+  }
+  .c {
+    margin-left: 35px !important;
+  }
+  .d {
+    margin-left: 35px !important;
+  }
+  .e {
+    margin-left: 29px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cercle {
+    width: 130px;
+    height: 130px;
+    margin: 20px;
+
+    ion-icon {
+      width: 55px;
+      height: 55px;
+    }
+    p {
+      margin-top: 90px;
+      font-size: 14px;
+    }
+  }
+  .a {
+    margin-left: 40px !important;
+  }
+  .b {
+    margin-left: 18px !important;
+  }
+  .c {
+    margin-left: 30px !important;
+  }
+  .d {
+    margin-left: 30px !important;
+  }
+  .e {
+    margin-left: 24px !important;
+  }
+}

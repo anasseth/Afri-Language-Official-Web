@@ -99,11 +99,10 @@ ion-input:-ms-input-placeholder {
 }
 
 @media screen and (min-width: 1000px) {
-
-  .UserLogo{
+  .UserLogo {
     width: 55px;
     height: 55px;
-    border-radius:50%;
+    border-radius: 50%;
     background-color: rgb(85, 85, 85);
     margin: auto;
     left: 0px;
@@ -111,7 +110,7 @@ ion-input:-ms-input-placeholder {
     text-align: center;
   }
 
-  .MainTitle{
+  .MainTitle {
     margin-top: 10px;
     width: auto;
     height: auto;
@@ -201,6 +200,158 @@ ion-input:-ms-input-placeholder {
     background-image: linear-gradient(to right, #f7cf30, #fc1634);
     // border-top-right-radius: 10px;
     // border-bottom-right-radius: 10px;
+  }
+
+  .logoAfdesk {
+    height: 170px !important;
+  }
+
+  .logoAfrica {
+    height: 130px !important;
+  }
+
+  .loginmobiledisnone {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  h5 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .logindesktop {
+    border: 1px solid #dfb401;
+    padding: 1%;
+    margin-left: 20% !important;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .logindesktop:hover {
+    border: 1px solid #dfb401;
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+    color: white !important;
+    cursor: pointer;
+  }
+
+  .desktoploginIBTN {
+    width: 60%;
+    padding: 6px;
+    border-radius: 8px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+  }
+  input:hover {
+    border: 2px solid #00a2ff !important;
+  }
+  .ShowMobileOn {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .UserLogo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(85, 85, 85);
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+  }
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: orangered;
+    padding: 10px;
+    font-size: 22px;
+  }
+
+  .AfriLogoDiv {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    margin-top: 65%;
+    padding-top: 35px;
+    padding-left: 15px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 9px 13px -3px rgba(255, 255, 255, 0.43);
+    -webkit-box-shadow: 0px 9px 13px -3px rgba(255, 255, 255, 0.43);
+    -moz-box-shadow: 0px 9px 13px -3px rgba(255, 255, 255, 0.43);
+  }
+
+  .ShowMobileOn {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    display: flex !important;
+    visibility: visible !important;
+    width: 100% !important;
+    margin-top: 3%;
+    justify-content: center;
+  }
+
+  .LoginDesktopDiv {
+    display: none;
+    visibility: hidden;
+  }
+
+  .logo {
+    margin: auto;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .rounded {
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+  }
+
+  .inlining {
+    margin-right: 3px;
+  }
+
+  span {
+    display: flex;
+  }
+
+  h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .contentdesktop {
+    width: 100%;
+    padding-top: 5% !important;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 5%;
+  }
+
+  .imgdesktop {
+    width: 35%;
+    height: auto;
+    min-height: 550px;
+    padding-left: 7%;
+    padding-right: 7%;
+    background-image: linear-gradient(to right, #f7cf30, #fc1634);
   }
 
   .logoAfdesk {

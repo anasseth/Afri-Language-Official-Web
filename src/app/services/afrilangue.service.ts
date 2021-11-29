@@ -48,8 +48,10 @@ export class AfrilangueService {
         trigger: { every: { hour: 11, minute: 30 } },
         led: "FF0000",
         foreground: true,
+        sound: null
       });
     }
+    console.log("Notification : Hello World")
   }
 
   showHelp() {
@@ -96,6 +98,8 @@ export class AfrilangueService {
 
   public getContentCoveredPercentage() {
     var email = JSON.parse(localStorage.getItem("userDetails")).email
+    console.log("Language ID")
+    console.log(this.language_id)
     let httpOptions = {
       headers: new HttpHeaders({
         Authorization: "Bearer " + this.myToken,
@@ -105,7 +109,8 @@ export class AfrilangueService {
 
     return this.http.post("https://afrilangues.com/api/topics",
       {
-        email: email,
+        // email: email,
+        language_id: this.language_id
       },
       httpOptions
     );

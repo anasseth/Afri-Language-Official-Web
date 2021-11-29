@@ -103,7 +103,9 @@
         class="iconElement"
         icon="assets/icon/light-bulb.svg"
       ></ion-icon>
-      <p style="margin-left: 57px"><strong>1) {{questions[0].name}}</strong></p>
+      <p class="a" style="margin-left: 57px">
+        <strong>1) {{questions[0].name}}</strong>
+      </p>
     </div>
 
     <div class="cercle" (click)="questionClick(questions[1])">
@@ -111,12 +113,14 @@
         class="iconElement"
         icon="assets/icon/vocabulary.svg"
       ></ion-icon>
-      <p style="margin-left: 28px"><strong>2) {{questions[1].name}}</strong></p>
+      <p class="b" style="margin-left: 28px">
+        <strong>2) {{questions[1].name}}</strong>
+      </p>
     </div>
 
     <div class="cercle" (click)="questionClick(questions[2])">
       <ion-icon class="iconElement" icon="assets/icon/grammar.svg"></ion-icon>
-      <p style="margin-left: 40px">
+      <p class="c" style="margin-left: 40px">
         <strong>3) {{questions[2].name}} </strong>
       </p>
     </div>
@@ -125,7 +129,7 @@
         class="iconElement"
         icon="assets/icon/vocabulary-2.svg"
       ></ion-icon>
-      <p style="margin-left: 40px">
+      <p class="d" style="margin-left: 40px">
         <strong>4) {{questions[3].name}} </strong>
       </p>
     </div>
@@ -134,7 +138,7 @@
         class="iconElement"
         icon="assets/icon/dialogue-1.svg"
       ></ion-icon>
-      <p style="margin-left: 34px">
+      <p class="e" style="margin-left: 34px">
         <strong>5) {{questions[4].name}} </strong>
       </p>
     </div>

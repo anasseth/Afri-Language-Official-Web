@@ -72,9 +72,10 @@ export class QuestiontypesPage implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log("9839hreui")
     this.afriService.getContentCoveredPercentage().subscribe(
       data => {
+        console.log("User Content Covered %")
         console.log(data)
       },
       (err) => {

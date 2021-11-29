@@ -56,7 +56,7 @@ export class ForgotPasswordPage implements OnInit {
           },
           (error) => {
             console.log(error);
-            this.wrongAlert("L'email ou le mot de passe est incorrect");
+            this.wrongAlert("L'email est incorrect");
           }
         );
     }
