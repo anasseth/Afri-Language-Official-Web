@@ -49,6 +49,9 @@ export class LessonsPage implements OnInit {
   async lessonClick(lesson) {
     console.log(lesson);
 
+    console.log(lesson.lesson_image)
+    console.log(lesson.lesson_image.slice(lesson.lesson_image.length - 4, lesson.lesson_image.length - 3))
+
     const modal = await this.modalController.create({
       cssClass: "modal-fullscreen",
       component: QuestiontypesPage,

@@ -48,7 +48,16 @@
         class="card"
         (click)="lessonClick(lesson)"
       >
-        <div class="top-half"></div>
+        <div
+          class="top-half"
+          [ngStyle]="{
+          'background-image': 
+          lesson.lesson_image.slice(lesson.lesson_image.length-4,lesson.lesson_image.length-3) == '.' || lesson.lesson_image.slice(lesson.lesson_image.length-5,lesson.lesson_image.length-4) == '.' ? 
+          'url(' + lesson.lesson_image + ')' : 
+          'url(' + '../../assets/images/afri6.jpg' + 
+          ')'
+        }"
+        ></div>
         <div class="bottom-half">
           <div class="title"><b>{{lesson.name}}</b></div>
           <div class="subtitle">
