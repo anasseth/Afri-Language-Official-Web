@@ -62,7 +62,7 @@ export class LoginPage implements OnInit {
             // this.router.navigateByUrl('/tabs/tabs/cours');
           },
           (error) => {
-            console.log(error);
+            // console.log(error);
             this.wrongAlert("L'email ou le mot de passe est incorrect");
           }
         );
@@ -90,14 +90,14 @@ export class LoginPage implements OnInit {
 
 
 
-             console.log(parsed);
+             // console.log(parsed);
 
 
               this.router.navigateByUrl("/tabs/tabs/home")
 
           },error =>{
 
-              console.log(error);
+              // console.log(error);
 
           }
 

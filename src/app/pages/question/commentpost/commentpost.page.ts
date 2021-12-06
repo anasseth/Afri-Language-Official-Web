@@ -41,7 +41,7 @@ export class CommentpostPage implements OnInit {
         (data) => {
           this.user = data;
 
-          console.log(data);
+          // console.log(data);
         },
         (error) => console.log(error)
       );
@@ -52,16 +52,16 @@ export class CommentpostPage implements OnInit {
       (data) => {
         this.user = data["success"];
 
-        console.log(this.user);
+        // console.log(this.user);
       },
-      (error) => console.log(error)
+      (error) => // console.log(error)
     ); */
 
     this.afriService.getCommunityComments(this.post.id).subscribe(
       (data) => {
         this.datas = data;
 
-        console.log(data);
+        // console.log(data);
       },
       (error) => console.log(error)
     );

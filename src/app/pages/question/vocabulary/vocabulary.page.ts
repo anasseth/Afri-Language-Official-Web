@@ -79,10 +79,10 @@ export class VocabularyPage implements OnInit {
   play(url) {
     const options: StreamingVideoOptions = {
       successCallback: () => {
-        console.log("Video played");
+        // console.log("Video played");
       },
       errorCallback: (e) => {
-        console.log("Error streaming");
+        // console.log("Error streaming");
       },
       orientation: "portrait",
       /* shouldAutoClose: true,
@@ -95,27 +95,27 @@ export class VocabularyPage implements OnInit {
     );
 
     /*    this.videoPlayer.play(url).then(() => {
-                console.log('video completed');
+                // console.log('video completed');
             }).catch(err => {
-                console.log(err);
+                // console.log(err);
             });*/
   }
 
   playVideo(url) {
     const options: StreamingVideoOptions = {
       successCallback: () => {
-        console.log("Video played");
+        // console.log("Video played");
       },
       errorCallback: (e) => {
-        console.log("Error streaming");
+        // console.log("Error streaming");
       },
       orientation: "portrait",
       /* shouldAutoClose: true,
              controls: false*/
     };
 
-    console.log(
-      '"https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_5mb.mp4"'
+     console.log(
+    '"https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_5mb.mp4"'
     );
 
     this.streamingMedia.playVideo(
@@ -124,9 +124,9 @@ export class VocabularyPage implements OnInit {
     );
 
     /*    this.videoPlayer.play(url).then(() => {
-             console.log('video completed');
+             // console.log('video completed');
          }).catch(err => {
-             console.log(err);
+             // console.log(err);
          });*/
   }
 
@@ -180,7 +180,7 @@ export class VocabularyPage implements OnInit {
       this.arrayDrag.push(this.replaceImg(data));
     }
 
-    console.log(this.arrayDrag);
+    // console.log(this.arrayDrag);
   }
 
   async successAlert() {
@@ -229,8 +229,8 @@ export class VocabularyPage implements OnInit {
   }
 
   /*   onGetQuestionSing() {
-    console.log("lesson = ", this.lesson.id);
-    console.log("question_type = ", this.question_type.question_type);
+    // console.log("lesson = ", this.lesson.id);
+    // console.log("question_type = ", this.question_type.question_type);
     this.afriService
       .getQuestion(this.lesson.id, this.question_type.question_type)
       .subscribe(
@@ -238,16 +238,16 @@ export class VocabularyPage implements OnInit {
           this.datas.push(this.question_type);
           this.data = this.question_type;
 
-          console.log("Data => ", this.data);
+          // console.log("Data => ", this.data);
           //this.tailles = this.datas[0].length - 1;
         },
         (error) => {
-          console.log(error);
+          // console.log(error);
         }
       );
   } */
   onGetQuestion() {
-    console.log("question_type => ", this.question_type.value);
+    // console.log("question_type => ", this.question_type.value);
 
     if (this.question_type.value != undefined) {
       this.afriService
@@ -257,11 +257,11 @@ export class VocabularyPage implements OnInit {
             this.datas.push(data);
             this.data = this.datas[0][0];
 
-            console.log("Data => ", this.data);
+            // console.log("Data => ", this.data);
             this.tailles = this.datas[0].length - 1;
           },
           (error) => {
-            console.log(error);
+            // console.log(error);
           }
         );
     } else {
@@ -272,13 +272,13 @@ export class VocabularyPage implements OnInit {
             this.datas.push(data);
             this.data = this.question_type;
 
-            console.log("Data => ", this.data);
+            // console.log("Data => ", this.data);
             this.tailles = this.datas[0].length;
 
             this.globalRender(this.data);
           },
           (error) => {
-            console.log(error);
+            // console.log(error);
           }
         );
     }
@@ -335,7 +335,7 @@ export class VocabularyPage implements OnInit {
     this.indexChoose = choose.value;
     this.choosesVal = choose.data;
 
-    console.log(this.choosesVal);
+    // console.log(this.choosesVal);
   }
 
   optionsClick(op, e) {
@@ -347,9 +347,9 @@ export class VocabularyPage implements OnInit {
 
     this.checkOptions = op;
 
-    console.log(this.checkAnswer)
-    console.log(this.checkOptions)
-    console.log(this.data)
+    // console.log(this.checkAnswer)
+    // console.log(this.checkOptions)
+    // console.log(this.data)
   }
 
   fillMatch(op, ops) {
@@ -442,7 +442,7 @@ export class VocabularyPage implements OnInit {
           answercheck
         )
         .subscribe((data) => {
-          console.log(data);
+          // console.log(data);
         });
 
       if (this.checkOptions == this.checkAnswer) {
@@ -464,7 +464,7 @@ export class VocabularyPage implements OnInit {
           this.nomQuestion
         )
         .subscribe((data) => {
-          console.log(data);
+          // console.log(data);
         });
 
       if (this.nomQuestion == this.data.answer) {
@@ -516,21 +516,21 @@ export class VocabularyPage implements OnInit {
     if (this.data.content_type == "translate") {
       const result = this.answerCheck;
       this.translateCheck = this.translateCheck.toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, "")
-      console.log(this.answerCheck[0]);
-      // console.log(this.answerCheck[0].toLowerCase().replace(/[^a-zA-Z ]/g, ""))
-      // console.log(this.answerCheck[0].toLowerCase().replace(/\s+/g, ''))
-      console.log(this.answerCheck[0].toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, ""))
-      console.log(this.translateCheck)
+      // console.log(this.answerCheck[0]);
+      // // console.log(this.answerCheck[0].toLowerCase().replace(/[^a-zA-Z ]/g, ""))
+      // // console.log(this.answerCheck[0].toLowerCase().replace(/\s+/g, ''))
+      // console.log(this.answerCheck[0].toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, ""))
+      // console.log(this.translateCheck)
 
       const index = result
         .map(function (e) {
-          console.log(e.toLowerCase().replace(/\s+/g, ''))
-          console.log(e.toLowerCase().replace(/[^a-zA-Z ]/g, " ").trim().split(" "))
+          // console.log(e.toLowerCase().replace(/\s+/g, ''))
+          // console.log(e.toLowerCase().replace(/[^a-zA-Z ]/g, " ").trim().split(" "))
           return e.toLowerCase().replace(/\s+/g, '');
         })
         .indexOf(this.translateCheck.toLowerCase().replace(/\s+/g, ''));
 
-      console.log(index)
+      // console.log(index)
 
       if (index != -1) {
         this.successAlert();
@@ -543,7 +543,7 @@ export class VocabularyPage implements OnInit {
             this.answerCheck[0]
           )
           .subscribe((data) => {
-            console.log(data);
+            // console.log(data);
           });
       } else {
         this.falseAlert("réessayer");
@@ -556,7 +556,7 @@ export class VocabularyPage implements OnInit {
             this.data.id
           )
           .subscribe((data) => {
-            console.log(data);
+            // console.log(data);
           });
       }
     }
@@ -581,7 +581,7 @@ export class VocabularyPage implements OnInit {
             this.data.answer
           )
           .subscribe((data) => {
-            console.log(data);
+            // console.log(data);
           });
       } else {
         this.falseAlert("réessayer");
@@ -594,13 +594,13 @@ export class VocabularyPage implements OnInit {
             this.data.id
           )
           .subscribe((data) => {
-            console.log(data);
+            // console.log(data);
           });
       }
     }
     if (this.data.content_type == "truefalse") {
-      console.log(this.choosesVal);
-      console.log(this.data.answer);
+      // console.log(this.choosesVal);
+      // console.log(this.data.answer);
 
       if (this.choosesVal == this.data.answer) {
         this.successAlert();

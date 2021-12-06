@@ -34,7 +34,7 @@ export class LessonsPage implements OnInit {
     this.afriService.getTLessons(this.topic).subscribe(
       (data) => {
         this.lessons = data;
-        console.log(this.lessons);
+        // console.log(this.lessons);
       },
       (error) => console.log(error)
     );
@@ -47,10 +47,10 @@ export class LessonsPage implements OnInit {
   }
 
   async lessonClick(lesson) {
-    console.log(lesson);
+    // console.log(lesson);
 
-    console.log(lesson.lesson_image)
-    console.log(lesson.lesson_image.slice(lesson.lesson_image.length - 4, lesson.lesson_image.length - 3))
+    // console.log(lesson.lesson_image)
+    // console.log(lesson.lesson_image.slice(lesson.lesson_image.length - 4, lesson.lesson_image.length - 3))
 
     const modal = await this.modalController.create({
       cssClass: "modal-fullscreen",

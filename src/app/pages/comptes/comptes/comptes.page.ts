@@ -31,7 +31,7 @@ export class ComptesPage implements OnInit {
     private route: Router
   ) {
     this.router.queryParams.subscribe((params) => {
-      // console.log(this.afriService.myToken );
+      // // console.log(this.afriService.myToken );
       this.afriService.showNotification();
       if (this.afriService.myToken == "") {
         this.route.navigateByUrl("/login");
@@ -39,7 +39,7 @@ export class ComptesPage implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
   notification() {
     this.afriService.showNotification();
   }

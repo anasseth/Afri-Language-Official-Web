@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AfrilangueService} from '../../services/afrilangue.service';
-import {log} from 'util';
-import {NavigationExtras, Router} from '@angular/router';
+import { AfrilangueService } from '../../services/afrilangue.service';
+import { log } from 'util';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +10,13 @@ import {NavigationExtras, Router} from '@angular/router';
 })
 export class HomePage implements OnInit {
 
-  constructor(private afriService: AfrilangueService,private router:Router) { }
+  constructor(private afriService: AfrilangueService, private router: Router) { }
 
-  profile:any;
+  profile: any;
 
   ngOnInit() {
-this.onGetProfile();
-this.onGetLangues();
+    this.onGetProfile();
+    this.onGetLangues();
 
   }
 
@@ -27,49 +27,49 @@ this.onGetLangues();
 
 
 
-  itemClick(langue){
-    console.log('langue choisie : ' , langue.id);
+  itemClick(langue) {
+    // console.log('langue choisie : ' , langue.id);
 
 
-    let navigationExtra : NavigationExtras = {
-        queryParams :{
-            language_id : langue.id
-        }
+    let navigationExtra: NavigationExtras = {
+      queryParams: {
+        language_id: langue.id
+      }
     }
 
-    this.router.navigate(["/tabs/tabs/cours/"+langue.id], navigationExtra)
-    
+    this.router.navigate(["/tabs/tabs/cours/" + langue.id], navigationExtra)
+
   }
 
 
-  onGetProfile(){
+  onGetProfile() {
 
-     this.afriService.getProfile()
-     
-     .subscribe(
-        data=>{
+    this.afriService.getProfile()
+
+      .subscribe(
+        data => {
           this.profile = data['success'];
-          console.log(this.profile);
+          // console.log(this.profile);
         }, error => console.log(error)
-    ) 
+    )
 
   }
 
-  onGetLangues(){
+  onGetLangues() {
 
     this.afriService.getLangues()
-    
-    .subscribe(
-       data=>{
-        
-        this.langues = data;
-         console.log(this.langues);
-       }, error => console.log(error)
-   ) 
 
- }
+      .subscribe(
+        data => {
 
-  resetToken(){
+          this.langues = data;
+          // console.log(this.langues);
+        }, error =>  console.log(error)
+   )
+
+  }
+
+  resetToken() {
     this.afriService.clearToken();
   }
 

@@ -45,8 +45,8 @@ export class DialoguePage implements OnInit {
   ) {
     this.question_type = this.navParams.get("question_type");
     this.lesson = this.navParams.get("lesson");
-    console.log("Intro info : ", this.question_type);
-    console.log("Lesson info : ", this.lesson);
+    // console.log("Intro info : ", this.question_type);
+    // console.log("Lesson info : ", this.lesson);
   }
 
   ngOnInit() {
@@ -62,12 +62,12 @@ export class DialoguePage implements OnInit {
           this.tailles = this.datas[0].length - 1;
           this.data = this.datas[0][this.index];
 
-          console.log("data info : ", this.datas);
+          // console.log("data info : ", this.datas);
           this.resultats = [];
           this.onResponse();
         },
         (error) => {
-          console.log(error);
+          // console.log(error);
         }
       );
   }
@@ -98,7 +98,7 @@ export class DialoguePage implements OnInit {
     let reg = "/\\[(.*?)\\]/";
     let str = "Seriba, í ní [tag]sɔ̀gɔma[/tag].";
 
-    //console.log("solutions =>" ,  str.match(reg));
+    //// console.log("solutions =>" ,  str.match(reg));
 
     let q = question.map((x) => {
       let pe = x.padStart(x.length + 1, "{").padEnd(x.length + 2, "}");
@@ -119,8 +119,8 @@ export class DialoguePage implements OnInit {
 
     let donnee = sousTag.split(",");
 
-    console.log("sousTag =>", sousTag);
-    console.log("sousTag2 =>", donnee);
+    // console.log("sousTag =>", sousTag);
+    // console.log("sousTag2 =>", donnee);
 
     donnee.forEach((x) => {
       if (x.includes("[/tag]")) {
@@ -128,13 +128,13 @@ export class DialoguePage implements OnInit {
       }
     });
 
-    // console.log('solutions =>', this.arrayTags);
-    console.log("Resultats =>", this.resultats);
+    // // console.log('solutions =>', this.arrayTags);
+    // console.log("Resultats =>", this.resultats);
 
     this.onDatas = this.resultats;
 
-    console.log(this.oldSize);
-    console.log(this.onDatas.length);
+    // console.log(this.oldSize);
+    // console.log(this.onDatas.length);
 
     if (this.state == false) {
       const lost = this.resultats.slice(this.oldSize, this.onDatas.length);
@@ -144,22 +144,22 @@ export class DialoguePage implements OnInit {
     } else if (this.state == true) {
       const lost = this.resultats.slice(this.oldSize, this.onDatas.length);
 
-      console.log("lost =>", lost);
+      // console.log("lost =>", lost);
       this.onDatas = this.resultats.slice(lost.length - 1, this.onDatas.length);
 
       this.resultats = this.onDatas;
     }
 
-    console.log("size =>", this.onDatas.length);
-    console.log("onDatas =>", this.onDatas);
+    // console.log("size =>", this.onDatas.length);
+    // console.log("onDatas =>", this.onDatas);
 
-    console.log(this.question_data);
+    // console.log(this.question_data);
     var x = "[f|oo|]";
     var y = x.replace(/^\[+|\]+$/g, "");
   }
 
   demo() {
-    console.log("Ca marche.");
+    // console.log("Ca marche.");
   }
 
   test;
@@ -182,9 +182,9 @@ export class DialoguePage implements OnInit {
       "  readonly   /> ";
 
     for (let i = 0; i < this.resultats.length; i++) {
-      //console.log("index => " + i +" : "+ this.resultats[i]);
+      //// console.log("index => " + i +" : "+ this.resultats[i]);
 
-      //console.log("Phrase : ", phrases ,phrases.includes(this.resultats[i]) , "Mot : " ,  this.resultats[i]);
+      //// console.log("Phrase : ", phrases ,phrases.includes(this.resultats[i]) , "Mot : " ,  this.resultats[i]);
 
       let untagtag;
       let ununtagtag;
@@ -199,11 +199,11 @@ export class DialoguePage implements OnInit {
       let unununununununununtagtag3;
 
       if (untag.includes(this.resultats[i] + "[")) {
-        // console.log("Phrase : ", untag.replace(this.resultats[i]+"[" , "!Okay!")    , "Mot : " ,  this.resultats[i]);
+        // // console.log("Phrase : ", untag.replace(this.resultats[i]+"[" , "!Okay!")    , "Mot : " ,  this.resultats[i]);
 
         untagtag = untag.replace(this.resultats[i] + "[", action);
 
-        // console.log("untagtag " ,  untagtag.replace(this.resultats[i-1]+"[" , action));
+        // // console.log("untagtag " ,  untagtag.replace(this.resultats[i-1]+"[" , action));
 
         ununtagtag = untagtag
           .replace(this.resultats[i - 1] + "[", action)
@@ -301,12 +301,12 @@ export class DialoguePage implements OnInit {
                   event.currentIndex*/
       );
     }
-    console.log("Event : ", event);
+    // console.log("Event : ", event);
   }
 
   onSubmit(f) {
-    console.log(this.saisie);
-    console.log(f.value);
+    // console.log(this.saisie);
+    // console.log(f.value);
   }
 
   saisieData = [];
@@ -352,8 +352,8 @@ export class DialoguePage implements OnInit {
       this.saisieData.push(demo[i].value);
     }
 
-    console.log(this.resultats.join(" "));
-    console.log(this.saisieData.join(" "));
+    // console.log(this.resultats.join(" "));
+    // console.log(this.saisieData.join(" "));
 
     if (this.resultats.join(" ") == this.saisieData.join(" ")) {
       this.successAlert();
@@ -377,7 +377,7 @@ export class DialoguePage implements OnInit {
 
     if (this.cible < demo.length) {
       (demo[this.cible] as HTMLInputElement).value = result;
-      console.log("possible");
+      // console.log("possible");
       this.cible++;
       this.onDatas = [...this.onDatas.filter((word) => word != result)];
     }
@@ -395,7 +395,7 @@ export class DialoguePage implements OnInit {
     this.cible = 0;
 
     this.onDatas = this.resultats;
-    //console.log(this.resultats);
+    //// console.log(this.resultats);
   }
 
   oldSize;
@@ -428,8 +428,8 @@ export class DialoguePage implements OnInit {
 
       this.oldSize = this.onDatas.length;
       this.prevold = this.onDatas.length;
-      console.log("prevvvvvvvv =>>>><", this.prevold);
-      console.log("prevvvvvvvvold =>>>><", this.oldSize);
+      // console.log("prevvvvvvvv =>>>><", this.prevold);
+      // console.log("prevvvvvvvvold =>>>><", this.oldSize);
 
       this.onGetQuestion();
       this.resultats = [];

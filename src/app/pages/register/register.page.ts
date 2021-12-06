@@ -23,17 +23,17 @@ export class RegisterPage implements OnInit {
     private alertController: AlertController,
     private router: Router
   ) {
-    console.log("params id: ", this.afriService.language_id);
+    // console.log("params id: ", this.afriService.language_id);
 
     this.route.queryParams.subscribe((params) => {
-      console.log("params : ", params.language_id);
+      // console.log("params : ", params.language_id);
       if (params && params.language_id) {
         this.language = params.language_id;
       }
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   async wrongAlert(wrong) {
     const alert = await this.alertController.create({
@@ -80,11 +80,11 @@ export class RegisterPage implements OnInit {
     } else if (user.password !== user.passwordConfirm) {
       this.wrongAlert("Les 2 mots de passe ne sont pas identiques");
     } else {
-      console.log("succes");
+      // console.log("succes");
       this.afriService
         .getRegister(user, this.afriService.language_id)
         .subscribe((data) => {
-          console.log(data);
+          // console.log(data);
 
           this.onLogin(user);
         });
@@ -105,7 +105,7 @@ export class RegisterPage implements OnInit {
           // this.router.navigateByUrl("/tabs/tabs/cours");
         },
         (error) => {
-          console.log(error);
+          // console.log(error);
         }
       );
   }

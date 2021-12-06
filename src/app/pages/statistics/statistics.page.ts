@@ -38,10 +38,10 @@ export class StatisticsPage implements OnInit {
         this.datas = data["questionStrong"];
         this.datasw = data["questionWeek"];
         this.data = data["questionStrong"];
-        console.log(data["questionStrong"]);
+        // console.log(data["questionStrong"]);
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
       }
     );
   }
@@ -51,10 +51,10 @@ export class StatisticsPage implements OnInit {
         this.datas = data["questionStrong"];
         this.datasw = data["questionWeek"];
         this.data = data["questionWeek"];
-        console.log(data["questionStrong"]);
+        // console.log(data["questionStrong"]);
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
       }
     );
   }
@@ -64,12 +64,12 @@ export class StatisticsPage implements OnInit {
   }
 
   async clickStatistic(data) {
-    console.log(data);
-    /* console.log(data.id);
-    console.log(data.question_type);
-    console.log(data.content_type);
-    console.log(data.lession_id);
-    console.log(data.answer); */
+    // console.log(data);
+    /* // console.log(data.id);
+    // console.log(data.question_type);
+    // console.log(data.content_type);
+    // console.log(data.lession_id);
+    // console.log(data.answer); */
 
     const modal = await this.modalController.create({
       cssClass: "modal-fullscreen",

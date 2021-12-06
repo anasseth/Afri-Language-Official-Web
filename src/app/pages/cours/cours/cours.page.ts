@@ -48,7 +48,7 @@ export class CoursPage implements OnInit {
       this.onGetLanguage();
       this.afriService.showNotification();
 
-      console.log("paramss : ", params.language);
+      // console.log("paramss : ", params.language);
       if (params && params.language) {
         this.data = params.language;
       }
@@ -78,11 +78,11 @@ export class CoursPage implements OnInit {
         for (var i = 0; i < this.usersData.length; i++) {
           this.usersData[i].logo = this.imageData[i]
         }
-        console.log(data)
+        // console.log(data)
       }, (err) => {
-        console.log(err)
+        // console.log(err)
       }, () => {
-        console.log(this.usersData)
+        // console.log(this.usersData)
         this.usersData2 = this.usersData
       }
     )
@@ -94,11 +94,11 @@ export class CoursPage implements OnInit {
       setTimeout(() => {
         this.afriService.getContentCoveredPercentage().subscribe(
           data => {
-            console.log("User Content % Covered")
-            console.log(data)
+            // console.log("User Content % Covered")
+            // console.log(data)
             this.contentLockingPercentage = data
           }, err => {
-            console.log(err)
+            // console.log(err)
           }
         )
       }, 3000);
@@ -106,11 +106,11 @@ export class CoursPage implements OnInit {
     else {
       this.afriService.getContentCoveredPercentage().subscribe(
         data => {
-          console.log("User Content % Covered")
-          console.log(data)
+          // console.log("User Content % Covered")
+          // console.log(data)
           this.contentLockingPercentage = data
         }, err => {
-          console.log(err)
+          // console.log(err)
         }
       )
     }
@@ -128,7 +128,7 @@ export class CoursPage implements OnInit {
         this.language_id = this.afriService.language_id;
       }
 
-      console.log(this.language_id);
+      // console.log(this.language_id);
 
       this.onGetTopics();
       this.onGetVerifier();
@@ -152,13 +152,13 @@ export class CoursPage implements OnInit {
   }
 
   onGetTopics() {
-    console.log("id service : ", this.afriService.language_id);
+    // console.log("id service : ", this.afriService.language_id);
     if (this.afriService.language_id != undefined) {
       this.afriService.getTopics(this.afriService.language_id).subscribe(
         (data) => {
           this.topics = data;
         },
-        (error) => console.log(error)
+        (error) =>  console.log(error)
       );
     }
   }
@@ -169,7 +169,7 @@ export class CoursPage implements OnInit {
         (data) => {
           this.verify = data["payment_required"];
         },
-        (error) => console.log(error)
+        (error) =>  console.log(error)
       );
     }
   }
@@ -185,10 +185,10 @@ export class CoursPage implements OnInit {
   }
 
   clickCourseCard(topic, user, index, mail) {
-    console.log("Topic : ", topic)
-    console.log("User : ", user)
-    console.log("Index : ", index)
-    console.log("Mail : ", mail)
+    // console.log("Topic : ", topic)
+    // console.log("User : ", user)
+    // console.log("Index : ", index)
+    // console.log("Mail : ", mail)
 
     if (index != 0 && topic.name == this.contentLockingPercentage[index].name) {
       if (
@@ -198,31 +198,31 @@ export class CoursPage implements OnInit {
         &&
         this.contentLockingPercentage[index - 1].sentence_percentage >= 70
       ) {
-        console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
-        console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
-        console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
+        // console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
+        // console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
+        // console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
         this.topicClick(topic, user, index, mail)
       }
       else {
         this.contentPercentageErrorAlert()
-        console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
-        console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
-        console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
+        // console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
+        // console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
+        // console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
       }
     }
     else if (index == 0) {
-      console.log("grammar_percentage : ", this.contentLockingPercentage[index].grammar_percentage)
-      console.log("review_percentage : ", this.contentLockingPercentage[index].review_percentage)
-      console.log("sentence_percentage : ", this.contentLockingPercentage[index].sentence_percentage)
+      // console.log("grammar_percentage : ", this.contentLockingPercentage[index].grammar_percentage)
+      // console.log("review_percentage : ", this.contentLockingPercentage[index].review_percentage)
+      // console.log("sentence_percentage : ", this.contentLockingPercentage[index].sentence_percentage)
       this.topicClick(topic, user, index, mail)
     }
 
   }
 
   async topicClick(topic, user, index, mail) {
-    console.log(this.verify);
-    console.log(this.user);
-    console.log(this.subscribed);
+    // console.log(this.verify);
+    // console.log(this.user);
+    // console.log(this.subscribed);
 
     let subId = [];
 
@@ -295,7 +295,7 @@ export class CoursPage implements OnInit {
       data => {
         this.user2 = data['success'];
 
-        console.log('user ', this.user2);
+        // console.log('user ', this.user2);
 
       }
     );
@@ -321,7 +321,7 @@ export class CoursPage implements OnInit {
 
           this.langues = data;
           this.onLanguage();
-        }, error => console.log(error)
+        }, error =>  console.log(error)
       );
 
   }

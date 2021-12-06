@@ -39,7 +39,7 @@ export class AfrilangueService {
   notification = true;
 
   showNotification() {
-    console.log("notification");
+    // console.log("notification");
 
     if (this.notification == true) {
       this.localNotifications.schedule({
@@ -51,7 +51,7 @@ export class AfrilangueService {
         sound: null
       });
     }
-    console.log("Notification : Hello World")
+    // console.log("Notification : Hello World")
   }
 
   showHelp() {
@@ -64,11 +64,11 @@ export class AfrilangueService {
     let etats;
     if (this.helpShow == null) {
       etats = "/tabs/tabs/help";
-      console.log(etats);
+      // console.log(etats);
       return etats;
     } else {
       etats = "/tabs/tabs/cours";
-      console.log(etats);
+      // console.log(etats);
       return etats;
     }
   }
@@ -76,7 +76,7 @@ export class AfrilangueService {
   saveToken() {
     localStorage.setItem("myToken", this.myToken);
 
-    console.log(this.myToken);
+    // console.log(this.myToken);
   }
 
   loadToken() {
@@ -98,14 +98,14 @@ export class AfrilangueService {
 
   public getContentCoveredPercentage() {
     var email = JSON.parse(localStorage.getItem("userDetails")).email
-    console.log("Language ID")
-    console.log(this.language_id)
+    // console.log("Language ID")
+    // console.log(this.language_id)
     let httpOptions = {
       headers: new HttpHeaders({
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.post("https://afrilangues.com/api/topics",
       {
@@ -135,7 +135,7 @@ export class AfrilangueService {
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.post("https://www.afrilangues.com/api/change_password",
       passObject,
@@ -154,7 +154,7 @@ export class AfrilangueService {
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.post(
       "https://afrilangues.com/api/profile",
@@ -168,7 +168,7 @@ export class AfrilangueService {
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.post(
       "https://afrilangues.com/api/payment_transaction",
@@ -182,7 +182,7 @@ export class AfrilangueService {
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.get("https://afrilangues.com/api/pricings");
   }
@@ -193,7 +193,7 @@ export class AfrilangueService {
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.post(
       "https://afrilangues.com/api/subscriptions",
@@ -207,7 +207,7 @@ export class AfrilangueService {
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.post(
       "https://afrilangues.com/api/cancle_subscription",
@@ -221,7 +221,7 @@ export class AfrilangueService {
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.post(
       "https://afrilangues.com/api/subscription_lang",
@@ -237,20 +237,20 @@ export class AfrilangueService {
     lession_idM,
     answerM
   ) {
-    console.log(
-      question_idM,
-      content_typeM,
-      question_typeM,
-      lession_idM,
-      answerM
-    );
+  //  console.log(
+  //   question_idM,
+  //     content_typeM,
+  //     question_typeM,
+  //     lession_idM,
+  //     answerM
+  //   );
 
     let httpOptions = {
       headers: new HttpHeaders({
         Authorization: "Bearer " + this.myToken,
       }),
     };
-    console.log("header => ", httpOptions.headers);
+    // console.log("header => ", httpOptions.headers);
 
     return this.http.post(
       "https://afrilangues.com/api/check_question",

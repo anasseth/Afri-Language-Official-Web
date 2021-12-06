@@ -7,7 +7,7 @@ import { AfrilangueService } from "src/app/services/afrilangue.service";
   styleUrls: ["./help.page.scss"],
 })
 export class HelpPage implements OnInit {
-  constructor(private afriService: AfrilangueService) {}
+  constructor(private afriService: AfrilangueService) { }
 
   ngOnInit() {
     localStorage.setItem("help", "oui");
@@ -16,9 +16,9 @@ export class HelpPage implements OnInit {
   data;
   showInfo(url) {
     this.afriService.getHtml(url).subscribe((data) => {
-      console.log("data ", data);
+      // console.log("data ", data);
       this.data = data;
     });
-    console.log(url);
+    // console.log(url);
   }
 }

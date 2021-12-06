@@ -72,14 +72,14 @@ export class QuestiontypesPage implements OnInit {
   }
 
   ngOnInit() {
-    console.log("9839hreui")
+    // console.log("9839hreui")
     this.afriService.getContentCoveredPercentage().subscribe(
       data => {
-        console.log("User Content Covered %")
-        console.log(data)
+        // console.log("User Content Covered %")
+        // console.log(data)
       },
       (err) => {
-        console.log(err)
+        // console.log(err)
       }
     )
   }
@@ -108,7 +108,7 @@ export class QuestiontypesPage implements OnInit {
       modalPage = page[1];
     }
 
-    console.log("modal : ", page);
+    // console.log("modal : ", page);
 
     const modal = await this.modalController.create({
       cssClass: "modal-fullscreen",

@@ -14,9 +14,9 @@ export class AddpostPage implements OnInit {
     private route: Router,
     private afriService: AfrilangueService,
     private alertController: AlertController
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   dismissModal() {
     this.modalController.dismiss({
@@ -48,7 +48,7 @@ export class AddpostPage implements OnInit {
           this.dismissModal();
         },
         (error) => {
-          //console.log(error);
+          //// console.log(error);
         }
       );
   }

@@ -9,12 +9,12 @@ import { AfrilangueService } from "../../services/afrilangue.service";
 export class TabsPage implements OnInit {
   constructor(private afriService: AfrilangueService) {
     // this.afriService.showNotification();
-    console.log(this.afriService.myToken);
+    // console.log(this.afriService.myToken);
   }
 
   ngOnInit() {
     // this.afriService.showNotification();
   }
 
-  test() {}
+  test() { }
 }

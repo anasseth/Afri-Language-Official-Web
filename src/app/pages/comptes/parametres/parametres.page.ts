@@ -50,29 +50,29 @@ export class ParametresPage implements OnInit {
     this.afriService.getSubscribes().subscribe((data) => {
       this.tableau = data;
 
-      console.log(data);
+      // console.log(data);
       let tab = [];
       /*    data.forEach((element) => {
         if (element.status == "succeeded") {
-          console.log("oui", element);
+          // console.log("oui", element);
           tab.push(element);
         } else {
-          console.log("non", element.id);
+          // console.log("non", element.id);
         }
       });
  */
       for (let index = 0; index < this.tableau.length; index++) {
         const element = this.tableau[index];
         if (element.status == "succeeded") {
-          console.log("oui", element);
+          // console.log("oui", element);
           tab.push(element);
         } else {
-          console.log("non", element.id);
+          // console.log("non", element.id);
         }
       }
 
       this.datas = tab;
-      console.log(this.datas);
+      // console.log(this.datas);
 
       this.onGetLanguage();
     });
@@ -123,7 +123,7 @@ export class ParametresPage implements OnInit {
   onGetProfil() {
     this.afriService.getProfile().subscribe((data) => {
       this.user = data["success"];
-      console.log(data["success"]);
+      // console.log(data["success"]);
     });
   }
 
@@ -131,7 +131,7 @@ export class ParametresPage implements OnInit {
 
   onEdit() {
     this.datas = undefined;
-    console.log(this.user)
+    // console.log(this.user)
 
     if (this.edit == false) {
       this.edit = true;
@@ -162,9 +162,9 @@ export class ParametresPage implements OnInit {
     ) {
       this.wrongAlert("Ce champ requiert 5 caractères minimum");
     } else {
-      console.log("succes");
+      // console.log("succes");
       this.afriService.getEditUser(user).subscribe((data) => {
-        console.log(data);
+        // console.log(data);
       });
     }
 
@@ -177,15 +177,15 @@ export class ParametresPage implements OnInit {
     ) {
       this.wrongAlert("Ce champ requiert 5 caractères minimum");
     } else {
-      console.log("succes");
+      // console.log("succes");
       let object = {
         old_password: JSON.parse(localStorage.getItem("userDetails")).password,
         new_password: user.password,
         confirm_password: user.password
       }
-      console.log(object)
+      // console.log(object)
       this.afriService.changePassword(object).subscribe((data) => {
-        console.log(data);
+        // console.log(data);
       });
     }
   }

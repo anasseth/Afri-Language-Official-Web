@@ -20,7 +20,7 @@ export class SubscribeinfoPage implements OnInit {
     this.router.queryParams.subscribe((params) => {
       this.info = this.navParams.get("info");
       this.onGetLanguage();
-      console.log(this.info);
+      // console.log(this.info);
     });
   }
 
@@ -35,7 +35,7 @@ export class SubscribeinfoPage implements OnInit {
   ngOnInit() {
     this.info = this.navParams.get("info");
     this.onGetLanguage();
-    console.log(this.info);
+    // console.log(this.info);
   }
 
   onGetLanguage() {
@@ -45,11 +45,11 @@ export class SubscribeinfoPage implements OnInit {
   }
   onGetCancel(language) {
     this.afriService.getCancelSubscribe(language).subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       this.router.queryParams.subscribe((params) => {
         this.info = this.navParams.get("info");
         this.dismissModal();
-        console.log(this.info);
+        // console.log(this.info);
       });
     });
   }
@@ -64,7 +64,7 @@ export class SubscribeinfoPage implements OnInit {
           role: "cancel",
           cssClass: "secondary",
           handler: (blah) => {
-            console.log("Confirm Cancel: blah");
+            // console.log("Confirm Cancel: blah");
           },
         },
         {

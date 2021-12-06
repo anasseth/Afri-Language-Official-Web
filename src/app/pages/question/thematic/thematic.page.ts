@@ -42,10 +42,10 @@ export class ThematicPage implements OnInit {
         (data) => {
           this.datas = data;
 
-          console.log(this.datas);
+          // console.log(this.datas);
         },
         (error) => {
-          console.log(error);
+          // console.log(error);
         }
       );
     }
@@ -57,7 +57,7 @@ export class ThematicPage implements OnInit {
         this.datas = data;
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
       }
     );
   }

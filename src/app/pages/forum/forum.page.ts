@@ -33,12 +33,12 @@ export class ForumPage implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
   mail;
   onGetProfile() {
     this.afriService.getProfile().subscribe((data) => {
       this.mail = data["success"]["email"];
-      console.log(this.mail);
+      // console.log(this.mail);
     });
   }
 
@@ -74,7 +74,7 @@ export class ForumPage implements OnInit {
           this.datas = data;
         }
 
-        console.log(this.datas);
+        // console.log(this.datas);
       },
       (error) => console.log(error)
     );
