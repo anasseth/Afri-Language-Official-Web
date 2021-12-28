@@ -1,0 +1,61 @@
+<!--
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Cours</ion-title>
+    </ion-toolbar>
+</ion-header>
+-->
+
+<section class="header">
+  <ion-img class="logoHeader" src="assets/images/afriwhite-map.png"> </ion-img>
+</section>
+
+<ion-content>
+  <div *ngIf="thematics">
+    <h5 style="margin-top: 10px" class="hide" text-center>
+      Lexique thématique
+    </h5>
+
+    <h5 text-center style="margin-top: 20px; margin-bottom: 20px">
+      <b class="MainTitle">Lexique thématique</b>
+    </h5>
+
+    <ion-row class="cercles" style="margin-top: 15px">
+      <ion-col size="6" *ngFor="let thematic of thematics ">
+        <div class="cercle" (click)="thematicClick(thematic)">
+          <!-- <ion-icon class="iconElement"  icon="assets/icon/family-silhouette.svg"></ion-icon>-->
+          <fa-icon
+            class="iconElement"
+            icon="{{thematic.logo | slice:7:110 }}"
+            size="3x"
+          ></fa-icon>
+
+          <p style="font-size: 14px">{{ thematic.name }}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div
+    *ngIf="!thematics && !show"
+    style="display: flex; justify-content: center; align-items: center"
+  >
+    <ion-spinner name="bubbles"></ion-spinner>
+    <p>Chargement...</p>
+  </div>
+  <div *ngIf="show">
+    <div
+      style="
+        margin: 70% 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+      "
+    >
+      <div (click)="payment() " class="btn">
+        Pour un accès complet au lexique thèmatique, abonnez-vous
+      </div>
+    </div>
+  </div>
+</ion-content>

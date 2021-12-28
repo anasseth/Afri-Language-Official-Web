@@ -1,0 +1,366 @@
+.LanguageDesktopDiv {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1000px) {
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .bg {
+    background-color: white;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-radius: 10px !important;
+  }
+
+  .bg1 {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    font-weight: bold;
+    // padding-left: 1%;
+    // padding-right: 1%;
+    cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    //     border-top-right-radius: 10px;
+    // border-bottom-right-radius: 10px;
+  }
+
+  .bg3 {
+    // background-color            : white;
+    // padding-top                 : 10px !important;
+    // padding-bottom              : 10px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    // border-bottom               : 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+  }
+
+  .bg4 {
+    background-color: white;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+  }
+
+  .LanguageDesktopDiv {
+    display: block !important;
+    visibility: visible;
+  }
+
+  .LanguageDesktopDiv2 {
+    // display: flex;
+    // visibility: visible;
+    width: 70%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    // padding: 50px;
+    // padding-top: 0px;
+    // background-color: transparent;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+
+  .header1 {
+    //   float: right;
+    display: flex;
+    //   justify-content: space-between;
+    //   flex-direction: column;
+    margin-left: 40% !important;
+    // margin-right        : 30% !important;
+    margin-top: 5% !important;
+    //   padding: 5%;
+    border-radius: 10px !important;
+  }
+
+  // ion-item {
+  //     --border-color: var(--ion-color-danger, #df780b);
+  //   }
+}
+@media screen and (max-width: 0px) {
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .bg {
+    background-color: white;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-radius: 10px !important;
+  }
+
+  .bg1 {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    font-weight: bold;
+    // padding-left: 1%;
+    // padding-right: 1%;
+    cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    //     border-top-right-radius: 10px;
+    // border-bottom-right-radius: 10px;
+  }
+
+  .bg3 {
+    // background-color            : white;
+    // padding-top                 : 10px !important;
+    // padding-bottom              : 10px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    // border-bottom               : 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+  }
+
+  .bg4 {
+    background-color: white;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+  }
+
+  .LanguageDesktopDiv {
+    display: block !important;
+    visibility: visible;
+  }
+
+  .LanguageDesktopDiv2 {
+    // display: flex;
+    // visibility: visible;
+    width: 99%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    // padding: 50px;
+    // padding-top: 0px;
+    // background-color: transparent;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+
+  .header1 {
+    //   float: right;
+    display: flex;
+    //   justify-content: space-between;
+    //   flex-direction: column;
+    margin-left: 40% !important;
+    // margin-right        : 30% !important;
+    margin-top: 5% !important;
+    //   padding: 5%;
+    border-radius: 10px !important;
+  }
+
+  // ion-item {
+  //     --border-color: var(--ion-color-danger, #df780b);
+  //   }
+}
+
+@media screen and (min-width: 0px) {
+  .hide {
+    display: none;
+    visibility: hidden;
+  }
+
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .bg {
+    background-color: white;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-radius: 10px !important;
+  }
+
+  .bg1 {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    font-weight: bold;
+    // padding-left: 1%;
+    // padding-right: 1%;
+    cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    //     border-top-right-radius: 10px;
+    // border-bottom-right-radius: 10px;
+  }
+
+  .bg3 {
+    // background-color            : white;
+    // padding-top                 : 10px !important;
+    // padding-bottom              : 10px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    // border-bottom               : 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+  }
+
+  .bg4 {
+    background-color: white;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    // padding-top: 1%;
+    // padding-bottom: 1%;
+    // padding-left: 1%;
+    // cursor: pointer;
+    border-bottom: 2px solid #df780b;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+  }
+
+  .LanguageDesktopDiv {
+    display: block !important;
+    visibility: visible;
+  }
+
+  .LanguageDesktopDiv2 {
+    // display: flex;
+    // visibility: visible;
+    width: 70%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    // padding: 50px;
+    // padding-top: 0px;
+    // background-color: transparent;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+
+  .header1 {
+    //   float: right;
+    display: flex;
+    //   justify-content: space-between;
+    //   flex-direction: column;
+    margin-left: 40% !important;
+    // margin-right        : 30% !important;
+    margin-top: 5% !important;
+    //   padding: 5%;
+    border-radius: 10px !important;
+  }
+
+  // ion-item {
+  //     --border-color: var(--ion-color-danger, #df780b);
+  //   }
+}

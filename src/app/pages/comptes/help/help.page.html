@@ -1,0 +1,29 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tabs/comptes/comptes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Parametres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+ -->
+
+<section class="header">
+  <ion-img class="logoHeader" src="assets/images/afriwhite-map.png"> </ion-img>
+</section>
+
+<ion-content>
+  <!-- 
+  <h5 text-center style="margin-top: 10px">About</h5> -->
+  <div class="HelpDiv">
+    <div
+      *ngIf="data"
+      style="margin-top: 20px; padding: 15px !important"
+      [innerHTML]="data.contents"
+    ></div>
+  </div>
+</ion-content>

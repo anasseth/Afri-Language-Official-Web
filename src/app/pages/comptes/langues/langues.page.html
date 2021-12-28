@@ -1,0 +1,81 @@
+<section class="header">
+  <ion-img class="logoHeader" src="assets/images/afriwhite-map.png"> </ion-img>
+</section>
+
+<ion-content *ngIf="user">
+  <!-- <h5 text-center style="margin-top: 10px">langue courant</h5>
+
+  <div class="rounded">
+    <ion-item lines="none">
+      <ion-icon style="height: 13px; color:#ff5e06" slot="start" icon="assets/icon/arrow-point-to-right.svg" ></ion-icon>
+      <ion-label>{{currentLangue.name}}
+      </ion-label>
+    </ion-item>
+  </div>
+-->
+  <div class="MobileDiv">
+    <h5 text-center style="margin-top: 10px">Choisir une langue</h5>
+
+    <div
+      class="rounded"
+      *ngFor="let langue of langues"
+      routerLink="/tabs/tabs/cours"
+    >
+      <ion-item
+        [ngClass]="servLanguage == langue.id ? 'couleur' : 'normal' "
+        lines="none"
+        (click)="itemClick(langue)"
+      >
+        <ion-icon
+          style="height: 13px"
+          slot="start"
+          icon="assets/icon/arrow-point-to-right.svg"
+        ></ion-icon>
+        <ion-label> {{langue.name}} </ion-label>
+
+        <ion-icon
+          style="height: 13px"
+          slot="end"
+          icon="assets/icon/online-course.svg"
+        ></ion-icon>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="LoginDesktopDiv">
+    <b class="MainTitle">Je voudrais apprendre le : </b>
+    <div class="Container23">
+      <div
+        class="h-100 container"
+        *ngFor="let i of this.usersData2"
+        routerLink="/tabs/tabs/cours"
+      >
+        <div class="card mobile-card" (click)="itemClick(i)">
+          <section class="onboarding">
+            <main class="onboarding-slides">
+              <div class="onboarding-slide">
+                <img
+                  class="onboarding-illustration"
+                  [src]="i.logo"
+                  style="width: 50%; border-radius: 50%; margin-top: 20px"
+                  alt=""
+                />
+                <!-- <img
+                  src="https://img.icons8.com/color/96/000000/france.png"
+                  style="margin-top: 20px"
+                /> -->
+                <!-- <h2 class="onboarding-title">{{i.name}}</h2> -->
+                <p
+                  class="onboarding-subtitle"
+                  style="color: orangered !important"
+                >
+                  {{i.total_users}} membres
+                </p>
+              </div>
+            </main>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

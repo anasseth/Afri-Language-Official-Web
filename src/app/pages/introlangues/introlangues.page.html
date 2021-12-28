@@ -1,0 +1,58 @@
+<!--
+<ion-header>
+    <ion-toolbar>
+
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/intro"></ion-back-button>
+        </ion-buttons>
+
+
+        <ion-title>Choissisez une langue</ion-title>
+    </ion-toolbar>
+</ion-header>
+-->
+<section class="header desktopheader LanguageDesktopDiv">
+  <h5 text-center style="margin-top: 10px">Choisissez une langue</h5>
+</section>
+
+<section class="header LanguageMobileDiv">
+  <ion-img class="logoHeader" src="assets/images/afriwhite-map.png"> </ion-img>
+</section>
+<ion-content>
+  <div class="LanguageMobileDiv">
+    <h5 text-center style="margin-top: 10px">Choisissez une langue</h5>
+    <div class="rounded" *ngFor="let langue of langues">
+      <ion-item lines="none" (click)="itemClick(langue)">
+        <ion-icon
+          style="height: 13px; color: #ff5e06"
+          slot="start"
+          icon="assets/icon/arrow-point-to-right.svg"
+        ></ion-icon>
+        <ion-label> {{langue.name}} </ion-label>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="LanguageDesktopDiv">
+    <div class="LanguageDesktopDiv2">
+      <div
+        *ngFor="let langue of langues"
+        class="Card"
+        (click)="itemClick(langue)"
+      >
+        {{langue.name}}
+      </div>
+    </div>
+    <!-- <h5 text-center>Choisissez une langue</h5> -->
+    <!-- <div class="rounded" *ngFor="let langue of langues">
+          <ion-item lines="none" (click)="itemClick(langue)">
+            <ion-icon
+              style="height: 13px; color: #ff5e06"
+              slot="start"
+              icon="assets/icon/arrow-point-to-right.svg"
+            ></ion-icon>
+            <ion-label> {{langue.name}} </ion-label>
+          </ion-item>
+        </div> -->
+  </div>
+</ion-content>

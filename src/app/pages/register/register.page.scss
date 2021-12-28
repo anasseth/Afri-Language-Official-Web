@@ -1,0 +1,253 @@
+.logo {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  height: 110px;
+}
+
+.btn {
+  margin: 5px;
+  /* height: 30px; */
+  width: 90%;
+  padding: 6px;
+  border-radius: 8px;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to right, #dfb401, #df011f);
+}
+
+.rounded {
+  background-color: white;
+  border: 2px solid #ccc;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  margin: 10px auto;
+  height: 50px;
+  width: 100%;
+  line-height: 25px;
+  font-size: 15px;
+  padding: 12px 17px;
+  outline: 0;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
+  ion-input {
+    position: relative;
+    margin-left: 30px;
+    margin-top: -40px;
+  }
+}
+/* .rounded {
+  border: 2px solid #ccc;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+
+  margin-top: 30px;
+
+
+
+  height: 40px;
+  width: 90%;
+  font-size: 15px;
+  padding: 5px 17px;
+  outline: 0;
+  -webkit-appearance: none;
+} */
+
+ion-input,
+ion-input:-moz-placeholder,
+ion-input::-webkit-input-placeholder,
+ion-input:-ms-input-placeholder {
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+.buttons {
+  --border-radius: 8px;
+  margin: 20px 0;
+}
+
+.but {
+  height: 30px;
+  --border-radius: 30px;
+  margin-top: 15px;
+}
+
+.ouModif {
+  margin: 30px auto;
+  width: 79%;
+  color: #9d9d9d;
+}
+
+.ouModif p {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #9d9d9d;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.ouModif p span {
+  background: #f6f6f6;
+  padding: 0 8px;
+}
+
+.LoginDesktopDiv {
+  display: none;
+  visibility: visible;
+}
+
+@media screen and (min-width: 1000px) {
+
+  .UserLogo{
+    width: 55px;
+    height: 55px;
+    border-radius:50%;
+    background-color: rgb(85, 85, 85);
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+  }
+
+  .MainTitle{
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: orangered;
+    padding: 10px;
+    font-size: 22px;
+  }
+
+  .AfriLogoDiv {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    margin-top: 65%;
+    padding-top: 35px;
+    padding-left: 15px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 9px 13px -3px rgba(255, 255, 255, 0.43);
+    -webkit-box-shadow: 0px 9px 13px -3px rgba(255, 255, 255, 0.43);
+    -moz-box-shadow: 0px 9px 13px -3px rgba(255, 255, 255, 0.43);
+  }
+
+  .LoginDesktopDiv {
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    display: flex !important;
+    visibility: visible !important;
+    width: 85% !important;
+    margin-top: 3%;
+    justify-content: center;
+    box-shadow: 0px 0px 19px -5px rgba(252, 22, 52, 0.3);
+    -webkit-box-shadow: 0px 0px 19px -5px rgba(252, 22, 52, 0.3);
+    -moz-box-shadow: 0px 0px 19px -5px rgba(252, 22, 52, 0.3);
+  }
+
+  .logo {
+    margin: auto;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .rounded {
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+  }
+
+  .inlining {
+    margin-right: 3px;
+  }
+
+  span {
+    display: flex;
+  }
+
+  h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .contentdesktop {
+    width: 65%;
+    // margin-top: 5%;
+    padding-top: 5% !important;
+    padding-left: 3%;
+    padding-right: 3%;
+    border: 2px solid rgb(252, 22, 52);
+    padding-top: 5%;
+    // border-top-left-radius: 20px;
+    // border-bottom-left-radius: 20px;
+  }
+
+  .imgdesktop {
+    width: 35%;
+    height: auto;
+    min-height: 550px;
+    // margin-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    background-image: linear-gradient(to right, #f7cf30, #fc1634);
+    // border-top-right-radius: 10px;
+    // border-bottom-right-radius: 10px;
+  }
+
+  .logoAfdesk {
+    height: 170px !important;
+  }
+
+  .logoAfrica {
+    height: 130px !important;
+  }
+
+  .loginmobiledisnone {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  h5 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .logindesktop {
+    border: 1px solid #dfb401;
+    padding: 1%;
+    margin-left: 20% !important;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .logindesktop:hover {
+    border: 1px solid #dfb401;
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+    color: white !important;
+    cursor: pointer;
+  }
+
+  .desktoploginIBTN {
+    width: 60%;
+    padding: 6px;
+    border-radius: 8px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to right, #dfb401, #df011f);
+  }
+  input:hover {
+    border: 2px solid #00a2ff !important;
+  }
+}

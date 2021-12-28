@@ -1,0 +1,335 @@
+.rounded {
+  background-color: white;
+
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 20px;
+  margin: 10px auto;
+  height: 50px;
+  width: 94%;
+  line-height: 25px;
+  font-size: 15px;
+  padding: 0px 15px;
+  outline: 0;
+  /* box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);*/
+  -webkit-appearance: none;
+
+  div {
+    position: relative;
+    padding: 15px;
+  }
+
+  .label {
+    position: absolute;
+    margin: -3px 14px;
+  }
+}
+
+.LanguageDesktopDiv {
+  display: none;
+  visibility: hidden;
+}
+.hide {
+  display: none;
+  visibility: hidden;
+}
+@media screen and (min-width: 1000px) {
+  .hide {
+    display: block;
+    visibility: visible;
+  }
+  .loginmobiledisnone {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .desktopheader {
+    border-radius: 0px !important;
+    height: 10% !important;
+    color: white;
+    box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -moz-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+  }
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: #df3d15;
+  }
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .LanguageDesktopDiv {
+    display: block;
+    visibility: visible;
+  }
+  .LanguageDesktopDiv2 {
+    display: flex;
+    visibility: visible;
+    width: 100%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    padding: 50px;
+    padding-top: 0px;
+    background-color: transparent;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Lato:300);
+  body {
+    background-color: #f1f1f1;
+    font-family: Lato;
+    font-weight: 300;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .badge {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: white;
+    color: white;
+
+    border-radius: 3rem; // As longe as this is bigger than the fontsize
+    text-align: center;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0.05rem 0.8rem 0.1rem;
+    line-height: inherit;
+  }
+  .badge--smaller {
+    font-size: 0.7rem;
+    padding: 0.09rem 0.4rem 0.15rem;
+  }
+  .badge--danger {
+    background-color: orangered;
+  }
+
+  .card {
+    width: 350px;
+    height: 220px;
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+
+    margin: 15px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 0px 0px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.4s ease, top 0.4s ease, width 0.4s ease,
+      height 0.4s ease;
+
+    &:hover,
+    &.active {
+      box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.5);
+      top: -5px;
+    }
+    &.active {
+      width: 500px;
+      height: 600px;
+    }
+
+    .top-half {
+      width: 100%;
+      height: 150px;
+      background-color: transparent;
+      background-image: url("../../assets/images/afri6.jpg");
+      background-size: auto 130%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-left: 2px solid orangered;
+      border-right: 2px solid orangered;
+    }
+    .bottom-half {
+      margin-left: 5%;
+      margin-top: 12px;
+      width: 90%;
+      text-align: center !important;
+      .title {
+        font-size: 18px;
+        color: #555555;
+        margin-bottom: 2px;
+      }
+      .subtitle {
+        margin-top: 3px;
+        font-size: 12px;
+        color: #999999;
+        font-weight: 700;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hide {
+    display: block;
+    visibility: visible;
+  }
+  .loginmobiledisnone {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .desktopheader {
+    border-radius: 0px !important;
+    height: 10% !important;
+    color: white;
+    box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -webkit-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+    -moz-box-shadow: -4px 71px 49px -58px rgba(252, 22, 52, 0.3);
+  }
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: #df3d15;
+  }
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .LanguageDesktopDiv {
+    display: block;
+    visibility: visible;
+  }
+  .LanguageDesktopDiv2 {
+    display: flex;
+    visibility: visible;
+    width: 100%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    padding: 50px;
+    padding-top: 0px;
+    background-color: transparent;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Lato:300);
+  body {
+    background-color: #f1f1f1;
+    font-family: Lato;
+    font-weight: 300;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .badge {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: white;
+    color: white;
+
+    border-radius: 3rem; // As longe as this is bigger than the fontsize
+    text-align: center;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0.05rem 0.8rem 0.1rem;
+    line-height: inherit;
+  }
+  .badge--smaller {
+    font-size: 0.7rem;
+    padding: 0.09rem 0.4rem 0.15rem;
+  }
+  .badge--danger {
+    background-color: orangered;
+  }
+
+  .card {
+    width: 350px;
+    height: 220px;
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+
+    margin: 15px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 0px 0px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.4s ease, top 0.4s ease, width 0.4s ease,
+      height 0.4s ease;
+
+    &:hover,
+    &.active {
+      box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.5);
+      top: -5px;
+    }
+    &.active {
+      width: 500px;
+      height: 600px;
+    }
+
+    .top-half {
+      width: 100%;
+      height: 150px;
+      background-color: transparent;
+      background-image: url("../../assets/images/afri6.jpg");
+      background-size: auto 130%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-left: 2px solid orangered;
+      border-right: 2px solid orangered;
+    }
+    .bottom-half {
+      margin-left: 5%;
+      margin-top: 12px;
+      width: 90%;
+      text-align: center !important;
+      .title {
+        font-size: 18px;
+        color: #555555;
+        margin-bottom: 2px;
+      }
+      .subtitle {
+        margin-top: 3px;
+        font-size: 12px;
+        color: #999999;
+        font-weight: 700;
+      }
+    }
+  }
+}

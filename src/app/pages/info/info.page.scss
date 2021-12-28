@@ -1,0 +1,20 @@
+.logoAf {
+    margin-top: 4px;
+    height: 250px;
+}
+
+.center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    ion-label {
+        margin: 10px !important;
+    }
+}

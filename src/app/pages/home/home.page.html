@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Langues</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+
+    <ion-card *ngFor="let langue of langues"  >
+        <ion-item lines="none"  (click)="itemClick(langue)" >
+
+
+            <ion-avatar slot="start">
+                <img src="https://afrilangues.com/public/images/{{langue.logo}}" />
+            </ion-avatar>
+            <ion-icon color="primary" name="arrow-dropright-circle" slot="end" ></ion-icon>
+
+
+
+            <ion-card-content>
+                <ion-label> {{langue.name}}
+                </ion-label>
+
+            </ion-card-content>
+        </ion-item>
+    </ion-card>
+
+
+
+
+
+   <!-- <ion-button (click)="resetToken()">Clear token</ion-button>-->
+</ion-content>

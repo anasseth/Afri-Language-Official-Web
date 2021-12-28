@@ -1,0 +1,244 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  ion-label {
+    margin: 10px !important;
+  }
+}
+
+ion-icon {
+  fill: #ff8c1d;
+}
+
+.btn {
+  margin: 5px;
+  /* height: 30px; */
+  padding: 6px 30px;
+  border-radius: 8px;
+  line-height: 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to right, #dfb401, #df011f);
+}
+.LanguageDesktopDiv {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1000px) {
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .bg {
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    cursor: pointer;
+    border-bottom: 1px solid #dadada;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .bg1 {
+    background-color: white;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    border-bottom: 1px solid #dadada;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+  }
+
+  .LanguageDesktopDiv {
+    display: block;
+    visibility: visible;
+  }
+
+  .LanguageDesktopDiv2 {
+    // display: flex;
+    // visibility: visible;
+    width: 100%;
+    // margin: auto;
+    // left: 0px;
+    // right: 0px;
+    // padding: 50px;
+    // padding-top: 0px;
+    // background-color: transparent;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+
+  .header1 {
+    //   float: right;
+    display: flex;
+    //   justify-content: space-between;
+    //   flex-direction: column;
+    margin-left: 83%;
+    //   padding: 5%;
+  }
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .bg {
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    cursor: pointer;
+    border-bottom: 1px solid #dadada;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .bg1 {
+    background-color: white;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    border-bottom: 1px solid #dadada;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+  }
+
+  .LanguageDesktopDiv {
+    display: block;
+    visibility: visible;
+  }
+
+  .LanguageDesktopDiv2 {
+    // display: flex;
+    // visibility: visible;
+    width: 100%;
+    // margin: auto;
+    // left: 0px;
+    // right: 0px;
+    // padding: 50px;
+    // padding-top: 0px;
+    // background-color: transparent;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+
+  .header1 {
+    //   float: right;
+    display: flex;
+    //   justify-content: space-between;
+    //   flex-direction: column;
+    margin-left: 83%;
+    //   padding: 5%;
+  }
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .MainTitle {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    background-color: #df3d15;
+    padding: 10px;
+  }
+  .bg {
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    cursor: pointer;
+    border-bottom: 1px solid #dadada;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .bg1 {
+    background-color: white;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    border-bottom: 1px solid #dadada;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  h5 {
+    font-size: 20px !important;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+  }
+
+  .LanguageDesktopDiv {
+    display: block;
+    visibility: visible;
+  }
+
+  .LanguageDesktopDiv2 {
+    // display: flex;
+    // visibility: visible;
+    width: 100%;
+    // margin: auto;
+    // left: 0px;
+    // right: 0px;
+    // padding: 50px;
+    // padding-top: 0px;
+    // background-color: transparent;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+
+  .header1 {
+    //   float: right;
+    display: flex;
+    //   justify-content: space-between;
+    //   flex-direction: column;
+    margin-left: 83%;
+    //   padding: 5%;
+  }
+  .LanguageMobileDiv {
+    display: none;
+    visibility: hidden;
+  }
+}
+

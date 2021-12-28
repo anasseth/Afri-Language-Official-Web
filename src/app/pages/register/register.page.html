@@ -1,0 +1,332 @@
+<!--
+<ion-header>
+    <ion-toolbar>
+
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/intro"></ion-back-button>
+        </ion-buttons>
+
+
+    </ion-toolbar>
+</ion-header>
+-->
+
+<section class="header loginmobiledisnone">
+  <ion-img class="logoHeader" src="assets/images/afriwhite-map.png"> </ion-img>
+</section>
+
+<ion-content>
+  <div class="loginmobiledisnone">
+    <h5 text-center style="margin-top: 10px">Création de compte</h5>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+      <ion-list style="margin: 15px">
+        <div class="rounded">
+          <div class="iconInput">
+            <ion-icon
+              style="height: 20px; color: #ff5e06"
+              slot="start"
+              icon="assets/icon/user.svg"
+            ></ion-icon>
+            <ion-input
+              type="text"
+              name="nompre"
+              [(ngModel)]="nompre"
+              placeholder="Nom & Prénom"
+            ></ion-input>
+          </div>
+        </div>
+
+        <div class="rounded">
+          <div class="iconInput">
+            <ion-icon
+              style="height: 20px; color: #ff5e06"
+              slot="start"
+              icon="assets/icon/envelope.svg"
+            >
+            </ion-icon>
+            <ion-input
+              type="text"
+              name="email"
+              [(ngModel)]="email"
+              placeholder="Email"
+            ></ion-input>
+          </div>
+        </div>
+
+        <div class="rounded">
+          <div class="iconInput">
+            <ion-icon
+              style="height: 20px; color: #ff5e06"
+              slot="start"
+              icon="assets/icon/address.svg"
+            >
+            </ion-icon>
+            <ion-input
+              type="text"
+              name="adresse"
+              [(ngModel)]="adresse"
+              placeholder="Adresse"
+            ></ion-input>
+          </div>
+        </div>
+
+        <div class="rounded">
+          <div class="iconInput">
+            <ion-icon
+              style="height: 20px; color: #ff5e06"
+              slot="start"
+              icon="assets/icon/phone-call.svg"
+            >
+            </ion-icon>
+            <ion-input
+              type="number"
+              name="telephone"
+              [(ngModel)]="telephone"
+              placeholder="Téléphone"
+            >
+            </ion-input>
+          </div>
+        </div>
+
+        <div class="rounded">
+          <div class="iconInput">
+            <ion-icon
+              style="height: 20px; color: #ff5e06"
+              slot="start"
+              icon="assets/icon/lock.svg"
+            ></ion-icon>
+            <ion-input
+              type="password"
+              name="password"
+              [(ngModel)]="password"
+              placeholder="Mot de passe"
+            >
+            </ion-input>
+          </div>
+        </div>
+
+        <div class="rounded">
+          <div class="iconInput">
+            <ion-icon
+              style="height: 20px; color: #ff5e06"
+              slot="start"
+              icon="assets/icon/confirm.svg"
+            >
+            </ion-icon>
+            <ion-input
+              type="password"
+              name="passwordConfirm"
+              [(ngModel)]="passwordConfirm"
+              placeholder="Confirmation de mot de passe"
+            >
+            </ion-input>
+          </div>
+        </div>
+      </ion-list>
+
+      <div style="display: flex; align-items: center; justify-content: center">
+        <button class="btn">
+          <strong style="font-size: 17px"> Créer un compte</strong>
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="LoginDesktopDiv">
+    <div class="contentdesktop">
+      <div>
+        <div class="UserLogo">
+          <img
+            src="https://img.icons8.com/color/48/ffffff/male-female-user-group.png"
+          />
+        </div>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+          <ion-list style="margin: 15px">
+            <div class="rounded">
+              <div class="iconInput">
+                <ion-icon
+                  style="height: 20px; color: #ff5e06"
+                  slot="start"
+                  icon="assets/icon/user.svg"
+                ></ion-icon>
+                <ion-input
+                  type="text"
+                  name="nompre"
+                  [(ngModel)]="nompre"
+                  placeholder="Nom & Prénom"
+                ></ion-input>
+              </div>
+            </div>
+
+            <div class="rounded">
+              <div class="iconInput">
+                <ion-icon
+                  style="height: 20px; color: #ff5e06"
+                  slot="start"
+                  icon="assets/icon/envelope.svg"
+                >
+                </ion-icon>
+                <ion-input
+                  type="text"
+                  name="email"
+                  [(ngModel)]="email"
+                  placeholder="Email"
+                ></ion-input>
+              </div>
+            </div>
+
+            <div class="rounded">
+              <div class="iconInput">
+                <ion-icon
+                  style="height: 20px; color: #ff5e06"
+                  slot="start"
+                  icon="assets/icon/address.svg"
+                >
+                </ion-icon>
+                <ion-input
+                  type="text"
+                  name="adresse"
+                  [(ngModel)]="adresse"
+                  placeholder="Adresse"
+                ></ion-input>
+              </div>
+            </div>
+
+            <div class="rounded">
+              <div class="iconInput">
+                <ion-icon
+                  style="height: 20px; color: #ff5e06"
+                  slot="start"
+                  icon="assets/icon/phone-call.svg"
+                >
+                </ion-icon>
+                <ion-input
+                  type="number"
+                  name="telephone"
+                  [(ngModel)]="telephone"
+                  placeholder="Téléphone"
+                >
+                </ion-input>
+              </div>
+            </div>
+            <span>
+              <div class="rounded inlining">
+                <div class="iconInput">
+                  <ion-icon
+                    style="height: 20px; color: #ff5e06"
+                    slot="start"
+                    icon="assets/icon/lock.svg"
+                  ></ion-icon>
+                  <ion-input
+                    type="password"
+                    name="password"
+                    [(ngModel)]="password"
+                    placeholder="Mot de passe"
+                  >
+                  </ion-input>
+                </div>
+              </div>
+
+              <div class="rounded inlining">
+                <div class="iconInput">
+                  <ion-icon
+                    style="height: 20px; color: #ff5e06"
+                    slot="start"
+                    icon="assets/icon/confirm.svg"
+                  >
+                  </ion-icon>
+                  <ion-input
+                    type="password"
+                    name="passwordConfirm"
+                    [(ngModel)]="passwordConfirm"
+                    placeholder="Confirmation"
+                  >
+                  </ion-input>
+                </div>
+              </div>
+            </span>
+          </ion-list>
+
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 20px;
+            "
+          >
+            <button class="btn desktoploginIBTN">
+              <strong style="font-size: 17px"> Créer un compte</strong>
+            </button>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 50px;
+            "
+          >
+            <button
+              class="btn desktoploginIBTN"
+              routerLink="/login"
+              style="width: 40% !important"
+            >
+              <strong style="font-size: 17px">Connexion</strong>
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- <div style="margin: 15px" text-center>
+        <p>
+          <a
+            routerLink="/forgotpwd"
+            style="color: black; text-decoration: none"
+          >
+            Mot de passe oublié ?
+          </a>
+          <br />
+          <a
+            routerLink="/introlangues"
+            style="color: #e07a0c; margin-left: -1px; text-decoration: none"
+          >
+            Créer un compte ?</a
+          >
+        </p>
+      </div> -->
+    </div>
+    <div class="imgdesktop">
+      <div class="AfriLogoDiv">
+        <ion-img class="logo logoAfrica" src="assets/images/afrilangues.png">
+        </ion-img>
+      </div>
+      <!-- <h1>
+            Learn <br />
+            African Language <br />
+            By Giving <br />
+            10 min a day
+          </h1> -->
+
+      <!-- <ion-img class="logo logoAfdesk" src="assets/images/intro.png"> </ion-img> -->
+      <!-- <h5>Learn an African <br> language for free <br> in 10 minutes a day</h5> -->
+    </div>
+  </div>
+
+  <!-- <div class="ouModif">
+        <p><span>Ou</span></p>
+    </div> -->
+
+  <!-- <ion-button style="width: 90%; margin: 5%" class="buttons" type="submit" color="secondary" size="default" expand="block">
+        <ion-label>
+            <ion-icon slot="start" name="logo-facebook"></ion-icon>
+            Continuer avec Facebook
+        </ion-label>
+    </ion-button>
+    <ion-button style="width: 90%; margin-top: -8px ;  margin-left: 5%" class="buttons" type="submit" color="danger" size="default" expand="block">
+        <ion-label>
+            <ion-icon slot="start" name="logo-google"></ion-icon>
+            Continuer avec Google
+        </ion-label>
+    </ion-button> -->
+</ion-content>
