@@ -94,7 +94,10 @@
   </div>
 
   <div class="LanguageDesktopDiv">
-    <div class="LanguageDesktopDiv2">
+    <div
+      class="LanguageDesktopDiv2"
+      *ngIf="this.contentLockingPercentage != undefined"
+    >
       <div
         *ngFor="let topic of topics |orderBy:'display_order' ; let index = index"
         class="card"
@@ -119,6 +122,24 @@
             >
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="notification active"
+    *ngIf="showLastViewedPopup && this.afriService.lastViewedPopupCount == 1"
+  >
+    <div class="text">
+      Hey! Start From Where You Left ( Topic :
+      {{topics[this.lastViewedCourseID].name}}).
+    </div>
+    <div
+      class="close ripple"
+      (click)="showLastViewedPopup = !showLastViewedPopup"
+    >
+      <div class="text">
+        <i class="fa fa-close"></i>
       </div>
     </div>
   </div>

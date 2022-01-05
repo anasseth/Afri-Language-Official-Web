@@ -1465,6 +1465,36 @@
   .icoQuiz {
     font-size: 20px;
   }
+  // .MatchTheColumn {
+  //   width: 100%;
+  //   padding: 10px;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+  // .ColumnOne {
+  //   width: 100%;
+  //   height: auto;
+  //   padding: 5px;
+  //   border-radius: 30px;
+  //   border: 5px solid rgb(255, 208, 0);
+  //   background-color: #ffd00057;
+  //   padding-top: 20px;
+  //   padding-bottom: 20px;
+  // }
+  // .ColumnTwo {
+  //   margin-top: 10px;
+  //   width: 100%;
+  //   height: auto;
+  //   padding: 5px;
+  //   border-radius: 30px;
+  //   background-color: #ff450057;
+  //   border: 5px solid orangered;
+  //   padding-top: 20px;
+  //   padding-bottom: 20px;
+  // }
+
   .MatchTheColumn {
     width: 100%;
     padding: 10px;
@@ -1474,31 +1504,30 @@
     align-items: center;
   }
   .ColumnOne {
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 5px;
-    border-radius: 30px;
-    border: 5px solid rgb(255, 208, 0);
-    background-color: #ffd00057;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    border: 3px solid #df061f;
+    background-color: white;
   }
   .ColumnTwo {
-    margin-top: 10px;
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 5px;
-    border-radius: 30px;
-    background-color: #ff450057;
-    border: 5px solid orangered;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    border: 3px solid #dfb401;
+    background-color: white;
   }
-  .columnOption {
-    border-radius: 20px;
-    border: 1px solid transparent;
-    padding-left: 20px;
-  }
+  // .columnOption {
+  //   border-radius: 20px;
+  //   border: 1px solid transparent;
+  //   padding-left: 20px;
+  // }
   .ColumnTitle {
     margin: auto;
     margin-bottom: 20px;
@@ -1573,8 +1602,18 @@
   .InsideCardText2 {
     padding: 15px;
   }
+  .ColumnMatchingFront {
+    // width: 100%;
+    background-color: white;
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 25%);
+  }
   .ColumnMatching {
-    height: 745px !important;
+    // height: 745px !important;
+    height: 550px !important;
+    overflow-y: auto !important;
+  }
+  .ColBtn {
+    top: 71% !important;
   }
   .TranslatingExcersice {
     height: 440px !important;

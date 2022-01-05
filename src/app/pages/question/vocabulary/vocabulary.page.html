@@ -480,7 +480,8 @@
       </div>
     </div>
 
-    <div
+    <ion-content
+      style="width: auto;"
       class="DesktopDiv Quiz ColumnMatching"
       *ngIf="data.content_type == 'match'"
       (swiperight)="index != 0 ? prev() : '' "
@@ -494,14 +495,14 @@
         <
       </div>
       <img
-        class="ImageBack"
+        class="ImageBack ColBtn"
         [ngStyle]="{'opacity' : index != 0 ? '1' : '0'} "
         (click)="prev()"
         src="https://img.icons8.com/material-rounded/48/000000/back--v1.png"
       />
 
       <div class="card-container-quiz">
-        <div class="QuizFront">
+        <div class="QuizFront ColumnMatchingFront">
           <!-- <div class="playAudioQuiz">
             <div class="playQuiz" (click)="startAudio(data)">
               <ion-icon
@@ -558,7 +559,7 @@
       </div>
 
       <img
-        class="ImageBack next pos"
+        class="ImageBack next pos ColBtn"
         [ngStyle]="{'opacity' : index != tailles ? '1' : '0'} "
         (click)="next()"
         src="https://img.icons8.com/material-rounded/48/000000/forward.png"
@@ -571,7 +572,7 @@
       >
         >
       </div>
-    </div>
+    </ion-content>
 
     <!-- <div class="DesktopDiv Quiz" *ngIf="data.content_type == 'multiple'">
       <div

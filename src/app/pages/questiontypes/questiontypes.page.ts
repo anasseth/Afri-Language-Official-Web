@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { AfrilangueService } from "../../services/afrilangue.service";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import { ModalController, NavParams } from "@ionic/angular";
 
 import { GrammarPage } from "../question/grammar/grammar.page";
@@ -17,11 +17,12 @@ import { SentencesPage } from "../question/sentences/sentences.page";
 @Input("lesson")
 export class QuestiontypesPage implements OnInit {
   lesson;
-
+  topicParams;
   constructor(
     private afriService: AfrilangueService,
     private navParams: NavParams,
     private router: Router,
+    public activatedRoute: ActivatedRoute,
     public modalController: ModalController
   ) {
     this.lesson = this.navParams.get("lesson");

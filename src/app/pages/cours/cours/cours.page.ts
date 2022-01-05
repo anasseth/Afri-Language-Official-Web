@@ -20,6 +20,8 @@ export class CoursPage implements OnInit {
   idVerify;
   usersData: any;
   contentLockingPercentage: any;
+  showLastViewedPopup: boolean = false;
+  lastViewedCourseID = -1;
   usersData2: any;
   imageData = [
     "../../../assets/images/1.png",
@@ -42,6 +44,7 @@ export class CoursPage implements OnInit {
     private router: Router,
     private alertController: AlertController,
     private modalController: ModalController,
+    private activatedRoute: ActivatedRoute
   ) {
     this.route.queryParams.subscribe((params) => {
       this.onGetProfile();
@@ -86,6 +89,10 @@ export class CoursPage implements OnInit {
         this.usersData2 = this.usersData
       }
     )
+
+    setTimeout(() => {
+      this.showLastViewedPopup = true;
+    }, 6000);
   }
 
   loadContentPercentage() {
@@ -99,6 +106,8 @@ export class CoursPage implements OnInit {
             this.contentLockingPercentage = data
           }, err => {
             // console.log(err)
+          }, () => {
+            this.popupForLastStartedCourse()
           }
         )
       }, 3000);
@@ -158,7 +167,7 @@ export class CoursPage implements OnInit {
         (data) => {
           this.topics = data;
         },
-        (error) =>  console.log(error)
+        (error) => console.log(error)
       );
     }
   }
@@ -169,7 +178,7 @@ export class CoursPage implements OnInit {
         (data) => {
           this.verify = data["payment_required"];
         },
-        (error) =>  console.log(error)
+        (error) => console.log(error)
       );
     }
   }
@@ -182,6 +191,32 @@ export class CoursPage implements OnInit {
       buttons: ["Continuer"],
     });
     await alert.present();
+  }
+
+  popupForLastStartedCourse() {
+    for (var i = 0; i < this.topics.length; i++) {
+      if (
+        this.contentLockingPercentage[i].grammar_percentage >= 70
+        &&
+        this.contentLockingPercentage[i].review_percentage >= 70
+        &&
+        this.contentLockingPercentage[i].sentence_percentage >= 70
+      ) {
+        console.log("grammar_percentage : ", this.contentLockingPercentage[i].grammar_percentage)
+        console.log("review_percentage : ", this.contentLockingPercentage[i].review_percentage)
+        console.log("sentence_percentage : ", this.contentLockingPercentage[i].sentence_percentage)
+        continue;
+      }
+      else {
+        console.log("grammar_percentage : ", this.contentLockingPercentage[i].grammar_percentage)
+        console.log("review_percentage : ", this.contentLockingPercentage[i].review_percentage)
+        console.log("sentence_percentage : ", this.contentLockingPercentage[i].sentence_percentage)
+        this.lastViewedCourseID = i;
+        this.afriService.lastViewedPopupCount = this.afriService.lastViewedPopupCount + 1;
+        break
+      }
+    }
+    console.log("Last Viewed topic : ", this.topics[this.lastViewedCourseID].name)
   }
 
   clickCourseCard(topic, user, index, mail) {
@@ -198,31 +233,36 @@ export class CoursPage implements OnInit {
         &&
         this.contentLockingPercentage[index - 1].sentence_percentage >= 70
       ) {
-        // console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
-        // console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
-        // console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
+        console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
+        console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
+        console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
         this.topicClick(topic, user, index, mail)
       }
       else {
         this.contentPercentageErrorAlert()
-        // console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
-        // console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
-        // console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
+        console.log("grammar_percentage : ", this.contentLockingPercentage[index - 1].grammar_percentage)
+        console.log("review_percentage : ", this.contentLockingPercentage[index - 1].review_percentage)
+        console.log("sentence_percentage : ", this.contentLockingPercentage[index - 1].sentence_percentage)
       }
     }
     else if (index == 0) {
-      // console.log("grammar_percentage : ", this.contentLockingPercentage[index].grammar_percentage)
-      // console.log("review_percentage : ", this.contentLockingPercentage[index].review_percentage)
-      // console.log("sentence_percentage : ", this.contentLockingPercentage[index].sentence_percentage)
+      console.log("grammar_percentage : ", this.contentLockingPercentage[index].grammar_percentage)
+      console.log("review_percentage : ", this.contentLockingPercentage[index].review_percentage)
+      console.log("sentence_percentage : ", this.contentLockingPercentage[index].sentence_percentage)
       this.topicClick(topic, user, index, mail)
     }
 
   }
 
   async topicClick(topic, user, index, mail) {
-    // console.log(this.verify);
-    // console.log(this.user);
-    // console.log(this.subscribed);
+
+    this.router.navigate(
+      [],
+      {
+        relativeTo: this.activatedRoute,
+        queryParams: { topic: topic.name.replace(/\s/g, '-') },
+        queryParamsHandling: 'merge'
+      });
 
     let subId = [];
 
@@ -321,7 +361,7 @@ export class CoursPage implements OnInit {
 
           this.langues = data;
           this.onLanguage();
-        }, error =>  console.log(error)
+        }, error => console.log(error)
       );
 
   }
