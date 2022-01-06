@@ -55,7 +55,7 @@ export class ForgotPasswordPage implements OnInit {
             this.router.navigate(["/login"])
           },
           (error) => {
-            // console.log(error);
+            console.log(error);
             this.wrongAlert("L'email est incorrect");
           }
         );
@@ -83,14 +83,14 @@ export class ForgotPasswordPage implements OnInit {
 
 
 
-             // console.log(parsed);
+             console.log(parsed);
 
 
               this.router.navigateByUrl("/tabs/tabs/home")
 
           },error =>{
 
-              // console.log(error);
+              console.log(error);
 
           }
 

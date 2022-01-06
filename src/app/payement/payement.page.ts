@@ -49,10 +49,10 @@ export class PayementPage implements OnInit {
     this.afriService.getPayment().subscribe(
       (data) => {
         this.datas = data;
-        // console.log(data);
+        console.log(data);
       },
       (error) => {
-        // console.log(error);
+        console.log(error);
       }
     );
   }
@@ -62,13 +62,13 @@ export class PayementPage implements OnInit {
       .getTransaction(wari, this.afriService.language_id, mois)
       .subscribe(
         (data) => {
-          // console.log(data);
+          console.log(data);
           this.dismissModal();
           this.router.navigateByUrl("/tabs/tabs/info");
           // this.wrongAlert("Montant", data["amount"] + " EURO");
         },
         (error) => {
-          // console.log(error);
+          console.log(error);
         }
       );
   }
@@ -105,7 +105,7 @@ export class PayementPage implements OnInit {
       }),
     };
 
-    // console.log(price, this.mail, this.mailAfrilangue, this.waripayApiKey);
+    console.log(price, this.mail, this.mailAfrilangue, this.waripayApiKey);
 
     let bodyData = { apikey: this.waripayApiKey, email: this.mailAfrilangue };
 
@@ -169,7 +169,7 @@ export class PayementPage implements OnInit {
           }
         },
         (error) => {
-          // console.log(error);
+          console.log(error);
         }
       );
   }

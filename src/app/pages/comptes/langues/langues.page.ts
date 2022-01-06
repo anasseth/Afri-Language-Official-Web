@@ -38,11 +38,11 @@ export class LanguesPage implements OnInit {
                 for (var i = 0; i < this.usersData.length; i++) {
                     this.usersData[i].logo = this.imageData[i]
                 }
-                // console.log(data)
+                console.log(data)
             }, (err) => {
-                // console.log(err)
+                console.log(err)
             }, () => {
-                // console.log(this.usersData)
+                console.log(this.usersData)
                 this.usersData2 = this.usersData
             }
         )
@@ -56,7 +56,7 @@ export class LanguesPage implements OnInit {
             data => {
                 this.user = data['success'];
 
-                // console.log('user ', this.user);
+                console.log('user ', this.user);
 
             }
         );

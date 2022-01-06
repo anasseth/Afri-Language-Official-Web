@@ -21,8 +21,8 @@ export class ReviewPage implements OnInit {
   constructor(private modalController: ModalController, private navParams: NavParams, private afriService: AfrilangueService, private domSanitize: DomSanitizer) {
     this.question_type = this.navParams.get('question_type');
     this.lesson = this.navParams.get('lesson');
-    // console.log("Intro info : ",  this.question_type);
-    // console.log("Lesson info : ",  this.lesson);
+    console.log("Intro info : ", this.question_type);
+    console.log("Lesson info : ", this.lesson);
 
     this.name = "<p><em><strong>abc</strong></em></p>";
   }
@@ -43,12 +43,13 @@ export class ReviewPage implements OnInit {
   onGetQuestion() {
     this.afriService.getQuestion(this.lesson.id, this.question_type.value).subscribe(data => {
       this.html = data[0].answer.toString();
-      // console.log(this.html);
+      console.log(this.html);
       this.data = this.html;
 
     },
       error => {
-        console.log(error);})
-      }
+        console.log(error);
+      })
+  }
 
 }

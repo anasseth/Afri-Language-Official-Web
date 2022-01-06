@@ -3,7 +3,7 @@ import { AlertController, ModalController, NavParams } from '@ionic/angular';
 import { StreamingMedia } from '@ionic-native/streaming-media/ngx';
 import { AfrilangueService } from '../../../services/afrilangue.service';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Track } from '../vocabulary/vocabulary.page';
+// import { Track } from '../vocabulary/vocabulary.page';
 import { Howl, Howler } from 'howler';
 
 
@@ -101,7 +101,7 @@ export class SentencesPage implements OnInit {
 
     },
       error => {
-        // console.log(error);
+        console.log(error);
       });
   }
 
@@ -111,7 +111,7 @@ export class SentencesPage implements OnInit {
   startAudio(track: Track) {
 
 
-    // console.log("index : " , this.data);
+    console.log("index : ", this.data);
 
 
 
@@ -171,7 +171,7 @@ export class SentencesPage implements OnInit {
       .indexOf(op);
 
 
-    // console.log(this.indexChoose);
+    console.log(this.indexChoose);
 
 
     this.checkOptions = op;
@@ -220,8 +220,8 @@ export class SentencesPage implements OnInit {
 
       let result = this.responses.join(' ');
       let question = this.datas[0][this.index].question;
-      // console.log("response " ,result);
-      // console.log("question " ,question);
+      console.log("response ", result);
+      console.log("question ", question);
 
       if (result == question) {
         this.successAlert()
@@ -255,7 +255,7 @@ export class SentencesPage implements OnInit {
         })
         .indexOf(this.translateCheck.toLowerCase());
 
-      // console.log(index);
+      console.log(index);
 
       if (index != -1) {
         this.successAlert();
@@ -302,8 +302,8 @@ export class SentencesPage implements OnInit {
         var x = '[f|oo|]';
         var y = x.replace(/^\[+|\]+$/g, '');
 
-        // console.log("Data : " , this.options_data);
-        // console.log("Data2 : " , this.question_data);
+        console.log("Data : ", this.options_data);
+        console.log("Data2 : ", this.question_data);
 
       }
 
@@ -316,7 +316,7 @@ export class SentencesPage implements OnInit {
         var x = '[f|oo|]';
         var y = x.replace(/^\[+|\]+$/g, '');
 
-        // console.log("Data : " , this.answer_data);
+        console.log("Data : ", this.answer_data);
 
         this.responses = [];
 
@@ -328,7 +328,7 @@ export class SentencesPage implements OnInit {
         this.answerCheck = this.data.answer.replace(/^\["+|\"]+$/g, '').split('","');
 
 
-        // console.log("answer : " , this.answerCheck);
+        console.log("answer : ", this.answerCheck);
 
         this.translateCheck = ""
 
@@ -377,8 +377,8 @@ export class SentencesPage implements OnInit {
         var x = '[f|oo|]';
         var y = x.replace(/^\[+|\]+$/g, '');
 
-        // console.log("Data : " , this.options_data);
-        // console.log("Data2 : " , this.question_data);
+        console.log("Data : ", this.options_data);
+        console.log("Data2 : ", this.question_data);
 
       }
 
@@ -391,7 +391,7 @@ export class SentencesPage implements OnInit {
         var x = '[f|oo|]';
         var y = x.replace(/^\[+|\]+$/g, '');
 
-        // console.log("Data : " , this.answer_data);
+        console.log("Data : ", this.answer_data);
 
         this.responses = [];
 
@@ -403,7 +403,7 @@ export class SentencesPage implements OnInit {
         this.answerCheck = this.data.answer.replace(/^\["+|\"]+$/g, '').split('","');
 
 
-        // console.log("answer : " , this.answerCheck);
+        console.log("answer : ", this.answerCheck);
 
         this.translateCheck = ""
 
@@ -473,7 +473,7 @@ export class SentencesPage implements OnInit {
 
     this.addItem(null);
     this.responses.pop();
-    // console.log(this.responses);
+    console.log(this.responses);
 
   }
 }

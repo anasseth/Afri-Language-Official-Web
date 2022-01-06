@@ -32,7 +32,7 @@ export class ThematicsPage implements OnInit {
       this.onGetProfile();
       this.onGetThematics();
       this.afriService.showNotification();
-      // console.log("params : ", params);
+      console.log("params : ", params);
       if (params && params.language) {
         this.data = params.language;
       }
@@ -50,7 +50,7 @@ export class ThematicsPage implements OnInit {
     this.afriService.getProfile().subscribe((data) => {
       this.mail = data["success"]["email"];
       this.role = data["success"]["role"];
-      // console.log(data);
+      console.log(data);
     });
   }
 
@@ -66,7 +66,7 @@ export class ThematicsPage implements OnInit {
   }
 
   onGetThematics() {
-    // console.log(this.afriService.language_id);
+    console.log(this.afriService.language_id);
 
     this.afriService.getThematics(this.afriService.language_id).subscribe(
       (data) => {
@@ -75,7 +75,7 @@ export class ThematicsPage implements OnInit {
 
           this.show = data;
 
-          // console.log("ici");
+          console.log("ici");
         } else {
           this.thematics = data;
         }

@@ -28,7 +28,7 @@ export class HomePage implements OnInit {
 
 
   itemClick(langue) {
-    // console.log('langue choisie : ' , langue.id);
+    console.log('langue choisie : ', langue.id);
 
 
     let navigationExtra: NavigationExtras = {
@@ -49,9 +49,9 @@ export class HomePage implements OnInit {
       .subscribe(
         data => {
           this.profile = data['success'];
-          // console.log(this.profile);
+          console.log(this.profile);
         }, error => console.log(error)
-    )
+      )
 
   }
 
@@ -63,9 +63,9 @@ export class HomePage implements OnInit {
         data => {
 
           this.langues = data;
-          // console.log(this.langues);
-        }, error =>  console.log(error)
-   )
+          console.log(this.langues);
+        }, error => console.log(error)
+      )
 
   }
 

@@ -48,7 +48,7 @@ export class AddpostPage implements OnInit {
           this.dismissModal();
         },
         (error) => {
-          //// console.log(error);
+          //console.log(error);
         }
       );
   }

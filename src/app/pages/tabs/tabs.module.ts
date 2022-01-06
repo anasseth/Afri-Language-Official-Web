@@ -80,10 +80,10 @@ const routes: Routes = [
 })
 export class TabsPageModule {
   ionTabsWillChange() {
-    // console.log("changeerr");
+    console.log("changeerr");
   }
 
   ionViewDidLeave() {
-    // console.log("TabX is exited");
+    console.log("TabX is exited");
   }
 }

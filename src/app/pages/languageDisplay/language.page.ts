@@ -46,17 +46,17 @@ export class LanguageDisplay implements OnInit {
         for (var i = 0; i < this.usersData.length; i++) {
           this.usersData[i].logo = this.imageData[i]
         }
-        // console.log(data)
+        console.log(data)
       }, (err) => {
-        // console.log(err)
+        console.log(err)
       }, () => {
-        // console.log(this.usersData)
+        console.log(this.usersData)
         this.usersData2 = this.usersData
       }
     )
   }
   itemClick(langue) {
-    // console.log('langue choisie : ' , langue);
+    console.log('langue choisie : ', langue);
 
     this.afriService.language_id = langue.id
 
@@ -106,7 +106,7 @@ export class LanguageDisplay implements OnInit {
             this.router.navigate(["/login"])
           },
           (error) => {
-            // console.log(error);
+            console.log(error);
             this.wrongAlert("L'email ou le mot de passe est incorrect");
           }
         );
@@ -134,14 +134,14 @@ export class LanguageDisplay implements OnInit {
 
 
 
-             // console.log(parsed);
+             console.log(parsed);
 
 
               this.router.navigateByUrl("/tabs/tabs/home")
 
           },error =>{
 
-              // console.log(error);
+              console.log(error);
 
           }
 

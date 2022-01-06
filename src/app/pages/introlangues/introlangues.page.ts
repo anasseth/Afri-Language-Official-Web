@@ -33,7 +33,7 @@ export class IntrolanguesPage implements OnInit {
 
 
   itemClick(langue) {
-    // console.log('langue choisie : ' , langue);
+    console.log('langue choisie : ', langue);
 
     this.afriService.language_id = langue.id
 
@@ -55,9 +55,9 @@ export class IntrolanguesPage implements OnInit {
       .subscribe(
         data => {
           this.profile = data['success'];
-          // console.log(this.profile);
+          console.log(this.profile);
         }, error => console.log(error)
-        )
+      )
 
   }
 
@@ -69,9 +69,9 @@ export class IntrolanguesPage implements OnInit {
         data => {
 
           this.langues = data;
-          // console.log(this.langues);
+          console.log(this.langues);
         }, error => console.log(error)
-        )
+      )
 
   }
 

@@ -16,9 +16,9 @@ export class HelpPage implements OnInit {
   data;
   showInfo(url) {
     this.afriService.getHtml(url).subscribe((data) => {
-      // console.log("data ", data);
+      console.log("data ", data);
       this.data = data;
     });
-    // console.log(url);
+    console.log(url);
   }
 }

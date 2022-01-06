@@ -28,7 +28,7 @@ export class SubscribePage implements OnInit {
   onGetSubscribes() {
     this.afriService.getSubscribes().subscribe((data) => {
       this.datas = data;
-      // console.log(data);
+      console.log(data);
 
       this.onGetLanguage();
     });

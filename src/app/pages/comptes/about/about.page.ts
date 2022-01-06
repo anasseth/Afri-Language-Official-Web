@@ -31,10 +31,10 @@ export class AboutPage implements OnInit {
 
   showInfo(url) {
     this.afriService.getHtml(url).subscribe((data) => {
-      // console.log("data ", data);
+      console.log("data ", data);
       this.data = data;
     });
-    // console.log(url);
+    console.log(url);
   }
 
   blankInfo(url) {
@@ -69,7 +69,7 @@ export class AboutPage implements OnInit {
 
   async shareFacebook() {
     const file = await this.resolveLocalFile();
-    // console.log("file ", file);
+    console.log("file ", file);
 
     this.socialSharing
       .shareViaFacebook(null, file.nativeURL, this.text)
@@ -77,7 +77,7 @@ export class AboutPage implements OnInit {
         this.removeTempFile(file);
       })
       .catch((e) => {
-        // console.log(e);
+        console.log(e);
       });
   }
   ShareWhatsapp() {
@@ -85,7 +85,7 @@ export class AboutPage implements OnInit {
       .shareViaWhatsApp(this.text, null, this.url)
       .then(() => { })
       .catch((e) => {
-        // console.log(e);
+        console.log(e);
       });
   }
 
