@@ -11,7 +11,6 @@ export class AfrilangueService {
   url: string;
 
   language_id: number;
-  lastViewedPopupCount: number = 0;
 
   tok: string =
     "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNmZjRjMGM4Y2NkMGM3MWI0NjkzMDZmNTExZWNlNDEyZTQ4Mjc3MjFiNjlhNDE3NGU4ZWIxNTI0MTM1NGIyYmFiMWVjNmQ0NzUyMjRiOGEyIn0.eyJhdWQiOiIzIiwianRpIjoiM2ZmNGMwYzhjY2QwYzcxYjQ2OTMwNmY1MTFlY2U0MTJlNDgyNzcyMWI2OWE0MTc0ZThlYjE1MjQxMzU0YjJiYWIxZWM2ZDQ3NTIyNGI4YTIiLCJpYXQiOjE1NjkzMjYyOTMsIm5iZiI6MTU2OTMyNjI5MywiZXhwIjoxNjAwOTQ4NjkzLCJzdWIiOiI4MyIsInNjb3BlcyI6W119.PHxAQ5ztf8QrqjdQriD41S7ZM8lKaI9xqWQoaV9EmeoST8OwNlfMnBvcD9P_U6wnhwOxRW_eL2bHsOUMPNK4EJV_J80gF1V7Bs65WTwHehspuRkEbQaBtoe7XRp7k1NreR49an4xBJ2IhJArcFJOSoDuLYyAoRWXokWLoB_YI_tRjddNwJXvXzYGhtxokygtxTysLWbjHvZUJz28p-JZVVFUZ0o_Qae6Yc23ZGWK09rrbBAC2qNGqLTD8gKPIRLHvW7mHik3k-1LMPaLZeQ8UOuG136KcYPZJjGP0s3AhjSem3vJIAWvf2fheir7OzYOiH8gUW2tuljrc4GNyZMSIv7FVhxilV7Ip9TN-ebsSr2UxJkeC3KsVRxKTmCvKR5HGToQzLKVHODFJ12lHwtxD7VvMFxTBz-ITLbyaOSzKdhCBJJZd1uHSrHEix9CTsUiTrKeGFy3wA0tT9QjW-Gzjz0DyvAfOcqTS0_nfAX7YEah0euBL-eeWP-LKsTRJHl7vE-M3pNb3dbsklrO8XIdCcVpy-AoWuO8h2okwE7kZ2P1tST7goEjxfg5veO6goNm1oS3EA8z6H8fyx0vaTa6IJJBuXNiTAIT0e4x300ZqvICoh7413PssbBqdEeMNU7g4zFwMjK83WW3c6XCDtqknoQdtag631j9RbXjyx8K95g";
@@ -46,7 +45,7 @@ export class AfrilangueService {
       this.localNotifications.schedule({
         text: "C'est l'heure d'apprendre ",
         // trigger: { at: new Date(new Date().getTime() + 15000) },
-        trigger: { every: { hour: 0, minute: 1 } },
+        trigger: { every: { hour: 13, minute: 1 } },
         led: "FF0000",
         foreground: true,
         sound: null

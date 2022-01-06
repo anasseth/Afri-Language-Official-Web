@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, ModalController, NavParams } from '@ionic/angular';
-import { StreamingMedia } from '@ionic-native/streaming-media/ngx';
-import { AfrilangueService } from '../../../services/afrilangue.service';
-import { DomSanitizer } from '@angular/platform-browser';
-// import { Track } from '../vocabulary/vocabulary.page';
-import { Howl, Howler } from 'howler';
+import {AlertController, ModalController, NavParams} from '@ionic/angular';
+import {StreamingMedia} from '@ionic-native/streaming-media/ngx';
+import {AfrilangueService} from '../../../services/afrilangue.service';
+import {DomSanitizer} from '@angular/platform-browser';
+import {Track} from '../vocabulary/vocabulary.page';
+import {Howl, Howler} from 'howler';
 
 
 export interface Track {
@@ -178,7 +178,6 @@ export class SentencesPage implements OnInit {
 
 
   }
-
 
 
 

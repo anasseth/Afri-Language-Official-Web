@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  afrilangues-web-front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PROFILE: "prod"
+    environment:
+      - ORCHESTRATOR_API_URL=none
+    ports:
+      - 80:80
+    volumes:
+      - .:/app
