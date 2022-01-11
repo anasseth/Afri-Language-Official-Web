@@ -23,19 +23,19 @@ export class CoursPage implements OnInit {
   showLastViewedPopup: boolean = false;
   lastViewedCourseID = -1;
   usersData2: any;
-  imageData = [
-    "../../../assets/images/1.png",
-    "../../../assets/images/2.png",
-    "../../../assets/images/3.png",
-    "../../../assets/images/4.png",
-    "../../../assets/images/5.png",
-    "../../../assets/images/6.png",
-    "../../../assets/images/7.png",
-    "../../../assets/images/8.png",
-    "../../../assets/images/9.png",
-    "../../../assets/images/10.png",
-    "../../../assets/images/11.png"
-  ]
+  // imageData = [
+  //   "../../../assets/images/1.png",
+  //   "../../../assets/images/2.png",
+  //   "../../../assets/images/3.png",
+  //   "../../../assets/images/4.png",
+  //   "../../../assets/images/5.png",
+  //   "../../../assets/images/6.png",
+  //   "../../../assets/images/7.png",
+  //   "../../../assets/images/8.png",
+  //   "../../../assets/images/9.png",
+  //   "../../../assets/images/10.png",
+  //   "../../../assets/images/11.png"
+  // ]
 
   constructor(
     public platform: Platform,
@@ -68,8 +68,6 @@ export class CoursPage implements OnInit {
   }
 
   ngOnInit() {
-    //this.afriService.showHelp();
-    //this.onGetProfile();
     this.onGetTopics();
     this.onGetLangues();
     this.loadContentPercentage();
@@ -78,9 +76,9 @@ export class CoursPage implements OnInit {
     this.afriService.getLanguageData().subscribe(
       (data) => {
         this.usersData = JSON.parse(JSON.stringify(data))
-        for (var i = 0; i < this.usersData.length; i++) {
-          this.usersData[i].logo = this.imageData[i]
-        }
+        // for (var i = 0; i < this.usersData.length; i++) {
+        //   this.usersData[i].logo = this.imageData[i]
+        // }
         console.log(data)
       }, (err) => {
         console.log(err)
@@ -90,9 +88,9 @@ export class CoursPage implements OnInit {
       }
     )
 
-    setTimeout(() => {
-      this.showLastViewedPopup = true;
-    }, 6000);
+    // setTimeout(() => {
+    //   this.showLastViewedPopup = true;
+    // }, 6000);
   }
 
   loadContentPercentage() {
@@ -101,7 +99,7 @@ export class CoursPage implements OnInit {
       setTimeout(() => {
         this.afriService.getContentCoveredPercentage().subscribe(
           data => {
-            console.log("User Content % Covered")
+            console.log("User Content % Covered 1")
             console.log(data)
             this.contentLockingPercentage = data
           }, err => {
@@ -115,7 +113,7 @@ export class CoursPage implements OnInit {
     else {
       this.afriService.getContentCoveredPercentage().subscribe(
         data => {
-          console.log("User Content % Covered")
+          console.log("User Content % Covered 2")
           console.log(data)
           this.contentLockingPercentage = data
         }, err => {
@@ -216,7 +214,12 @@ export class CoursPage implements OnInit {
         break
       }
     }
+
+    setTimeout(() => {
+      this.showLastViewedPopup = true;
+    }, 7000);
     console.log("Last Viewed topic : ", this.topics[this.lastViewedCourseID].name)
+    console.log("Last Viewed Popup Countup", this.afriService.lastViewedPopupCount)
   }
 
   clickCourseCard(topic, user, index, mail) {

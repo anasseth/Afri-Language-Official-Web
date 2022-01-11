@@ -25,6 +25,7 @@ export class AfrilangueService {
   };
 
   data = "appel";
+  lastViewedPopupCount: number = 0;
 
   constructor(
     private httpClient: HTTP,
