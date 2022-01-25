@@ -266,7 +266,7 @@ export class CoursPage implements OnInit {
         queryParams: { topic: topic.name.replace(/\s/g, '-') },
         queryParamsHandling: 'merge'
       });
-
+ 
     let subId = [];
 
     if (index >= 0 && this.user.role != "user") {
