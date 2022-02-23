@@ -515,6 +515,7 @@ export class VocabularyPage implements OnInit {
 
     if (this.data.content_type == "translate") {
       const result = this.answerCheck;
+      console.log("Answer Check : ", this.answerCheck)
       this.translateCheck = this.translateCheck.toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, "")
       console.log(this.answerCheck[0]);
       // console.log(this.answerCheck[0].toLowerCase().replace(/[^a-zA-Z ]/g, ""))
@@ -522,13 +523,29 @@ export class VocabularyPage implements OnInit {
       console.log(this.answerCheck[0].toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, ""))
       console.log(this.translateCheck)
 
-      const index = result
-        .map(function (e) {
-          console.log(e.toLowerCase().replace(/\s+/g, ''))
-          console.log(e.toLowerCase().replace(/[^a-zA-Z ]/g, " ").trim().split(" "))
-          return e.toLowerCase().replace(/\s+/g, '');
-        })
-        .indexOf(this.translateCheck.toLowerCase().replace(/\s+/g, ''));
+      // const index = result
+      //   .map(function (e) {
+      //     console.log(e.toLowerCase().replace(/\s+/g, ''))
+      //     console.log()
+      //     return e.toLowerCase().replace(/\s+/g, '');
+      //   })
+      //   .indexOf(this.translateCheck.toLowerCase().replace(/\s+/g, ''));
+
+      // Updated Translation Code
+      var index = 0;
+      for (var j = 0; j < result.length; j++) {
+        var userAnswer = this.translateCheck.toLowerCase().replace(/\s+/g, '').replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '');
+        if (result[j].toLowerCase().replace(/\s+/g, '').replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '') == userAnswer) {
+          index = 1;
+          break;
+        }
+        else {
+          index = -1;
+        }
+      }
+
+      console.log(" Correct Answer : ", this.answerCheck[0].toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, ""))
+      console.log(" User Answer : ", this.translateCheck.toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g, '').replace(/ /g, ""))
 
       console.log(index)
 
