@@ -62,8 +62,8 @@ export class RegisterPage implements OnInit {
     if (
       user.nompre == undefined ||
       user.email == undefined ||
-      user.adresse == undefined ||
-      user.telephone == undefined ||
+      // user.adresse == undefined || 
+      // user.telephone == undefined ||
       user.password == undefined ||
       user.passwordConfirm == undefined
     ) {
@@ -71,8 +71,8 @@ export class RegisterPage implements OnInit {
     } else if (
       user.nompre.toString().length < 5 ||
       user.email.toString().length < 5 ||
-      user.adresse.toString().length < 5 ||
-      user.telephone.toString().length < 5 ||
+      // user.adresse.toString().length < 5 ||
+      // user.telephone.toString().length < 5 ||
       user.password.toString().length < 5 ||
       user.passwordConfirm.toString().length < 5
     ) {
